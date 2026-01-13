@@ -135,6 +135,11 @@
             color: #7b1fa2;
         }
 
+        .version-tag--c {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
         /* Landing Page Cards */
         .pages-section {
             margin-bottom: 50px;
@@ -384,16 +389,16 @@
         <div class="version-control-notice">
             <h3>Version Control</h3>
             <p>
-                Each landing page has two versions for A/B testing. <strong>Version A</strong> is the original layout.
-                <strong>Version B</strong> uses alternate hero styles, section ordering, and copy angles per SKILL.md guidelines.
-                Files follow the naming convention: <code>*-landing.html</code> (Version A) and <code>*-landing-v2.html</code> (Version B).
+                Landing pages have multiple versions for A/B testing. <strong>Version A</strong> is the original layout.
+                <strong>Version B</strong> uses alternate hero styles and section ordering. <strong>Version C</strong> follows SKILL.md guidelines with no emojis, SVG icons, and trust-first layouts.
+                Files follow the naming convention: <code>*-landing.html</code> (A), <code>*-landing-v2.html</code> (B), <code>*-landing-v3.html</code> (C).
             </p>
         </div>
 
         <!-- Version Legend -->
         <div class="version-legend">
             <h3>Version Differences</h3>
-            <div class="legend-grid">
+            <div class="legend-grid" style="grid-template-columns: repeat(3, 1fr);">
                 <div class="legend-item">
                     <h4><span class="version-tag version-tag--a">Version A</span> Original</h4>
                     <p>Full-width hero with background image overlay, stats bar below hero, standard section flow: hero → stats → press → value props → products → testimonials → FAQ → CTA</p>
@@ -401,6 +406,10 @@
                 <div class="legend-item">
                     <h4><span class="version-tag version-tag--b">Version B</span> Alternate</h4>
                     <p>Varied hero styles (testimonial hero, split hero, minimal hero), testimonials moved higher for trust-first approach, CSS custom properties for easier theming, accordion FAQ</p>
+                </div>
+                <div class="legend-item">
+                    <h4><span class="version-tag version-tag--c">Version C</span> SKILL.md</h4>
+                    <p>No emojis (all replaced with SVG icons), H1 Product Hero, trust-first testimonials, CSS-styled checkmarks, shield guarantee icon, rounded buttons with hover effects</p>
                 </div>
             </div>
         </div>
@@ -411,8 +420,8 @@
                 <div class="label">Landing Pages</div>
             </div>
             <div class="stat-card">
-                <div class="number">8</div>
-                <div class="label">Total Versions (A/B)</div>
+                <div class="number">10</div>
+                <div class="label">Total Versions</div>
             </div>
             <div class="stat-card">
                 <div class="number">$4-10</div>
@@ -429,7 +438,7 @@
             <div class="section-header">
                 <h2>NYC Bagels Shipped</h2>
             </div>
-            <div class="pages-grid">
+            <div class="pages-grid" style="grid-template-columns: repeat(3, 1fr);">
                 <div class="page-card">
                     <div class="page-header">
                         <div>
@@ -484,6 +493,35 @@
                         </div>
                         <div class="page-actions">
                             <a href="nyc-bagels-shipped-landing-v2.html" class="btn btn-secondary">Preview Version B</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-card">
+                    <div class="page-header" style="background: #2e7d32;">
+                        <div>
+                            <h3>Version C <span class="version-tag version-tag--c">SKILL.md</span></h3>
+                            <p class="target">nyc-bagels-shipped-landing-v3.html</p>
+                        </div>
+                    </div>
+                    <div class="page-body">
+                        <p>H1 Product Hero with eyebrow text and star rating. All emojis replaced with SVG icons. Trust-first testimonials right after stats bar.</p>
+                        <div class="version-info">
+                            <h4>Layout Details</h4>
+                            <ul>
+                                <li>Product hero with proof elements</li>
+                                <li>SVG icons replace all emojis</li>
+                                <li>CSS-styled green checkmarks</li>
+                                <li>Shield icon for guarantee</li>
+                            </ul>
+                        </div>
+                        <div class="keywords">
+                            <h4>Target Keywords</h4>
+                            <span class="keyword-tag">nyc bagels shipped</span>
+                            <span class="keyword-tag">bagels from new york shipped</span>
+                        </div>
+                        <div class="page-actions">
+                            <a href="nyc-bagels-shipped-landing-v3.html" class="btn" style="background: #2e7d32;">Preview Version C</a>
                         </div>
                     </div>
                 </div>
@@ -561,7 +599,7 @@
             <div class="section-header">
                 <h2>Jewish Deli Gift Baskets</h2>
             </div>
-            <div class="pages-grid">
+            <div class="pages-grid" style="grid-template-columns: repeat(3, 1fr);">
                 <div class="page-card">
                     <div class="page-header">
                         <div>
@@ -616,6 +654,35 @@
                         </div>
                         <div class="page-actions">
                             <a href="jewish-deli-gifts-landing-v2.html" class="btn btn-secondary">Preview Version B</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-card">
+                    <div class="page-header" style="background: #2e7d32;">
+                        <div>
+                            <h3>Version C <span class="version-tag version-tag--c">SKILL.md</span></h3>
+                            <p class="target">jewish-deli-gifts-landing-v3.html</p>
+                        </div>
+                    </div>
+                    <div class="page-body">
+                        <p>H1 Product Hero with gift basket image. All 18 emojis replaced with SVG icons. Trust-first testimonials. Promo banner at top.</p>
+                        <div class="version-info">
+                            <h4>Layout Details</h4>
+                            <ul>
+                                <li>Product hero with dual CTAs</li>
+                                <li>All occasion icons are SVGs</li>
+                                <li>SVG icons in services section</li>
+                                <li>Shield icon for guarantee</li>
+                            </ul>
+                        </div>
+                        <div class="keywords">
+                            <h4>Target Keywords</h4>
+                            <span class="keyword-tag">jewish deli gift baskets</span>
+                            <span class="keyword-tag">jewish food gifts</span>
+                        </div>
+                        <div class="page-actions">
+                            <a href="jewish-deli-gifts-landing-v3.html" class="btn" style="background: #2e7d32;">Preview Version C</a>
                         </div>
                     </div>
                 </div>
@@ -709,7 +776,7 @@
         <footer>
             <p>Shelsky's of Brooklyn | Landing Pages Index | Last Updated: January 2026</p>
             <p style="margin-top: 8px;">All pages optimized for Google Ads Quality Score and conversion rate.</p>
-            <p style="margin-top: 8px;">Version A = Original | Version B = Alternate (per SKILL.md guidelines)</p>
+            <p style="margin-top: 8px;">Version A = Original | Version B = Alternate | Version C = SKILL.md (no emojis, SVG icons)</p>
         </footer>
     </div>
 </body>
