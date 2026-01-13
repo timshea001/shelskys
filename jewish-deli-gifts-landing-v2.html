@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewish Deli Gift Baskets | Authentic Brooklyn Appetizing Shipped Nationwide</title>
+    <meta name="description" content="Send authentic Jewish deli gift baskets nationwide. Smoked fish, bagels, and traditional appetizing from Brooklyn's finest. The perfect gift for any occasion.">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Shelsky's Jewish Deli Gift Baskets",
+      "brand": { "@type": "Brand", "name": "Shelsky's of Brooklyn" },
+      "description": "Authentic Jewish deli gift baskets with smoked fish, bagels, and appetizing shipped nationwide",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "500" },
+      "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "204.99", "highPrice": "329.99" }
+    }
+    </script>
+
+    <style>
+        :root {
+            --color-primary: #e74b2a;
+            --color-primary-dark: #cf2e2e;
+            --color-dark: #32373c;
+            --color-text: #1a1a1a;
+            --color-text-muted: #666;
+            --color-bg: #fff;
+            --color-bg-alt: #f9f9f9;
+            --color-bg-warm: #fef7f0;
+            --color-border: #e0e0e0;
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+        }
+
+        @font-face {
+            font-family: 'MochaMattari';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/MochaMattariW01-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Arvo';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/Arvo-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-bg);
+        }
+
+        h1, h2, h3 {
+            font-family: 'MochaMattari', Georgia, serif;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .container--narrow { max-width: 700px; }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { height: 60px; }
+
+        .btn {
+            display: inline-block;
+            background: var(--color-primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-family: 'Arvo', Georgia, serif;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn:hover { background: var(--color-primary-dark); }
+        .btn-dark { background: var(--color-dark); }
+        .btn-dark:hover { background: #1e2327; }
+        .btn-small { padding: 10px 20px; font-size: 14px; }
+        .btn-large { padding: 18px 36px; font-size: 18px; }
+        .btn-outline { background: transparent; border: 2px solid var(--color-dark); color: var(--color-dark); }
+        .btn-outline:hover { background: var(--color-dark); color: white; }
+
+        /* H6: Minimal Hero - Text-Focused, Elegant */
+        .hero-minimal {
+            padding: 80px 0 60px;
+            text-align: center;
+            background: var(--color-bg-warm);
+        }
+
+        .hero-minimal__eyebrow {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-minimal__title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-minimal__subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .hero-minimal__cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Image Strip */
+        .image-strip {
+            display: flex;
+            gap: var(--space-md);
+            padding: 0 var(--space-md) 60px;
+            overflow-x: auto;
+            justify-content: center;
+            background: var(--color-bg-warm);
+        }
+
+        .image-strip img {
+            width: 280px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            flex-shrink: 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Social Proof Compact */
+        .social-proof-bar {
+            padding: 24px 0;
+            background: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .social-proof-bar__inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--color-text-muted);
+        }
+
+        .social-proof-bar span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .stars { color: #f59e0b; }
+
+        /* Occasion Cards */
+        .occasions {
+            padding: 70px 0;
+            background: var(--color-bg);
+        }
+
+        .occasions h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .occasions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .occasion-card {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .occasion-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+            border-color: var(--color-primary);
+        }
+
+        .occasion-card__icon { font-size: 42px; margin-bottom: 14px; }
+        .occasion-card h3 { font-size: 17px; margin-bottom: 6px; }
+        .occasion-card p { font-size: 13px; color: var(--color-text-muted); }
+
+        /* Featured Package */
+        .featured-package {
+            padding: 70px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .featured-package__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .featured-package__image {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        .featured-package__badge {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        .featured-package__content h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .featured-package__price {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+        }
+
+        .featured-package__serves {
+            font-size: 15px;
+            color: var(--color-text-muted);
+            margin-bottom: 20px;
+        }
+
+        .featured-package__list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .featured-package__list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 15px;
+            color: var(--color-text-muted);
+        }
+
+        .featured-package__list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #059669;
+            font-weight: bold;
+        }
+
+        /* Package Grid */
+        .packages {
+            padding: 70px 0;
+            background: var(--color-bg);
+        }
+
+        .packages h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .package-card {
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .package-card:hover {
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+
+        .package-card__img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .package-card__info {
+            padding: 24px;
+        }
+
+        .package-card h3 { font-size: 20px; margin-bottom: 8px; }
+        .package-card__price { color: var(--color-primary); font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+        .package-card__serves { font-size: 13px; color: var(--color-text-muted); margin-bottom: 12px; }
+        .package-card__desc { font-size: 14px; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 16px; }
+
+        /* Corporate CTA */
+        .corporate {
+            padding: 60px 0;
+            background: var(--color-dark);
+            color: white;
+            text-align: center;
+        }
+
+        .corporate h2 { font-size: 36px; margin-bottom: 16px; }
+        .corporate p { font-size: 17px; opacity: 0.9; max-width: 550px; margin: 0 auto 28px; }
+        .corporate__cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .corporate .btn-outline { border-color: white; color: white; }
+        .corporate .btn-outline:hover { background: white; color: var(--color-dark); }
+
+        /* Why Send */
+        .why-send {
+            padding: 70px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .why-send h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .why-item__icon { font-size: 48px; margin-bottom: 16px; }
+        .why-item h3 { font-size: 20px; margin-bottom: 12px; }
+        .why-item p { font-size: 14px; color: var(--color-text-muted); line-height: 1.7; }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 70px 0;
+            background: var(--color-bg);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--color-bg-alt);
+            padding: 32px;
+            border-radius: 12px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .testimonial-card__stars { color: #f59e0b; font-size: 18px; margin-bottom: 14px; }
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .testimonial-card cite {
+            font-style: normal;
+            font-size: 13px;
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        /* Gift Services */
+        .gift-services {
+            padding: 60px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .gift-services h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 28px 20px;
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+        }
+
+        .service-item__icon { font-size: 36px; margin-bottom: 12px; }
+        .service-item h4 { font-size: 16px; margin-bottom: 8px; }
+        .service-item p { font-size: 13px; color: var(--color-text-muted); }
+
+        /* FAQ */
+        .faq-section {
+            padding: 60px 0;
+            background: var(--color-bg);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--color-bg-alt);
+            padding: 24px;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+        }
+
+        .faq-item h3 { font-size: 17px; margin-bottom: 10px; }
+        .faq-item p { color: var(--color-text-muted); line-height: 1.6; font-size: 14px; }
+
+        /* Guarantee */
+        .guarantee-section {
+            padding: 50px 0;
+            background: #f0fdf4;
+        }
+
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-lg);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon { font-size: 3rem; }
+        .guarantee-title { font-size: 1.25rem; font-weight: 700; color: #166534; margin-bottom: var(--space-xs); }
+        .guarantee-text { color: #15803d; line-height: 1.5; }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                        url('Shelsky\'s Best/Handing Box Best Frame.jpeg') center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .final-cta h2 { font-size: 40px; margin-bottom: 16px; }
+        .final-cta p { font-size: 18px; margin-bottom: 32px; opacity: 0.9; }
+
+        /* Footer */
+        footer {
+            background: #1a1d20;
+            color: #fff;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a { color: #fff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .occasions-grid { grid-template-columns: repeat(2, 1fr); }
+            .featured-package__grid { grid-template-columns: 1fr; }
+            .package-grid, .why-grid, .testimonial-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .faq-grid { grid-template-columns: 1fr; }
+            .image-strip { justify-content: flex-start; }
+        }
+
+        @media (max-width: 600px) {
+            .hero-minimal__title { font-size: 2.5rem; }
+            .header-inner { flex-direction: column; gap: 12px; }
+            .logo { height: 50px; }
+            .occasions-grid, .services-grid { grid-template-columns: 1fr; }
+            .image-strip img { width: 220px; height: 280px; }
+            .guarantee-box { flex-direction: column; text-align: center; }
+            .corporate__cta { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="https://shelskys.com">
+                    <img src="logo-text.webp" alt="Shelsky's of Brooklyn" class="logo">
+                </a>
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-small">Shop Gift Baskets</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- H6: Minimal Hero -->
+    <section class="hero-minimal">
+        <div class="container container--narrow">
+            <p class="hero-minimal__eyebrow">Brooklyn's Finest Appetizing</p>
+            <h1 class="hero-minimal__title">Send the Gift They'll Actually Remember</h1>
+            <p class="hero-minimal__subtitle">Authentic Jewish deli gift baskets. Bagels, lox, smoked fish, and all the fixings—shipped fresh anywhere in America.</p>
+            <div class="hero-minimal__cta">
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-large">Shop Gift Baskets</a>
+                <a href="#packages" class="btn btn-outline btn-large">See Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Strip -->
+    <div class="image-strip">
+        <img src="https://shelskys.com/wp-content/uploads/2023/05/2-Wake-Up-In-Brooklyn-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Wake Up in Brooklyn Gift">
+        <img src="https://shelskys.com/wp-content/uploads/2023/05/6-look-like-a-real-macher-big-shot-1-scaled-1-400x400.jpeg" alt="Big Macher Package">
+        <img src="https://shelskys.com/wp-content/uploads/2023/05/3-from-Brooklyn-with-sweet-love-1-scaled-1-400x400.jpeg" alt="Brooklyn is Sweet Package">
+    </div>
+
+    <!-- Social Proof Bar -->
+    <div class="social-proof-bar">
+        <div class="container">
+            <div class="social-proof-bar__inner">
+                <span><span class="stars">★★★★★</span> 500+ Reviews</span>
+                <span>Free Shipping on All Gifts</span>
+                <span>Gift Message Included</span>
+                <span>Ships Nationwide</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Occasions -->
+    <section class="occasions">
+        <div class="container">
+            <h2>Perfect For Every Occasion</h2>
+            <div class="occasions-grid">
+                <div class="occasion-card">
+                    <div class="occasion-card__icon">🎂</div>
+                    <h3>Birthdays</h3>
+                    <p>Better than cake</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-card__icon">🙏</div>
+                    <h3>Thank You</h3>
+                    <p>Say it with smoked fish</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-card__icon">🕎</div>
+                    <h3>Jewish Holidays</h3>
+                    <p>Rosh Hashanah, Hanukkah</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-card__icon">💼</div>
+                    <h3>Corporate</h3>
+                    <p>Impress clients & teams</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-card__icon">🏠</div>
+                    <h3>Housewarming</h3>
+                    <p>Stock their kitchen</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-card__icon">❤️</div>
+                    <h3>Shiva & Condolences</h3>
+                    <p>Comfort food for the soul</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-card__icon">🎓</div>
+                    <h3>Celebrations</h3>
+                    <p>Graduations, Bar Mitzvahs</p>
+                </div>
+                <div class="occasion-card">
+                    <div class="occasion-card__icon">🌇</div>
+                    <h3>Miss New York?</h3>
+                    <p>Send Brooklyn anywhere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Package -->
+    <section class="featured-package">
+        <div class="container">
+            <div class="featured-package__grid">
+                <img src="https://shelskys.com/wp-content/uploads/2023/05/2-Wake-Up-In-Brooklyn-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Wake Up in Brooklyn" class="featured-package__image">
+                <div class="featured-package__content">
+                    <span class="featured-package__badge">Best Seller</span>
+                    <h2>Wake Up in Brooklyn</h2>
+                    <p class="featured-package__price">$229.99</p>
+                    <p class="featured-package__serves">Serves 6-8 people</p>
+                    <ul class="featured-package__list">
+                        <li>Dozen fresh bagels (mix of flavors)</li>
+                        <li>Half pound house-cured gravlax</li>
+                        <li>Half pound smoked salmon</li>
+                        <li>Three cream cheese selections</li>
+                        <li>Capers, onions, tomatoes</li>
+                        <li>Personal gift message included</li>
+                    </ul>
+                    <a href="https://shelskys.com/product/wake-up-in-brooklyn-package/" class="btn btn-large">Send This Gift</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Packages -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2>More Gift Packages</h2>
+            <div class="package-grid">
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/1-Shelskys-Schmear-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Brooklyn Schmear" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>A Brooklyn Schmear</h3>
+                        <p class="package-card__price">$209.99</p>
+                        <p class="package-card__serves">Serves 4-6 people</p>
+                        <p class="package-card__desc">Bagels, cream cheeses, and all the schmear essentials.</p>
+                        <a href="https://shelskys.com/product/a-brooklyn-schmear-package/" class="btn btn-dark btn-small">Send This Gift</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/4-How-you-doin-Gift-Basket-2-scaled-1-400x400.jpeg" alt="How YOU Doin" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>"How YOU Doin'?"</h3>
+                        <p class="package-card__price">$269.99</p>
+                        <p class="package-card__serves">Serves 8-10 people</p>
+                        <p class="package-card__desc">Expanded spread with premium fish selections.</p>
+                        <a href="https://shelskys.com/product/how-you-doin-package/" class="btn btn-dark btn-small">Send This Gift</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/6-look-like-a-real-macher-big-shot-1-scaled-1-400x400.jpeg" alt="Big Macher" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>Big Macher Brooklyn Brunch</h3>
+                        <p class="package-card__price">$329.99</p>
+                        <p class="package-card__serves">Serves 10-12 people</p>
+                        <p class="package-card__desc">The ultimate spread. Everything they need.</p>
+                        <a href="https://shelskys.com/product/big-macher-brooklyn-brunch-package/" class="btn btn-dark btn-small">Send This Gift</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/5-Cardiologists-Dream-1-scaled-1-400x400.jpeg" alt="Cardiologist's Dream" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>Cardiologist's Dream</h3>
+                        <p class="package-card__price">$239.99</p>
+                        <p class="package-card__serves">Serves 4-6 people</p>
+                        <p class="package-card__desc">Deli brunch with pastrami, corned beef, plus fish.</p>
+                        <a href="https://shelskys.com/product/cardiologists-dream-brooklyn-deli-brunch-for-4/" class="btn btn-dark btn-small">Send This Gift</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/3-from-Brooklyn-with-sweet-love-1-scaled-1-400x400.jpeg" alt="Brooklyn is Sweet" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>Brooklyn is SWEET</h3>
+                        <p class="package-card__price">$229.99</p>
+                        <p class="package-card__serves">Serves 4-6 people</p>
+                        <p class="package-card__desc">Sweet-focused with babka, rugelach, pastries.</p>
+                        <a href="https://shelskys.com/product/brooklyn-is-sweet-package/" class="btn btn-dark btn-small">Send This Gift</a>
+                    </div>
+                </div>
+
+                <div class="package-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--color-bg); text-align: center;">
+                    <div style="padding: 40px;">
+                        <h3 style="margin-bottom: 16px;">See All Packages</h3>
+                        <p style="color: var(--color-text-muted); margin-bottom: 20px;">Browse our complete collection of gift baskets and brunch packages.</p>
+                        <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn">View All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate -->
+    <section class="corporate">
+        <div class="container">
+            <h2>Corporate & Bulk Gifting</h2>
+            <p>Need to send to multiple recipients or order for a large team? We offer bulk pricing and can coordinate multiple shipments.</p>
+            <div class="corporate__cta">
+                <a href="mailto:shelskys@shelskys.com?subject=Corporate%20Gift%20Inquiry" class="btn">Email for Corporate Orders</a>
+                <a href="tel:7188558817" class="btn btn-outline">Call: 718.855.8817</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Send -->
+    <section class="why-send">
+        <div class="container">
+            <h2>Why Send Shelsky's?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-item__icon">⭐</div>
+                    <h3>Brooklyn's Finest</h3>
+                    <p>The first new appetizing shop in Brooklyn in 60 years. Chef Peter Shelsky trained at Eleven Madison Park and brings fine dining standards to traditional Jewish food.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-item__icon">📦</div>
+                    <h3>Arrives Perfect</h3>
+                    <p>Every gift is carefully packed in temperature-controlled packaging. It arrives fresh and beautiful, ready to enjoy. Free shipping on all gift packages.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-item__icon">💌</div>
+                    <h3>Personal Touch</h3>
+                    <p>Add a custom gift message at checkout. We'll include it with the delivery so your recipient knows exactly who to thank.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Recipients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"My mom cried when she opened this. Said it reminded her of her grandmother's kitchen in Brooklyn. Best gift I've ever sent her."</blockquote>
+                    <cite>— Sarah M., Chicago</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"Shelsky's has sort of become our synagogue. This tiny shop holds so many of the traditions, foods, rituals, and memories that I'm trying so hard to pass down to my children."</blockquote>
+                    <cite>— Customer Review</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"I send Shelsky's to clients instead of the usual corporate gift baskets. They actually get eaten and people remember them. Worth every penny."</blockquote>
+                    <cite>— David R., Manhattan</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Services -->
+    <section class="gift-services">
+        <div class="container">
+            <h2>Gift Services Included</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-item__icon">💌</div>
+                    <h4>Gift Messages</h4>
+                    <p>Personalized card with every order</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-item__icon">🎀</div>
+                    <h4>Gift-Ready Packaging</h4>
+                    <p>Arrives beautiful, no wrapping needed</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-item__icon">📅</div>
+                    <h4>Schedule Delivery</h4>
+                    <p>Choose the perfect arrival date</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-item__icon">🚚</div>
+                    <h4>Free Shipping</h4>
+                    <p>On all gift packages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Can I include a gift message?</h3>
+                    <p>Yes! Every order includes a complimentary personalized gift card. Add your message at checkout.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I schedule delivery for a specific date?</h3>
+                    <p>Yes, you can select your preferred delivery date at checkout. We recommend ordering at least 3-5 days in advance.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if my recipient isn't home?</h3>
+                    <p>Packages are shipped with ice packs and insulated packaging. They'll stay fresh for several hours even if left at the door.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you ship internationally?</h3>
+                    <p>Currently we ship to all 50 US states. International shipping is not available for perishable items.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-icon">✓</div>
+                <div>
+                    <h3 class="guarantee-title">Not Happy? We'll Make It Right.</h3>
+                    <p class="guarantee-text">If you're unsatisfied with your order for any reason, contact us at shelskys@shelskys.com. We'll work with you to make it right with a refund or store credit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Send the Perfect Gift?</h2>
+            <p>Free shipping on all gift packages. Gift message included.</p>
+            <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-large">Shop Gift Baskets Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shelsky's of Brooklyn | 141 Court St, Brooklyn NY | <a href="tel:7188558817">718.855.8817</a></p>
+            <p style="margin-top: 12px;">
+                <a href="https://shelskys.com">Main Site</a> |
+                <a href="https://shelskys.com/#history">Our Story</a> |
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/">Shop Gifts</a>
+            </p>
+            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2026 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
+        </div>
+    </footer>
+
+    <script>
+        let depths = [25, 50, 75, 100];
+        let tracked = [];
+        window.addEventListener('scroll', function() {
+            const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            depths.forEach(d => {
+                if (pct >= d && !tracked.includes(d)) {
+                    tracked.push(d);
+                    if (typeof gtag === 'function') gtag('event', 'scroll_depth', { depth: d });
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (typeof gtag === 'function') gtag('event', 'cta_click', { label: this.textContent.trim() });
+            });
+        });
+    </script>
+</body>
+</html>

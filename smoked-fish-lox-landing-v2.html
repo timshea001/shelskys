@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Smoked Fish & Lox | NYC Quality Shipped Nationwide | Shelsky's Brooklyn</title>
+    <meta name="description" content="House-cured lox, gravlax, smoked salmon & sturgeon from Brooklyn's finest appetizing shop. The smoked fish NYC is famous for, shipped fresh to your door.">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Shelsky's Smoked Fish Collection",
+      "brand": { "@type": "Brand", "name": "Shelsky's of Brooklyn" },
+      "description": "House-cured lox, gravlax, and premium smoked fish shipped nationwide",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "500" },
+      "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "31.49", "highPrice": "62.38" }
+    }
+    </script>
+
+    <style>
+        :root {
+            --color-primary: #e74b2a;
+            --color-primary-dark: #cf2e2e;
+            --color-dark: #32373c;
+            --color-text: #1a1a1a;
+            --color-text-muted: #666;
+            --color-bg: #fff;
+            --color-bg-alt: #f9f9f9;
+            --color-border: #e0e0e0;
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+        }
+
+        @font-face {
+            font-family: 'MochaMattari';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/MochaMattariW01-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Arvo';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/Arvo-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-bg);
+        }
+
+        h1, h2, h3 {
+            font-family: 'MochaMattari', Georgia, serif;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { height: 60px; }
+
+        .btn {
+            display: inline-block;
+            background: var(--color-primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-family: 'Arvo', Georgia, serif;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background: var(--color-primary-dark); }
+        .btn-dark { background: var(--color-dark); }
+        .btn-dark:hover { background: #1e2327; }
+        .btn-small { padding: 10px 20px; font-size: 14px; }
+        .btn-large { padding: 18px 36px; font-size: 18px; }
+        .btn-outline { background: transparent; border: 2px solid var(--color-text); color: var(--color-text); }
+        .btn-outline:hover { background: var(--color-text); color: white; }
+
+        /* H5: Split Hero (50/50) */
+        .hero-split {
+            min-height: 80vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-split__media {
+            position: relative;
+        }
+
+        .hero-split__media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-split__content {
+            display: flex;
+            align-items: center;
+            padding: var(--space-xl);
+            background: var(--color-bg);
+        }
+
+        .hero-split__inner {
+            max-width: 500px;
+        }
+
+        .hero-split__eyebrow {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero-split__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-split__subtitle {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .hero-split__benefits {
+            list-style: none;
+            padding: 0;
+            margin-bottom: var(--space-lg);
+        }
+
+        .hero-split__benefits li {
+            padding: var(--space-sm) 0;
+            padding-left: var(--space-lg);
+            position: relative;
+            font-size: 15px;
+        }
+
+        .hero-split__benefits li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #059669;
+            font-weight: bold;
+        }
+
+        /* Featured Quote */
+        .featured-quote {
+            padding: 60px 0;
+            background: var(--color-bg-alt);
+            text-align: center;
+        }
+
+        .featured-quote__text {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            line-height: 1.5;
+            color: var(--color-text);
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .featured-quote__author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-md);
+        }
+
+        .featured-quote__name {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        /* Fish Grid - Elegant Cards */
+        .fish-products {
+            padding: 80px 0;
+            background: var(--color-bg);
+        }
+
+        .fish-products h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .fish-products .intro {
+            text-align: center;
+            font-size: 17px;
+            color: var(--color-text-muted);
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .fish-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .fish-card {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .fish-card:hover {
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+
+        .fish-card__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .fish-card__info {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fish-card__name {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .fish-card__price {
+            color: var(--color-primary);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .fish-card__desc {
+            font-size: 13px;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        /* Sourcing Section */
+        .sourcing {
+            padding: 60px 0;
+            background: var(--color-dark);
+            color: white;
+        }
+
+        .sourcing__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .sourcing__content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .sourcing__content p {
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .sourcing__image {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Serving Guide */
+        .serving-guide {
+            padding: 60px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .serving-guide h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .serving-guide .section-intro {
+            text-align: center;
+            color: var(--color-text-muted);
+            margin-bottom: 40px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .guide-item {
+            text-align: center;
+            padding: 28px 16px;
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+        }
+
+        .guide-item__count {
+            display: block;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--color-primary);
+        }
+
+        .guide-item__rec {
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        /* Why Section */
+        .why-section {
+            padding: 60px 0;
+            background: var(--color-bg);
+        }
+
+        .why-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .why-item__icon { font-size: 48px; margin-bottom: 16px; }
+        .why-item h3 { font-size: 20px; margin-bottom: 12px; }
+        .why-item p { font-size: 14px; color: var(--color-text-muted); line-height: 1.7; }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--color-bg);
+            padding: 28px;
+            border-radius: 12px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .testimonial-card__stars { color: #f59e0b; font-size: 18px; margin-bottom: 12px; }
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .testimonial-card cite {
+            font-style: normal;
+            font-size: 13px;
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 60px 0;
+            background: var(--color-bg);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item summary {
+            padding: var(--space-md) var(--space-lg);
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .faq-item summary::marker { display: none; }
+
+        .faq-item .answer {
+            padding: 0 var(--space-lg) var(--space-md);
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        /* Guarantee */
+        .guarantee-section {
+            padding: 50px 0;
+            background: #f0fdf4;
+        }
+
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-lg);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon { font-size: 3rem; }
+        .guarantee-title { font-size: 1.25rem; font-weight: 700; color: #166534; margin-bottom: var(--space-xs); }
+        .guarantee-text { color: #15803d; line-height: 1.5; }
+
+        /* Final CTA */
+        .final-cta {
+            padding: var(--space-xl) 0;
+            background: var(--color-primary);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta__box { max-width: 600px; margin: 0 auto; }
+        .final-cta h2 { font-size: 2rem; margin-bottom: var(--space-md); }
+        .final-cta p { font-size: 1.125rem; opacity: 0.9; margin-bottom: var(--space-lg); }
+        .final-cta .btn { background: white; color: var(--color-primary); }
+        .final-cta .btn:hover { background: var(--color-bg-alt); }
+
+        /* Footer */
+        footer {
+            background: #1a1d20;
+            color: #fff;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a { color: #fff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-split { grid-template-columns: 1fr; }
+            .hero-split__media { height: 300px; }
+            .fish-grid { grid-template-columns: 1fr; }
+            .fish-card { grid-template-columns: 140px 1fr; }
+            .sourcing__grid { grid-template-columns: 1fr; }
+            .why-grid, .testimonial-grid { grid-template-columns: 1fr; }
+            .guide-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .hero-split__title { font-size: 2rem; }
+            .header-inner { flex-direction: column; gap: 12px; }
+            .logo { height: 50px; }
+            .fish-card { grid-template-columns: 1fr; }
+            .fish-card__img { height: 180px; }
+            .guide-grid { grid-template-columns: 1fr; }
+            .guarantee-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="https://shelskys.com">
+                    <img src="logo-text.webp" alt="Shelsky's of Brooklyn" class="logo">
+                </a>
+                <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-small">Shop Smoked Fish</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- H5: Split Hero -->
+    <section class="hero-split">
+        <div class="hero-split__media">
+            <img src="Shelsky's Best/SalmonTrioPlatterSquare.jpeg" alt="Shelsky's Smoked Fish Platter">
+        </div>
+        <div class="hero-split__content">
+            <div class="hero-split__inner">
+                <p class="hero-split__eyebrow">Brooklyn's Finest Appetizing</p>
+                <h1 class="hero-split__title">House-Cured Smoked Fish, Shipped Fresh</h1>
+                <p class="hero-split__subtitle">Gravlax, nova, sturgeon, and more from the first new appetizing shop in Brooklyn in 60 years. Chef Peter Shelsky brings fine dining standards to traditional Jewish food.</p>
+                <ul class="hero-split__benefits">
+                    <li>House-cured daily with traditional techniques</li>
+                    <li>Sourced from the same suppliers as Russ & Daughters</li>
+                    <li>Ships overnight, arrives fresh</li>
+                    <li>Free shipping on orders over $300</li>
+                </ul>
+                <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-large">Shop Smoked Fish</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Quote -->
+    <section class="featured-quote">
+        <div class="container">
+            <p class="featured-quote__text">"Shelsky's brings the classic Jewish appetizing experience to a new generation. Their house-cured gravlax rivals anything on the Lower East Side."</p>
+            <div class="featured-quote__author">
+                <span class="featured-quote__name">— Bon Appetit Magazine</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fish Products -->
+    <section class="fish-products">
+        <div class="container">
+            <h2>Our Smoked Fish Collection</h2>
+            <p class="intro">Every piece is hand-selected and prepared using traditional techniques. This is what real appetizing tastes like.</p>
+
+            <div class="fish-grid">
+                <div class="fish-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Gravlax_3-0230_SQ-400x400.jpg" alt="House-Cured Gravlax" class="fish-card__img">
+                    <div class="fish-card__info">
+                        <h3 class="fish-card__name">House-Cured Gravlax</h3>
+                        <p class="fish-card__price">$36.99 / half lb</p>
+                        <p class="fish-card__desc">Wild salmon cured in-house with dill, juniper, and aquavit. Silky texture, subtle sweetness.</p>
+                        <a href="https://shelskys.com/product/house-cured-gravlax/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Smoked-Irish-Salmon_3-0221_SQ-400x400.jpg" alt="Eastern Gaspé Nova" class="fish-card__img">
+                    <div class="fish-card__info">
+                        <h3 class="fish-card__name">Eastern Gaspé Nova</h3>
+                        <p class="fish-card__price">$35.97 / half lb</p>
+                        <p class="fish-card__desc">The classic. Cold-smoked Atlantic salmon with buttery, silky texture.</p>
+                        <a href="https://shelskys.com/product/eastern-gaspe-nova-smoked-salmon/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Pastrami-Smoked-Salmon_3-0228_SQ-400x400.jpg" alt="Pastrami Smoked Salmon" class="fish-card__img">
+                    <div class="fish-card__info">
+                        <h3 class="fish-card__name">Pastrami Smoked Salmon</h3>
+                        <p class="fish-card__price">$38.49 / half lb</p>
+                        <p class="fish-card__desc">Our signature cure—salmon with pastrami spices including Sichuan peppercorns.</p>
+                        <a href="https://shelskys.com/product/pastrami-smoked-salmon/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Tsars-Cut-Balik-Salmon-scaled-e1609091751991-400x400.jpg" alt="Tsar's Cut Balik" class="fish-card__img">
+                    <div class="fish-card__info">
+                        <h3 class="fish-card__name">Tsar's Cut Balik</h3>
+                        <p class="fish-card__price">$62.38 / half lb</p>
+                        <p class="fish-card__desc">The belly cut. Supremely fatty, melt-in-your-mouth. Once reserved for royalty.</p>
+                        <a href="https://shelskys.com/product/tsars-cut-balik-salmon/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Belly-Lox_3-0207_SQ-400x400.jpg" alt="Salty Belly Lox" class="fish-card__img">
+                    <div class="fish-card__info">
+                        <h3 class="fish-card__name">Salty Belly Lox</h3>
+                        <p class="fish-card__price">$35.99 / half lb</p>
+                        <p class="fish-card__desc">Traditional salt-cured lox. Rich, intense flavor. The original.</p>
+                        <a href="https://shelskys.com/product/salty-belly-lox/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Wild-King-Salmon_3-0216_SQ-400x400.jpg" alt="Ōra King Salmon" class="fish-card__img">
+                    <div class="fish-card__info">
+                        <h3 class="fish-card__name">Ōra King Salmon</h3>
+                        <p class="fish-card__price">$38.37 / half lb</p>
+                        <p class="fish-card__desc">Organic and sustainable. Premium New Zealand salmon with exceptional marbling.</p>
+                        <a href="https://shelskys.com/product/ora-king-salmon-organic-and-sustainable/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://shelskys.com/product-category/smoked-fish/" class="btn">View All Smoked Fish</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sourcing -->
+    <section class="sourcing">
+        <div class="container">
+            <div class="sourcing__grid">
+                <div class="sourcing__content">
+                    <h2>Where Our Fish Comes From</h2>
+                    <p>We source from the best: Acme Smoked Fish in Brooklyn (the same supplier trusted by Russ & Daughters, Barney Greengrass, and Zabar's), organic Irish salmon farms, and sustainable New Zealand operations.</p>
+                    <p>Every piece is selected by hand. We don't cut corners—you shouldn't either.</p>
+                </div>
+                <img src="Shelsky's Best/GravlaxSquare.jpeg" alt="Premium smoked fish" class="sourcing__image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Serving Guide -->
+    <section class="serving-guide">
+        <div class="container">
+            <h2>How Much Do I Need?</h2>
+            <p class="section-intro">Each half-pound feeds approximately 2-3 people as part of a bagel brunch.</p>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <span class="guide-item__count">2-4 guests</span>
+                    <span class="guide-item__rec">1 lb (2 half-pounds)</span>
+                </div>
+                <div class="guide-item">
+                    <span class="guide-item__count">6-8 guests</span>
+                    <span class="guide-item__rec">2 lbs (4 half-pounds)</span>
+                </div>
+                <div class="guide-item">
+                    <span class="guide-item__count">10-12 guests</span>
+                    <span class="guide-item__rec">3 lbs or a package</span>
+                </div>
+                <div class="guide-item">
+                    <span class="guide-item__count">15+ guests</span>
+                    <span class="guide-item__rec">Big Macher Package</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="container">
+            <h2>Why Shelsky's Is Different</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-item__icon">⭐</div>
+                    <h3>Fine Dining Pedigree</h3>
+                    <p>Chef Peter Shelsky trained at Eleven Madison Park (3 Michelin stars). He brings the same obsessive attention to curing fish that he did to haute cuisine.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-item__icon">🏠</div>
+                    <h3>Cured In-House Daily</h3>
+                    <p>We cure our gravlax in-house every day. No mass-produced imports. Every piece is made with care, the old-school way.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-item__icon">📦</div>
+                    <h3>Ships Fresh Overnight</h3>
+                    <p>Vacuum-sealed and packed cold. Arrives at your door as fresh as if you walked into our shop. Free shipping over $300.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"The gravlax is unreal. I've had lox all over NYC and this is hands down the best. Silky, perfectly seasoned, and the freshness when it arrives is incredible."</blockquote>
+                    <cite>— Rebecca T., Manhattan</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"Please do yourself a favor and order the Fancy Pants. It's the most incredible salmon and sturgeon I've ever had, and dare I say the best smoked fish bagel I've ever had."</blockquote>
+                    <cite>— Mary Madison Durst, Google Review</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"I moved from Brooklyn to Texas and thought I'd never have real lox again. Shelsky's ships it perfectly. It's like being back home."</blockquote>
+                    <cite>— Daniel K., Austin TX</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>How long does smoked fish last?</summary>
+                    <div class="answer">
+                        <p>Vacuum-sealed and refrigerated, our smoked fish stays fresh for 2-3 weeks unopened. Once opened, consume within 5-7 days. You can also freeze for up to 2 months.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>What's the difference between Nova and Lox?</summary>
+                    <div class="answer">
+                        <p>Nova is cold-smoked and has a milder, silkier texture. Traditional lox is salt-cured (not smoked) with a more intense, briny flavor. We offer both!</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>How is it shipped?</summary>
+                    <div class="answer">
+                        <p>Vacuum-sealed and packed with ice packs in insulated containers. Ships overnight to arrive fresh and cold.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>What makes Shelsky's fish different?</summary>
+                    <div class="answer">
+                        <p>Chef Peter Shelsky trained at Eleven Madison Park (3 Michelin stars). We cure our gravlax in-house daily. We source from Acme Smoked Fish—the same supplier used by Russ & Daughters, Barney Greengrass, and Zabar's.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-icon">✓</div>
+                <div>
+                    <h3 class="guarantee-title">Not Happy? We'll Make It Right.</h3>
+                    <p class="guarantee-text">If you're unsatisfied with your order for any reason, contact us at shelskys@shelskys.com. We'll work with you to make it right with a refund or store credit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta__box">
+                <h2>Ready for Real NYC Smoked Fish?</h2>
+                <p>House-cured and shipped fresh. Free shipping on orders over $300.</p>
+                <a href="https://shelskys.com/product-category/smoked-fish/" class="btn">Shop Smoked Fish Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shelsky's of Brooklyn | 141 Court St, Brooklyn NY | <a href="tel:7188558817">718.855.8817</a></p>
+            <p style="margin-top: 12px;">
+                <a href="https://shelskys.com">Main Site</a> |
+                <a href="https://shelskys.com/#history">Our Story</a> |
+                <a href="https://shelskys.com/product-category/smoked-fish/">Shop Fish</a>
+            </p>
+            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2026 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
+        </div>
+    </footer>
+
+    <script>
+        let depths = [25, 50, 75, 100];
+        let tracked = [];
+        window.addEventListener('scroll', function() {
+            const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            depths.forEach(d => {
+                if (pct >= d && !tracked.includes(d)) {
+                    tracked.push(d);
+                    if (typeof gtag === 'function') gtag('event', 'scroll_depth', { depth: d });
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (typeof gtag === 'function') gtag('event', 'cta_click', { label: this.textContent.trim() });
+            });
+        });
+    </script>
+</body>
+</html>

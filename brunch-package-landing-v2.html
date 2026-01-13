@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooklyn Brunch Delivered | Bagels, Lox & Spreads | Shelsky's</title>
+    <meta name="description" content="Complete brunch packages delivered. Authentic bagels, lox, cream cheese, and all the fixings from Brooklyn's finest appetizing shop. Perfect for hosting.">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Shelsky's Brunch Packages",
+      "brand": { "@type": "Brand", "name": "Shelsky's of Brooklyn" },
+      "description": "Complete brunch packages with bagels, lox, and spreads delivered nationwide",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "500" },
+      "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "209.99", "highPrice": "329.99" }
+    }
+    </script>
+
+    <style>
+        :root {
+            --color-primary: #e74b2a;
+            --color-primary-dark: #cf2e2e;
+            --color-dark: #32373c;
+            --color-text: #1a1a1a;
+            --color-text-muted: #666;
+            --color-bg: #fff;
+            --color-bg-alt: #f9f9f9;
+            --color-bg-warm: #fef7f0;
+            --color-border: #e0e0e0;
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+        }
+
+        @font-face {
+            font-family: 'MochaMattari';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/MochaMattariW01-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Arvo';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/Arvo-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-bg);
+        }
+
+        h1, h2, h3 {
+            font-family: 'MochaMattari', Georgia, serif;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { height: 60px; }
+
+        .btn {
+            display: inline-block;
+            background: var(--color-primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-family: 'Arvo', Georgia, serif;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 4px;
+        }
+
+        .btn:hover { background: var(--color-primary-dark); }
+        .btn-dark { background: var(--color-dark); }
+        .btn-dark:hover { background: #1e2327; }
+        .btn-small { padding: 10px 20px; font-size: 14px; }
+        .btn-large { padding: 18px 36px; font-size: 18px; }
+
+        /* H1: Product Hero with Image Right */
+        .hero {
+            padding: var(--space-xl) 0;
+            background: var(--color-bg);
+        }
+
+        .hero__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .hero__eyebrow {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero__title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-md);
+            color: var(--color-text);
+        }
+
+        .hero__subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .hero__proof {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .hero__stars { color: #f59e0b; font-size: 1.25rem; }
+
+        .hero__cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .hero__reassurance {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+        }
+
+        .hero__image {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            padding: var(--space-lg) 0;
+            background: var(--color-bg-alt);
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 0 var(--space-lg);
+        }
+
+        .stat__number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            line-height: 1;
+        }
+
+        .stat__label {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            margin-top: var(--space-xs);
+        }
+
+        /* Use Cases */
+        .use-cases {
+            padding: 70px 0;
+            background: var(--color-bg);
+        }
+
+        .use-cases h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .use-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .use-card {
+            text-align: center;
+            padding: 36px 28px;
+            background: var(--color-bg-alt);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .use-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        }
+
+        .use-card__icon { font-size: 52px; margin-bottom: 18px; }
+        .use-card h3 { font-size: 22px; margin-bottom: 10px; }
+        .use-card p { font-size: 15px; color: var(--color-text-muted); line-height: 1.6; }
+
+        /* Packages - Visual Cards */
+        .packages {
+            padding: 70px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .packages h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .packages__intro {
+            text-align: center;
+            font-size: 17px;
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto 50px;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .package-card {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .package-card:hover {
+            box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+
+        .package-card__badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--color-primary);
+            color: white;
+            padding: 6px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            z-index: 1;
+        }
+
+        .package-card__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .package-card__info {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .package-card h3 { font-size: 22px; margin-bottom: 8px; }
+        .package-card__price { color: var(--color-primary); font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+        .package-card__serves { font-size: 14px; color: var(--color-text-muted); margin-bottom: 14px; font-weight: 600; }
+        .package-card__desc { font-size: 14px; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 18px; }
+
+        /* What's Included */
+        .whats-included {
+            padding: 70px 0;
+            background: var(--color-bg);
+        }
+
+        .whats-included h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .included-item {
+            text-align: center;
+            padding: 28px;
+            background: var(--color-bg-alt);
+            border-radius: 12px;
+        }
+
+        .included-item__icon { font-size: 56px; margin-bottom: 14px; }
+        .included-item h4 { font-size: 18px; margin-bottom: 8px; }
+        .included-item p { font-size: 13px; color: var(--color-text-muted); }
+
+        /* How It Works - Horizontal */
+        .how-it-works {
+            padding: 70px 0;
+            background: var(--color-dark);
+            color: white;
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 28px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+
+        .step__num {
+            width: 56px;
+            height: 56px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0 auto 18px;
+        }
+
+        .step h4 { font-size: 18px; margin-bottom: 10px; }
+        .step p { font-size: 14px; opacity: 0.85; }
+
+        /* Hosting Tips */
+        .hosting-tips {
+            padding: 70px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .hosting-tips h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tip {
+            padding: 32px;
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+        }
+
+        .tip h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .tip p {
+            font-size: 15px;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 70px 0;
+            background: var(--color-bg);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--color-bg-alt);
+            padding: 32px;
+            border-radius: 12px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .testimonial-card__stars { color: #f59e0b; font-size: 18px; margin-bottom: 14px; }
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .testimonial-card cite {
+            font-style: normal;
+            font-size: 13px;
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 60px 0;
+            background: var(--color-bg-alt);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item summary {
+            padding: var(--space-md) var(--space-lg);
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .faq-item summary::marker { display: none; }
+
+        .faq-item .answer {
+            padding: 0 var(--space-lg) var(--space-md);
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        /* Guarantee */
+        .guarantee-section {
+            padding: 50px 0;
+            background: #f0fdf4;
+        }
+
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-lg);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon { font-size: 3rem; }
+        .guarantee-title { font-size: 1.25rem; font-weight: 700; color: #166534; margin-bottom: var(--space-xs); }
+        .guarantee-text { color: #15803d; line-height: 1.5; }
+
+        /* Final CTA */
+        .final-cta {
+            padding: var(--space-xl) 0;
+            background: var(--color-primary);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta__box { max-width: 600px; margin: 0 auto; }
+        .final-cta h2 { font-size: 2.5rem; margin-bottom: var(--space-md); }
+        .final-cta p { font-size: 1.125rem; opacity: 0.9; margin-bottom: var(--space-lg); }
+        .final-cta .btn { background: white; color: var(--color-primary); }
+        .final-cta .btn:hover { background: var(--color-bg-alt); }
+
+        /* Footer */
+        footer {
+            background: #1a1d20;
+            color: #fff;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a { color: #fff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero__grid { grid-template-columns: 1fr; }
+            .hero__media { order: -1; }
+            .use-grid { grid-template-columns: 1fr; }
+            .package-grid { grid-template-columns: 1fr; }
+            .package-card { grid-template-columns: 1fr; }
+            .package-card__img { height: 200px; }
+            .included-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .tips-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .hero__title { font-size: 2rem; }
+            .header-inner { flex-direction: column; gap: 12px; }
+            .logo { height: 50px; }
+            .included-grid, .steps-grid { grid-template-columns: 1fr; }
+            .stats-grid { gap: var(--space-lg); }
+            .stat { flex: 0 0 45%; }
+            .guarantee-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="https://shelskys.com">
+                    <img src="logo-text.webp" alt="Shelsky's of Brooklyn" class="logo">
+                </a>
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-small">Order Brunch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- H1: Product Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__grid">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">Effortless Entertaining</p>
+                    <h1 class="hero__title">Brooklyn Brunch, Delivered Ready to Serve</h1>
+                    <p class="hero__subtitle">Complete brunch packages with everything you need. Just unwrap, arrange, and take all the credit. Real bagels, real lox, real Brooklyn.</p>
+                    <div class="hero__proof">
+                        <span class="hero__stars">★★★★★</span>
+                        <span>500+ Reviews</span>
+                    </div>
+                    <div class="hero__cta-group">
+                        <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-large">Order Brunch Packages</a>
+                        <p class="hero__reassurance">Free shipping on all packages. Arrives fresh.</p>
+                    </div>
+                </div>
+                <div class="hero__media">
+                    <img src="Shelsky's Best/GrandPlateauSquare.jpeg" alt="Brooklyn Brunch Spread" class="hero__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <span class="stat__number">6</span>
+                    <span class="stat__label">Package Options</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">4-20</span>
+                    <span class="stat__label">Guests Fed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">10min</span>
+                    <span class="stat__label">Setup Time</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">50</span>
+                    <span class="stat__label">States Shipped</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases">
+        <div class="container">
+            <h2>Perfect For...</h2>
+            <div class="use-grid">
+                <div class="use-card">
+                    <div class="use-card__icon">🌅</div>
+                    <h3>Sunday Brunch</h3>
+                    <p>Impress your guests with authentic Brooklyn appetizing. No cooking, no stress—just great food and great company.</p>
+                </div>
+                <div class="use-card">
+                    <div class="use-card__icon">🏢</div>
+                    <h3>Office Meetings</h3>
+                    <p>Upgrade from the usual bagel platter. Your team (and clients) will notice the difference. Bulk pricing available.</p>
+                </div>
+                <div class="use-card">
+                    <div class="use-card__icon">🎉</div>
+                    <h3>Celebrations</h3>
+                    <p>Baby showers, birthday brunches, holiday gatherings. Feed a crowd with food that actually impresses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="packages">
+        <div class="container">
+            <h2>Choose Your Brunch Package</h2>
+            <p class="packages__intro">Everything arrives fresh and ready to serve. Just set it out and enjoy.</p>
+
+            <div class="package-grid">
+                <div class="package-card">
+                    <span class="package-card__badge">Most Popular</span>
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/2-Wake-Up-In-Brooklyn-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Wake Up in Brooklyn" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>Wake Up in Brooklyn</h3>
+                        <p class="package-card__price">$229.99</p>
+                        <p class="package-card__serves">Serves 6-8 people</p>
+                        <p class="package-card__desc">Dozen bagels, smoked fish, cream cheese, capers, onions, tomatoes. The complete brunch.</p>
+                        <a href="https://shelskys.com/product/wake-up-in-brooklyn-package/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/6-look-like-a-real-macher-big-shot-1-scaled-1-400x400.jpeg" alt="Big Macher" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>Big Macher Brooklyn Brunch</h3>
+                        <p class="package-card__price">$329.99</p>
+                        <p class="package-card__serves">Serves 10-12 people</p>
+                        <p class="package-card__desc">The works: bagels, multiple fish, salads, spreads, sweets. The ultimate spread.</p>
+                        <a href="https://shelskys.com/product/big-macher-brooklyn-brunch-package/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/1-Shelskys-Schmear-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Brooklyn Schmear" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>A Brooklyn Schmear</h3>
+                        <p class="package-card__price">$209.99</p>
+                        <p class="package-card__serves">Serves 4-6 people</p>
+                        <p class="package-card__desc">Dozen bagels, 3 cream cheeses, and all the fixings. Perfect starter package.</p>
+                        <a href="https://shelskys.com/product/a-brooklyn-schmear-package/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/4-How-you-doin-Gift-Basket-2-scaled-1-400x400.jpeg" alt="How YOU Doin" class="package-card__img">
+                    <div class="package-card__info">
+                        <h3>"How YOU Doin'?"</h3>
+                        <p class="package-card__price">$269.99</p>
+                        <p class="package-card__serves">Serves 8-10 people</p>
+                        <p class="package-card__desc">Expanded spread with premium fish selections.</p>
+                        <a href="https://shelskys.com/product/how-you-doin-package/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn">See All Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="whats-included">
+        <div class="container">
+            <h2>What's in a Shelsky's Brunch?</h2>
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-item__icon">🥯</div>
+                    <h4>Fresh Bagels</h4>
+                    <p>Kettle-boiled, 3-day fermented. The real deal.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-item__icon">🐟</div>
+                    <h4>Smoked Fish</h4>
+                    <p>House-cured lox, gravlax, and premium salmon.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-item__icon">🧀</div>
+                    <h4>Cream Cheese</h4>
+                    <p>Plain, scallion, and seasonal varieties.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-item__icon">🥗</div>
+                    <h4>All The Fixings</h4>
+                    <p>Capers, onions, tomatoes, whitefish salad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step__num">1</div>
+                    <h4>Choose Your Package</h4>
+                    <p>Pick the size that fits your gathering</p>
+                </div>
+                <div class="step">
+                    <div class="step__num">2</div>
+                    <h4>Select Delivery Date</h4>
+                    <p>We ship to arrive fresh when you need it</p>
+                </div>
+                <div class="step">
+                    <div class="step__num">3</div>
+                    <h4>Unwrap & Arrange</h4>
+                    <p>Everything arrives ready to serve</p>
+                </div>
+                <div class="step">
+                    <div class="step__num">4</div>
+                    <h4>Take All the Credit</h4>
+                    <p>Enjoy your amazing brunch!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hosting Tips -->
+    <section class="hosting-tips">
+        <div class="container">
+            <h2>Pro Hosting Tips</h2>
+            <div class="tips-grid">
+                <div class="tip">
+                    <h3>Set Up in 10 Minutes</h3>
+                    <p>Everything arrives ready to serve. Just unwrap, arrange on platters, and you're done. We recommend a few serving platters and a cutting board.</p>
+                </div>
+                <div class="tip">
+                    <h3>Serve Fish at Cool Temp</h3>
+                    <p>Take fish out of the fridge 15-20 minutes before serving. It tastes best slightly cool, not cold.</p>
+                </div>
+                <div class="tip">
+                    <h3>Toast the Bagels</h3>
+                    <p>A quick toast brings out the best texture—crispy outside, chewy inside. Toast just before serving.</p>
+                </div>
+                <div class="tip">
+                    <h3>Build-Your-Own Bar</h3>
+                    <p>Let guests assemble their own bagels. Set out fish, cream cheese, and fixings buffet-style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Hosts Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"I've hosted 6 brunches with Shelsky's packages. Every single time, guests ask where I got the bagels. It's my secret weapon for effortless entertaining."</blockquote>
+                    <cite>— Jennifer L., Connecticut</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"Thank you so much for everything you and your team did for Jack's bar mitzvah this past weekend. Everyone complimented how delicious it was."</blockquote>
+                    <cite>— Customer Review</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <blockquote>"We order Shelsky's for our monthly team breakfast. It's the only meeting people actually show up early for. Worth every penny."</blockquote>
+                    <cite>— Mark T., Manhattan</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>How far in advance should I order?</summary>
+                    <div class="answer">
+                        <p>We recommend ordering 3-5 days before your brunch. For large orders or holiday weekends, order at least a week ahead.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need to prepare anything?</summary>
+                    <div class="answer">
+                        <p>Nope! Everything arrives ready to serve. Just unwrap and arrange. We recommend having a cutting board and a few platters handy.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I customize the packages?</summary>
+                    <div class="answer">
+                        <p>Our packages are pre-set for the best experience, but you can always order a la carte items to add on. Contact us for special dietary requests.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>What about dietary restrictions?</summary>
+                    <div class="answer">
+                        <p>Our fish is gluten-free. We carry gluten-free bagels from The Great Knead. All products are kosher-style (not certified kosher). Contact us for specific allergen questions.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-icon">✓</div>
+                <div>
+                    <h3 class="guarantee-title">Not Happy? We'll Make It Right.</h3>
+                    <p class="guarantee-text">If you're unsatisfied with your order for any reason, contact us at shelskys@shelskys.com. We'll work with you to make it right with a refund or store credit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta__box">
+                <h2>Ready to Host an Amazing Brunch?</h2>
+                <p>Free shipping on all packages. Arrives fresh and ready to serve.</p>
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-large">Order Brunch Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shelsky's of Brooklyn | 141 Court St, Brooklyn NY | <a href="tel:7188558817">718.855.8817</a></p>
+            <p style="margin-top: 12px;">
+                <a href="https://shelskys.com">Main Site</a> |
+                <a href="https://shelskys.com/#history">Our Story</a> |
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/">Shop Packages</a>
+            </p>
+            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2026 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
+        </div>
+    </footer>
+
+    <script>
+        let depths = [25, 50, 75, 100];
+        let tracked = [];
+        window.addEventListener('scroll', function() {
+            const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            depths.forEach(d => {
+                if (pct >= d && !tracked.includes(d)) {
+                    tracked.push(d);
+                    if (typeof gtag === 'function') gtag('event', 'scroll_depth', { depth: d });
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (typeof gtag === 'function') gtag('event', 'cta_click', { label: this.textContent.trim() });
+            });
+        });
+    </script>
+</body>
+</html>
