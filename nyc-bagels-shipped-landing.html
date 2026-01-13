@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC Bagels Shipped Nationwide | Authentic Brooklyn Bagels Delivered Fresh</title>
-    <meta name="description" content="Real New York bagels shipped fresh to your door. Hand-rolled, kettle-boiled, 3-day fermented. Free shipping over $300. The bagels NYers miss most, delivered anywhere.">
+    <meta name="description" content="Real New York bagels shipped fresh to your door. Kettle-boiled, 3-day fermented with sourdough starter. Free shipping over $300. The bagels NYers miss most, delivered anywhere.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="NYC Bagels Shipped Nationwide | Shelsky's of Brooklyn">
-    <meta property="og:description" content="Real New York bagels shipped fresh. Hand-rolled, kettle-boiled perfection from Brooklyn's finest appetizing shop.">
+    <meta property="og:description" content="Real New York bagels shipped fresh. Kettle-boiled, 3-day fermented perfection from Brooklyn's finest appetizing shop.">
     <meta property="og:type" content="product">
 
     <!-- Schema Markup for Google Ads Quality Score -->
@@ -21,7 +21,7 @@
         "@type": "Brand",
         "name": "Shelsky's of Brooklyn"
       },
-      "description": "Authentic hand-rolled, kettle-boiled New York bagels shipped nationwide",
+      "description": "Authentic kettle-boiled, 3-day fermented New York bagels shipped nationwide",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -30,8 +30,8 @@
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "18",
-        "highPrice": "150",
+        "lowPrice": "31.20",
+        "highPrice": "329.99",
         "offerCount": "20"
       }
     }
@@ -137,7 +137,7 @@
             font-size: 20px;
             margin-bottom: 24px;
             opacity: 0.95;
-            max-width: 600px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -232,10 +232,45 @@
         .prop-card h3 { font-size: 20px; margin-bottom: 12px; }
         .prop-card p { font-size: 14px; color: #666; line-height: 1.7; }
 
+        /* Bagel Flavors */
+        .flavors-section {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .flavors-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .flavors-section .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .flavors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .flavor-item {
+            background: #fff;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
         /* Product Section */
         .products {
             padding: 60px 0;
-            background: #f9f9f9;
+            background: #fff;
         }
 
         .products h2 {
@@ -276,7 +311,7 @@
         /* Testimonials */
         .testimonials {
             padding: 60px 0;
-            background: #fff;
+            background: #f9f9f9;
         }
 
         .testimonials h2 {
@@ -292,7 +327,7 @@
         }
 
         .testimonial-card {
-            background: #f9f9f9;
+            background: #fff;
             padding: 28px;
             border-left: 4px solid #e74b2a;
         }
@@ -351,6 +386,75 @@
         .step h4 { font-size: 18px; margin-bottom: 8px; }
         .step p { font-size: 14px; opacity: 0.85; }
 
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background: #fafafa;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 24px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .faq-item h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            padding: 50px 0;
+            background: #f0f7f0;
+            text-align: center;
+        }
+
+        .guarantee-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon {
+            font-size: 48px;
+            color: #2d5a27;
+        }
+
+        .guarantee-text { text-align: left; }
+        .guarantee-text h3 {
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+        .guarantee-text p {
+            color: #666;
+            font-size: 14px;
+        }
+
         /* Final CTA */
         .final-cta {
             padding: 80px 0;
@@ -380,6 +484,7 @@
             .props-grid, .product-grid, .testimonial-grid { grid-template-columns: 1fr; }
             .steps-grid { grid-template-columns: repeat(2, 1fr); }
             .proof-grid { grid-template-columns: repeat(2, 1fr); }
+            .faq-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 600px) {
@@ -390,6 +495,9 @@
             .proof-grid { grid-template-columns: 1fr; }
             .header-inner { flex-direction: column; gap: 12px; }
             .logo { height: 50px; }
+            .guarantee-content { flex-direction: column; text-align: center; }
+            .guarantee-text { text-align: center; }
+            .flavors-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -406,7 +514,7 @@
                 <a href="https://shelskys.com">
                     <img src="logo-text.webp" alt="Shelsky's of Brooklyn" class="logo">
                 </a>
-                <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn btn-small">Order Bagels Now</a>
+                <a href="https://shelskys.com/product-category/bagels-bialys-bread/" class="btn btn-small">Order Bagels Now</a>
             </div>
         </div>
     </header>
@@ -415,7 +523,7 @@
     <section class="hero">
         <div class="container">
             <h1>Real NYC Bagels, Shipped Fresh to Your Door</h1>
-            <p class="tagline">Hand-rolled, kettle-boiled, 3-day fermented. This is what New Yorkers miss most. Now delivered anywhere in America.</p>
+            <p class="tagline">Kettle-boiled, 3-day fermented, made with sourdough starter. This is what New Yorkers miss most. Now delivered anywhere in America.</p>
 
             <div class="trust-row">
                 <span><span class="stars">★★★★★</span> 500+ Reviews</span>
@@ -423,7 +531,7 @@
                 <span>Ships Overnight</span>
             </div>
 
-            <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn">Order Fresh Bagels - Free Shipping $300+</a>
+            <a href="https://shelskys.com/product-category/bagels-bialys-bread/" class="btn">Order Fresh Bagels - Free Shipping $300+</a>
         </div>
     </section>
 
@@ -473,12 +581,12 @@
                 <div class="prop-card">
                     <div class="prop-icon">⏰</div>
                     <h3>3-Day Fermentation</h3>
-                    <p>We don't rush it. 72 hours of cold fermentation develops complex flavors that mass-produced bagels can never achieve. You'll taste the difference.</p>
+                    <p>We don't rush it. 72 hours of cold fermentation with our sourdough starter develops complex flavors that mass-produced bagels can never achieve. You'll taste the difference.</p>
                 </div>
                 <div class="prop-card">
-                    <div class="prop-icon">👐</div>
-                    <h3>Hand-Rolled & Kettle-Boiled</h3>
-                    <p>Every bagel is rolled by hand and boiled before baking. The old-school method creates that perfect crust and dense, chewy interior.</p>
+                    <div class="prop-icon">🥯</div>
+                    <h3>Traditionally Made & Kettle-Boiled</h3>
+                    <p>Every bagel is kettle-boiled before baking—the old-school method that creates that perfect crust and dense, chewy interior you remember.</p>
                 </div>
                 <div class="prop-card">
                     <div class="prop-icon">📦</div>
@@ -489,41 +597,64 @@
         </div>
     </section>
 
+    <!-- Bagel Flavors -->
+    <section class="flavors-section">
+        <div class="container">
+            <h2>Choose Your Flavors</h2>
+            <p class="intro">Mix and match any combination. $2.40 per bagel.</p>
+            <div class="flavors-grid">
+                <div class="flavor-item">Everything</div>
+                <div class="flavor-item">Plain</div>
+                <div class="flavor-item">Sesame</div>
+                <div class="flavor-item">Salt</div>
+                <div class="flavor-item">Poppy</div>
+                <div class="flavor-item">Onion</div>
+                <div class="flavor-item">Garlic</div>
+                <div class="flavor-item">Pumpernickel</div>
+                <div class="flavor-item">Whole Wheat Everything</div>
+                <div class="flavor-item">Cinnamon Raisin</div>
+                <div class="flavor-item">Salt & Pepper</div>
+                <div class="flavor-item">Gluten-Free*</div>
+            </div>
+            <p style="text-align: center; margin-top: 16px; font-size: 13px; color: #666;">*Gluten-free bagels from Philadelphia's The Great Knead</p>
+        </div>
+    </section>
+
     <!-- Products -->
     <section class="products">
         <div class="container">
             <h2>Build Your Bagel Order</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="Shelsky's Best/IMG_8350.jpeg" alt="Assorted Bagels" class="product-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Everything-Bagel_5-0092_SQ-400x400.jpg" alt="Baker's Dozen Bagels" class="product-img">
                     <div class="product-info">
                         <h3>Baker's Dozen (13 Bagels)</h3>
-                        <p class="product-price">From $24</p>
-                        <p class="product-desc">Mix and match any combination. Everything, Plain, Sesame, Pumpernickel, and more.</p>
-                        <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn btn-dark">Select Bagels</a>
+                        <p class="product-price">From $31.20</p>
+                        <p class="product-desc">Mix and match any combination: Everything, Plain, Sesame, Pumpernickel, Salt, Onion, Garlic, and more.</p>
+                        <a href="https://shelskys.com/product-category/bagels-bialys-bread/" class="btn btn-dark">Select Bagels</a>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="Shelsky's Best/SalmonTrioPlatterSquare.jpeg" alt="Bagels and Lox" class="product-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/2-Wake-Up-In-Brooklyn-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Wake Up in Brooklyn" class="product-img">
                     <div class="product-info">
-                        <h3>Bagels & Lox Package</h3>
-                        <p class="product-price">From $89</p>
-                        <p class="product-desc">Complete brunch kit: bagels, house-cured salmon, cream cheese, capers, onions.</p>
-                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Build Package</a>
+                        <h3>Wake Up in Brooklyn Package</h3>
+                        <p class="product-price">$229.99</p>
+                        <p class="product-desc">Complete brunch kit: Dozen bagels + smoked fish + cream cheese + all the fixings. Feeds 6-8.</p>
+                        <a href="https://shelskys.com/product/wake-up-in-brooklyn-package/" class="btn btn-dark">Build Package</a>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="Shelsky's Best/BigMacherFaded.jpeg" alt="Gift Package" class="product-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/6-look-like-a-real-macher-big-shot-1-scaled-1-400x400.jpeg" alt="Big Macher" class="product-img">
                     <div class="product-info">
-                        <h3>The Big Macher Gift</h3>
-                        <p class="product-price">From $175</p>
-                        <p class="product-desc">The ultimate Brooklyn care package. Feeds 8-10 with bagels, fish, spreads, and sweets.</p>
-                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Send a Gift</a>
+                        <h3>Big Macher Brooklyn Brunch</h3>
+                        <p class="product-price">$329.99</p>
+                        <p class="product-desc">The ultimate Brooklyn care package. Bagels, fish, spreads, salads, and sweets. Feeds 10-12.</p>
+                        <a href="https://shelskys.com/product/big-macher-brooklyn-brunch-package/" class="btn btn-dark">Send a Gift</a>
                     </div>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 40px;">
-                <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn">Shop All Bagels</a>
+                <a href="https://shelskys.com/product-category/bagels-bialys-bread/" class="btn">Shop All Bagels</a>
             </div>
         </div>
     </section>
@@ -540,13 +671,13 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <blockquote>"These bagels educated my California family on what a real bagel is. The 3-day fermentation makes all the difference. Now they request Shelsky's for every visit!"</blockquote>
-                    <cite>— Rachel K., Los Angeles</cite>
+                    <blockquote>"I have ordered from them all. Katz, Zabars, Russ, Manny's in Chicago etc. By far and away your appetizing and deli beats them all hands down."</blockquote>
+                    <cite>— Florida Customer</cite>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <blockquote>"I order from Shelsky's every month for our office. It's become our most anticipated meeting perk. Nothing else compares."</blockquote>
-                    <cite>— David L., Austin TX</cite>
+                    <blockquote>"These bagels educated my California family on what a real bagel is. The 3-day fermentation makes all the difference. Now they request Shelsky's for every visit!"</blockquote>
+                    <cite>— Rachel K., Los Angeles</cite>
                 </div>
             </div>
         </div>
@@ -581,12 +712,50 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How long do the bagels stay fresh?</h3>
+                    <p>Eat within 3 days for peak freshness. For longer storage, freeze immediately upon arrival—they'll keep for up to 3 months. Toast directly from frozen.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How are they shipped?</h3>
+                    <p>Bagels are baked fresh the morning of shipment, packed in insulated containers, and shipped overnight. They arrive ready to enjoy.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What makes these different from other bagels?</h3>
+                    <p>72 hours of cold fermentation develops complex flavor. Kettle-boiling creates the signature crust. These are authentic Brooklyn bagels—dense, chewy, with that profound crust that defines a real bagel.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you have gluten-free options?</h3>
+                    <p>Yes! We carry gluten-free bagels from Philadelphia's The Great Knead—the gold standard of GF bagels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <span class="guarantee-icon">✓</span>
+                <div class="guarantee-text">
+                    <h3>Not Happy? We'll Make It Right.</h3>
+                    <p>If you're unsatisfied with your order for any reason, contact us at shelskys@shelskys.com. We'll work with you to make it right with a refund or store credit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
             <h2>Ready for Real NYC Bagels?</h2>
             <p>Free shipping on orders over $300. Ships fresh overnight.</p>
-            <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn">Order Now - Ship Anywhere</a>
+            <a href="https://shelskys.com/product-category/bagels-bialys-bread/" class="btn">Order Now - Ship Anywhere</a>
         </div>
     </section>
 
@@ -597,9 +766,9 @@
             <p style="margin-top: 12px;">
                 <a href="https://shelskys.com">Main Site</a> |
                 <a href="https://shelskys.com/#history">Our Story</a> |
-                <a href="https://shelskys.com/product-category/bagels-bialys/">Shop Bagels</a>
+                <a href="https://shelskys.com/product-category/bagels-bialys-bread/">Shop Bagels</a>
             </p>
-            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2025 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
+            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2026 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
         </div>
     </footer>
 

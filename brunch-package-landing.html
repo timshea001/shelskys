@@ -25,8 +25,8 @@
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "65",
-        "highPrice": "350"
+        "lowPrice": "209.99",
+        "highPrice": "329.99"
       }
     }
     </script>
@@ -179,6 +179,27 @@
             opacity: 0.5;
         }
 
+        /* Lead Time */
+        .lead-time {
+            padding: 30px 0;
+            background: #fff8e6;
+            text-align: center;
+        }
+
+        .lead-time h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .lead-time p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .lead-time a {
+            color: #e74b2a;
+        }
+
         /* Brunch Use Cases */
         .use-cases {
             padding: 60px 0;
@@ -267,13 +288,13 @@
 
         .package-img {
             width: 100%;
-            height: 240px;
+            height: 220px;
             object-fit: cover;
         }
 
-        .package-info { padding: 24px; }
-        .package-info h3 { font-size: 22px; margin-bottom: 8px; }
-        .package-price { color: #e74b2a; font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+        .package-info { padding: 20px; }
+        .package-info h3 { font-size: 20px; margin-bottom: 8px; }
+        .package-price { color: #e74b2a; font-size: 22px; font-weight: 700; margin-bottom: 4px; }
         .package-serves { font-size: 13px; color: #666; margin-bottom: 12px; font-weight: 600; }
         .package-desc { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 16px; }
 
@@ -303,6 +324,42 @@
         .included-icon { font-size: 56px; margin-bottom: 12px; }
         .included-item h4 { font-size: 18px; margin-bottom: 8px; }
         .included-item p { font-size: 13px; color: #666; }
+
+        /* Hosting Tips */
+        .hosting-tips {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .hosting-tips h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .tip {
+            padding: 28px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .tip h3 {
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .tip p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
 
         /* How It Works */
         .how-it-works {
@@ -347,7 +404,7 @@
         /* Testimonials */
         .testimonials {
             padding: 60px 0;
-            background: #f9f9f9;
+            background: #fff;
         }
 
         .testimonials h2 {
@@ -363,7 +420,7 @@
         }
 
         .testimonial-card {
-            background: #fff;
+            background: #f9f9f9;
             padding: 28px;
             border-left: 4px solid #e74b2a;
         }
@@ -380,6 +437,75 @@
             font-size: 13px;
             color: #666;
             font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background: #fafafa;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 24px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .faq-item h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            padding: 50px 0;
+            background: #f0f7f0;
+            text-align: center;
+        }
+
+        .guarantee-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon {
+            font-size: 48px;
+            color: #2d5a27;
+        }
+
+        .guarantee-text { text-align: left; }
+        .guarantee-text h3 {
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+        .guarantee-text p {
+            color: #666;
+            font-size: 14px;
         }
 
         /* Final CTA */
@@ -409,7 +535,8 @@
         /* Responsive */
         @media (max-width: 900px) {
             .use-grid, .package-grid, .testimonial-grid { grid-template-columns: 1fr; }
-            .included-grid, .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .included-grid, .steps-grid, .tips-grid { grid-template-columns: repeat(2, 1fr); }
+            .faq-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 600px) {
@@ -418,14 +545,16 @@
             .trust-row { flex-direction: column; gap: 12px; }
             .header-inner { flex-direction: column; gap: 12px; }
             .logo { height: 50px; }
-            .included-grid, .steps-grid { grid-template-columns: 1fr; }
+            .included-grid, .steps-grid, .tips-grid { grid-template-columns: 1fr; }
+            .guarantee-content { flex-direction: column; text-align: center; }
+            .guarantee-text { text-align: center; }
         }
     </style>
 </head>
 <body>
     <!-- Promo Banner -->
     <div class="promo-banner">
-        FREE SHIPPING on brunch packages over $300 | Everything arrives fresh & ready to serve
+        FREE SHIPPING on brunch packages | Everything arrives fresh & ready to serve
     </div>
 
     <!-- Header -->
@@ -435,7 +564,7 @@
                 <a href="https://shelskys.com">
                     <img src="logo-text.webp" alt="Shelsky's of Brooklyn" class="logo">
                 </a>
-                <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-small">Order Brunch</a>
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-small">Order Brunch</a>
             </div>
         </div>
     </header>
@@ -443,8 +572,8 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Brooklyn Brunch, Delivered to Your Door</h1>
-            <p class="tagline">Complete brunch packages with bagels, lox, cream cheese, and all the fixings. Just unwrap and serve. Hosting made effortless.</p>
+            <h1>Host an Unforgettable Brooklyn Brunch</h1>
+            <p class="tagline">Complete brunch packages with everything you need. Just unwrap, arrange, and take all the credit. Effortless entertaining, delivered.</p>
 
             <div class="trust-row">
                 <span><span class="stars">★★★★★</span> 500+ Reviews</span>
@@ -452,7 +581,7 @@
                 <span>Ships Nationwide</span>
             </div>
 
-            <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-large">Order Brunch Packages</a>
+            <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-large">Order Brunch Packages</a>
         </div>
     </section>
 
@@ -466,6 +595,14 @@
                 <img src="press/featured3.webp" alt="Vogue">
                 <img src="press/featured4.webp" alt="Edible Brooklyn">
             </div>
+        </div>
+    </section>
+
+    <!-- Lead Time -->
+    <section class="lead-time">
+        <div class="container">
+            <h3>When to Order</h3>
+            <p>Order at least <strong>3-5 days before</strong> your event for guaranteed delivery. Need it sooner? <a href="tel:7188558817">Call us</a>—we'll do our best to accommodate.</p>
         </div>
     </section>
 
@@ -501,42 +638,75 @@
 
             <div class="package-grid">
                 <div class="package-card">
-                    <img src="Shelsky's Best/SalmonTrioPlatterSquare.jpeg" alt="Classic Brunch" class="package-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/1-Shelskys-Schmear-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Brooklyn Schmear" class="package-img">
                     <div class="package-info">
-                        <h3>Classic Brunch</h3>
-                        <p class="package-price">$89</p>
+                        <h3>A Brooklyn Schmear</h3>
+                        <p class="package-price">$209.99</p>
                         <p class="package-serves">Serves 4-6 people</p>
-                        <p class="package-desc">The essentials done right. Perfect for an intimate gathering or family breakfast.</p>
-                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
+                        <p class="package-desc">Dozen bagels, 3 cream cheeses, and all the fixings.</p>
+                        <a href="https://shelskys.com/product/a-brooklyn-schmear-package/" class="btn btn-dark btn-small">Order Now</a>
                     </div>
                 </div>
 
                 <div class="package-card">
                     <span class="package-badge">Most Popular</span>
-                    <img src="Shelsky's Best/BigMacherFaded.jpeg" alt="Big Macher Brunch" class="package-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/2-Wake-Up-In-Brooklyn-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Wake Up in Brooklyn" class="package-img">
                     <div class="package-info">
-                        <h3>The Big Macher</h3>
-                        <p class="package-price">$175</p>
-                        <p class="package-serves">Serves 8-10 people</p>
-                        <p class="package-desc">The full spread. Bagels, multiple fish, salads, spreads, and sweets. Everything you need.</p>
-                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
+                        <h3>Wake Up in Brooklyn</h3>
+                        <p class="package-price">$229.99</p>
+                        <p class="package-serves">Serves 6-8 people</p>
+                        <p class="package-desc">Dozen bagels, smoked fish, cream cheese, capers, onions, tomatoes.</p>
+                        <a href="https://shelskys.com/product/wake-up-in-brooklyn-package/" class="btn btn-dark btn-small">Order Now</a>
                     </div>
                 </div>
 
                 <div class="package-card">
-                    <img src="Shelsky's Best/GrandPlateauSquare.jpeg" alt="Grand Brunch" class="package-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/4-How-you-doin-Gift-Basket-2-scaled-1-400x400.jpeg" alt="How YOU Doin" class="package-img">
                     <div class="package-info">
-                        <h3>Grand Celebration</h3>
-                        <p class="package-price">$350</p>
-                        <p class="package-serves">Serves 15-20 people</p>
-                        <p class="package-desc">The ultimate brunch spread. Perfect for large gatherings and special celebrations.</p>
-                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
+                        <h3>"How YOU Doin'?"</h3>
+                        <p class="package-price">$269.99</p>
+                        <p class="package-serves">Serves 8-10 people</p>
+                        <p class="package-desc">Expanded spread with premium fish selections.</p>
+                        <a href="https://shelskys.com/product/how-you-doin-package/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/6-look-like-a-real-macher-big-shot-1-scaled-1-400x400.jpeg" alt="Big Macher" class="package-img">
+                    <div class="package-info">
+                        <h3>Big Macher Brooklyn Brunch</h3>
+                        <p class="package-price">$329.99</p>
+                        <p class="package-serves">Serves 10-12 people</p>
+                        <p class="package-desc">The works: bagels, multiple fish, salads, spreads, sweets.</p>
+                        <a href="https://shelskys.com/product/big-macher-brooklyn-brunch-package/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/5-Cardiologists-Dream-1-scaled-1-400x400.jpeg" alt="Cardiologist's Dream" class="package-img">
+                    <div class="package-info">
+                        <h3>Cardiologist's Dream</h3>
+                        <p class="package-price">$239.99</p>
+                        <p class="package-serves">Serves 4-6 people</p>
+                        <p class="package-desc">Deli-style with pastrami, corned beef, plus fish.</p>
+                        <a href="https://shelskys.com/product/cardiologists-dream-brooklyn-deli-brunch-for-4/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/05/3-from-Brooklyn-with-sweet-love-1-scaled-1-400x400.jpeg" alt="Brooklyn is Sweet" class="package-img">
+                    <div class="package-info">
+                        <h3>Brooklyn is SWEET</h3>
+                        <p class="package-price">$229.99</p>
+                        <p class="package-serves">Serves 4-6 people</p>
+                        <p class="package-desc">Sweet-focused with babka, rugelach, and pastries.</p>
+                        <a href="https://shelskys.com/product/brooklyn-is-sweet-package/" class="btn btn-dark btn-small">Order Now</a>
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 40px;">
-                <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn">See All Packages</a>
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn">See All Packages</a>
             </div>
         </div>
     </section>
@@ -549,22 +719,47 @@
                 <div class="included-item">
                     <div class="included-icon">🥯</div>
                     <h4>Fresh Bagels</h4>
-                    <p>Hand-rolled, kettle-boiled, 3-day fermented. The real deal.</p>
+                    <p>Kettle-boiled, 3-day fermented. The real deal.</p>
                 </div>
                 <div class="included-item">
                     <div class="included-icon">🐟</div>
                     <h4>Smoked Fish</h4>
-                    <p>House-cured lox, gravlax, and premium salmon selections.</p>
+                    <p>House-cured lox, gravlax, and premium salmon.</p>
                 </div>
                 <div class="included-item">
                     <div class="included-icon">🧀</div>
                     <h4>Cream Cheese</h4>
-                    <p>Plain, scallion, and seasonal varieties. All made fresh.</p>
+                    <p>Plain, scallion, and seasonal varieties.</p>
                 </div>
                 <div class="included-item">
                     <div class="included-icon">🥗</div>
                     <h4>All The Fixings</h4>
-                    <p>Capers, onions, tomatoes, whitefish salad, and more.</p>
+                    <p>Capers, onions, tomatoes, whitefish salad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hosting Tips -->
+    <section class="hosting-tips">
+        <div class="container">
+            <h2>Hosting Tips</h2>
+            <div class="tips-grid">
+                <div class="tip">
+                    <h3>Set Up in 10 Minutes</h3>
+                    <p>Everything arrives ready to serve. Just unwrap, arrange on platters, and you're done.</p>
+                </div>
+                <div class="tip">
+                    <h3>Serve at Room Temperature</h3>
+                    <p>Take fish out of the fridge 15-20 minutes before serving. It tastes best slightly cool, not cold.</p>
+                </div>
+                <div class="tip">
+                    <h3>Toast the Bagels</h3>
+                    <p>A quick toast brings out the best texture—crispy outside, chewy inside.</p>
+                </div>
+                <div class="tip">
+                    <h3>Build Your Own Bar</h3>
+                    <p>Let guests assemble their own bagels. Set out fish, cream cheese, and fixings buffet-style.</p>
                 </div>
             </div>
         </div>
@@ -592,8 +787,8 @@
                 </div>
                 <div class="step">
                     <div class="step-num">4</div>
-                    <h4>Enjoy!</h4>
-                    <p>Take all the credit for an amazing brunch</p>
+                    <h4>Take All the Credit</h4>
+                    <p>Enjoy your amazing brunch!</p>
                 </div>
             </div>
         </div>
@@ -611,8 +806,8 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
-                    <blockquote>"Shelsky's catered our family event for 10 guests. The food was top quality and beautifully arranged. Delivered on time. Will definitely order again."</blockquote>
-                    <cite>— Benjamin W., Google Review</cite>
+                    <blockquote>"Thank you so much for everything you and your team did for Jack's bar mitzvah this past weekend. Everyone complimented how delicious it was."</blockquote>
+                    <cite>— Customer Review</cite>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
@@ -623,12 +818,50 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How far in advance should I order?</h3>
+                    <p>We recommend ordering 3-5 days before your brunch. For large orders or holiday weekends, order at least a week ahead.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need to prepare anything?</h3>
+                    <p>Nope! Everything arrives ready to serve. Just unwrap and arrange. We recommend having a cutting board and a few platters handy.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I customize the packages?</h3>
+                    <p>Our packages are pre-set for the best experience, but you can always order a la carte items to add on. Contact us for special dietary requests.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What about dietary restrictions?</h3>
+                    <p>Our fish is gluten-free. We carry gluten-free bagels from The Great Knead. All products are kosher-style (not certified kosher). Contact us for specific allergen questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <span class="guarantee-icon">✓</span>
+                <div class="guarantee-text">
+                    <h3>Not Happy? We'll Make It Right.</h3>
+                    <p>If you're unsatisfied with your order for any reason, contact us at shelskys@shelskys.com. We'll work with you to make it right with a refund or store credit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
             <h2>Ready to Host an Amazing Brunch?</h2>
-            <p>Free shipping on packages over $300. Arrives fresh and ready to serve.</p>
-            <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-large">Order Brunch Now</a>
+            <p>Free shipping on all packages. Arrives fresh and ready to serve.</p>
+            <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/" class="btn btn-large">Order Brunch Now</a>
         </div>
     </section>
 
@@ -639,9 +872,9 @@
             <p style="margin-top: 12px;">
                 <a href="https://shelskys.com">Main Site</a> |
                 <a href="https://shelskys.com/#history">Our Story</a> |
-                <a href="https://shelskys.com/product-category/gift-brunch-packages/">Shop Packages</a>
+                <a href="https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/">Shop Packages</a>
             </p>
-            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2025 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
+            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2026 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
         </div>
     </footer>
 

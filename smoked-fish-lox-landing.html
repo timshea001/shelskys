@@ -25,8 +25,8 @@
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "USD",
-        "lowPrice": "18",
-        "highPrice": "95"
+        "lowPrice": "31.49",
+        "highPrice": "62.38"
       }
     }
     </script>
@@ -206,19 +206,19 @@
             font-style: normal;
         }
 
-        /* Fish Types Section */
-        .fish-types {
+        /* Fish Products Section */
+        .fish-products {
             padding: 60px 0;
             background: #fff;
         }
 
-        .fish-types h2 {
+        .fish-products h2 {
             text-align: center;
             font-size: 36px;
             margin-bottom: 16px;
         }
 
-        .fish-types .intro {
+        .fish-products .intro {
             text-align: center;
             font-size: 17px;
             color: #666;
@@ -228,39 +228,82 @@
 
         .fish-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
         .fish-card {
-            display: flex;
             background: #f9f9f9;
             border: 1px solid #e0e0e0;
             overflow: hidden;
-            transition: box-shadow 0.3s;
+            transition: box-shadow 0.3s, transform 0.3s;
         }
 
         .fish-card:hover {
             box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
         }
 
         .fish-img {
-            width: 200px;
-            min-height: 200px;
+            width: 100%;
+            height: 200px;
             object-fit: cover;
-            flex-shrink: 0;
         }
 
         .fish-info {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            padding: 20px;
         }
 
-        .fish-info h3 { font-size: 22px; margin-bottom: 8px; }
+        .fish-info h3 { font-size: 18px; margin-bottom: 8px; }
         .fish-price { color: #e74b2a; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-        .fish-desc { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 16px; }
+        .fish-desc { font-size: 13px; color: #666; line-height: 1.6; margin-bottom: 16px; }
+
+        /* Serving Guide */
+        .serving-guide {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .serving-guide h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .serving-guide .section-intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guide-item {
+            text-align: center;
+            padding: 24px 16px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .guest-count {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #e74b2a;
+        }
+
+        .recommendation {
+            color: #666;
+            font-size: 14px;
+        }
 
         /* Why Shelsky's */
         .why-section {
@@ -289,6 +332,26 @@
         .why-icon { font-size: 48px; margin-bottom: 16px; }
         .why-item h3 { font-size: 20px; margin-bottom: 12px; }
         .why-item p { font-size: 14px; opacity: 0.9; line-height: 1.7; }
+
+        /* Sourcing Section */
+        .sourcing-section {
+            padding: 50px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .sourcing-section h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .sourcing-section p {
+            max-width: 750px;
+            margin: 0 auto;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.7;
+        }
 
         /* Testimonials */
         .testimonials {
@@ -328,46 +391,74 @@
             font-weight: 600;
         }
 
-        /* Products Grid */
-        .products {
+        /* FAQ Section */
+        .faq-section {
             padding: 60px 0;
-            background: #fff;
+            background: #fafafa;
         }
 
-        .products h2 {
+        .faq-section h2 {
             text-align: center;
             font-size: 36px;
             margin-bottom: 40px;
         }
 
-        .product-grid {
+        .faq-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .product-card {
+        .faq-item {
             background: #fff;
+            padding: 24px;
             border: 1px solid #e0e0e0;
-            overflow: hidden;
-            transition: box-shadow 0.3s, transform 0.3s;
         }
 
-        .product-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-            transform: translateY(-4px);
+        .faq-item h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
         }
 
-        .product-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
         }
 
-        .product-info { padding: 20px; }
-        .product-info h3 { font-size: 18px; margin-bottom: 8px; }
-        .product-price { color: #e74b2a; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
-        .product-desc { font-size: 14px; color: #666; margin-bottom: 16px; }
+        /* Guarantee Section */
+        .guarantee-section {
+            padding: 50px 0;
+            background: #f0f7f0;
+            text-align: center;
+        }
+
+        .guarantee-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon {
+            font-size: 48px;
+            color: #2d5a27;
+        }
+
+        .guarantee-text { text-align: left; }
+        .guarantee-text h3 {
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+        .guarantee-text p {
+            color: #666;
+            font-size: 14px;
+        }
 
         /* Final CTA */
         .final-cta {
@@ -396,9 +487,9 @@
         /* Responsive */
         @media (max-width: 900px) {
             .fish-grid { grid-template-columns: 1fr; }
-            .fish-card { flex-direction: column; }
-            .fish-img { width: 100%; height: 200px; }
-            .why-grid, .product-grid, .testimonial-grid { grid-template-columns: 1fr; }
+            .why-grid, .testimonial-grid { grid-template-columns: 1fr; }
+            .guide-grid { grid-template-columns: repeat(2, 1fr); }
+            .faq-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 600px) {
@@ -408,6 +499,9 @@
             .header-inner { flex-direction: column; gap: 12px; }
             .logo { height: 50px; }
             .quote-box blockquote { font-size: 18px; }
+            .guide-grid { grid-template-columns: 1fr; }
+            .guarantee-content { flex-direction: column; text-align: center; }
+            .guarantee-text { text-align: center; }
         }
     </style>
 </head>
@@ -466,51 +560,102 @@
         </div>
     </section>
 
-    <!-- Fish Types -->
-    <section class="fish-types">
+    <!-- Fish Products -->
+    <section class="fish-products">
         <div class="container">
             <h2>Our Smoked Fish Selection</h2>
-            <p class="intro">Every piece is hand-selected and prepared in-house using traditional techniques. This is what real appetizing tastes like.</p>
+            <p class="intro">Every piece is hand-selected and prepared using traditional techniques. This is what real appetizing tastes like.</p>
 
             <div class="fish-grid">
                 <div class="fish-card">
-                    <img src="Shelsky's Best/GravlaxSquare.jpeg" alt="Gravlax" class="fish-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Gravlax_3-0230_SQ-400x400.jpg" alt="House-Cured Gravlax" class="fish-img">
                     <div class="fish-info">
                         <h3>House-Cured Gravlax</h3>
-                        <p class="fish-price">From $24</p>
-                        <p class="fish-desc">Our signature cure. Wild salmon cured in-house with dill, juniper, and a touch of aquavit. Silky texture, subtle sweetness.</p>
-                        <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-dark btn-small">Order Now</a>
+                        <p class="fish-price">$36.99 / half lb</p>
+                        <p class="fish-desc">Wild salmon cured in-house with dill, juniper, and aquavit. Silky texture, subtle sweetness.</p>
+                        <a href="https://shelskys.com/product/house-cured-gravlax/" class="btn btn-dark btn-small">Order Now</a>
                     </div>
                 </div>
 
                 <div class="fish-card">
-                    <img src="Shelsky's Best/IcelandicSalmonSquare.jpeg" alt="Nova Lox" class="fish-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Smoked-Irish-Salmon_3-0221_SQ-400x400.jpg" alt="Eastern Gaspé Nova" class="fish-img">
                     <div class="fish-info">
-                        <h3>Nova Scotia Lox</h3>
-                        <p class="fish-price">From $22</p>
-                        <p class="fish-desc">The classic. Cold-smoked Atlantic salmon with that buttery, silky texture you remember from the best delis.</p>
-                        <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-dark btn-small">Order Now</a>
+                        <h3>Eastern Gaspé Nova</h3>
+                        <p class="fish-price">$35.97 / half lb</p>
+                        <p class="fish-desc">The classic. Cold-smoked Atlantic salmon with buttery, silky texture.</p>
+                        <a href="https://shelskys.com/product/eastern-gaspe-nova-smoked-salmon/" class="btn btn-dark btn-small">Order Now</a>
                     </div>
                 </div>
 
                 <div class="fish-card">
-                    <img src="Shelsky's Best/FancyLakeSturgeonSquare.jpeg" alt="Smoked Sturgeon" class="fish-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Pastrami-Smoked-Salmon_3-0228_SQ-400x400.jpg" alt="Pastrami Smoked Salmon" class="fish-img">
                     <div class="fish-info">
-                        <h3>Smoked Sturgeon</h3>
-                        <p class="fish-price">From $32</p>
-                        <p class="fish-desc">The king of smoked fish. Rich, buttery, with a clean smoke finish. A true delicacy for the serious fish lover.</p>
-                        <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-dark btn-small">Order Now</a>
+                        <h3>Pastrami Smoked Salmon</h3>
+                        <p class="fish-price">$38.49 / half lb</p>
+                        <p class="fish-desc">Our signature cure—salmon with pastrami spices including Sichuan peppercorns.</p>
+                        <a href="https://shelskys.com/product/pastrami-smoked-salmon/" class="btn btn-dark btn-small">Order Now</a>
                     </div>
                 </div>
 
                 <div class="fish-card">
-                    <img src="Shelsky's Best/BalikSquare.jpeg" alt="Balik Salmon" class="fish-img">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Tsars-Cut-Balik-Salmon-scaled-e1609091751991-400x400.jpg" alt="Tsar's Cut Balik" class="fish-img">
                     <div class="fish-info">
                         <h3>Tsar's Cut Balik Salmon</h3>
-                        <p class="fish-price">From $38</p>
-                        <p class="fish-desc">The belly cut. Supremely fatty, melt-in-your-mouth salmon that was once reserved for Russian royalty.</p>
-                        <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-dark btn-small">Order Now</a>
+                        <p class="fish-price">$62.38 / half lb</p>
+                        <p class="fish-desc">The belly cut. Supremely fatty, melt-in-your-mouth. Once reserved for royalty.</p>
+                        <a href="https://shelskys.com/product/tsars-cut-balik-salmon/" class="btn btn-dark btn-small">Order Now</a>
                     </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Belly-Lox_3-0207_SQ-400x400.jpg" alt="Salty Belly Lox" class="fish-img">
+                    <div class="fish-info">
+                        <h3>Salty Belly Lox</h3>
+                        <p class="fish-price">$35.99 / half lb</p>
+                        <p class="fish-desc">Traditional salt-cured lox. Rich, intense flavor. The original.</p>
+                        <a href="https://shelskys.com/product/salty-belly-lox/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="https://shelskys.com/wp-content/uploads/2023/01/Wild-King-Salmon_3-0216_SQ-400x400.jpg" alt="Ōra King Salmon" class="fish-img">
+                    <div class="fish-info">
+                        <h3>Ōra King Salmon</h3>
+                        <p class="fish-price">$38.37 / half lb</p>
+                        <p class="fish-desc">Organic and sustainable. Premium New Zealand salmon with exceptional marbling.</p>
+                        <a href="https://shelskys.com/product/ora-king-salmon-organic-and-sustainable/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: #666; margin-bottom: 16px;">Also available: New Brunswick Salmon ($31.49), Mild Scottish Salmon ($38.38), Double-Smoked Irish Organic ($38.49)</p>
+                <a href="https://shelskys.com/product-category/smoked-fish/" class="btn">Shop All Smoked Fish</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serving Guide -->
+    <section class="serving-guide">
+        <div class="container">
+            <h2>How Much Do I Need?</h2>
+            <p class="section-intro">Each half-pound feeds approximately 2-3 people as part of a bagel brunch.</p>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <span class="guest-count">2-4 guests</span>
+                    <span class="recommendation">1 lb (2 half-pounds)</span>
+                </div>
+                <div class="guide-item">
+                    <span class="guest-count">6-8 guests</span>
+                    <span class="recommendation">2 lbs (4 half-pounds)</span>
+                </div>
+                <div class="guide-item">
+                    <span class="guest-count">10-12 guests</span>
+                    <span class="recommendation">3 lbs or a package</span>
+                </div>
+                <div class="guide-item">
+                    <span class="guest-count">15+ guests</span>
+                    <span class="recommendation">Big Macher Package</span>
                 </div>
             </div>
         </div>
@@ -529,7 +674,7 @@
                 <div class="why-item">
                     <div class="why-icon">🏠</div>
                     <h3>Cured In-House Daily</h3>
-                    <p>We cure and smoke everything in our Brooklyn kitchen. No mass-produced imports. Every piece is made with care, the old-school way.</p>
+                    <p>We cure our gravlax in-house every day. No mass-produced imports. Every piece is made with care, the old-school way.</p>
                 </div>
                 <div class="why-item">
                     <div class="why-icon">📦</div>
@@ -537,6 +682,14 @@
                     <p>Vacuum-sealed and packed cold. Arrives at your door as fresh as if you walked into our shop. Free shipping on orders over $300.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Sourcing Section -->
+    <section class="sourcing-section">
+        <div class="container">
+            <h2>Where Our Fish Comes From</h2>
+            <p>We source from the best: Acme Smoked Fish in Brooklyn (the same supplier trusted by Russ & Daughters, Barney Greengrass, and Zabar's), organic Irish salmon farms, and sustainable New Zealand operations. Every piece is selected by hand.</p>
         </div>
     </section>
 
@@ -564,41 +717,40 @@
         </div>
     </section>
 
-    <!-- Ready-Made Packages -->
-    <section class="products">
+    <!-- FAQ Section -->
+    <section class="faq-section">
         <div class="container">
-            <h2>Complete Packages - Everything You Need</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="Shelsky's Best/SalmonTrioPlatterSquare.jpeg" alt="Salmon Trio Platter" class="product-img">
-                    <div class="product-info">
-                        <h3>Salmon Trio Platter</h3>
-                        <p class="product-price">$89</p>
-                        <p class="product-desc">Three of our finest: Gravlax, Nova Lox, and Irish Smoked Salmon. Perfect for comparison tasting.</p>
-                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
-                    </div>
+            <h2>Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How long does smoked fish last?</h3>
+                    <p>Vacuum-sealed and refrigerated, our smoked fish stays fresh for 2-3 weeks unopened. Once opened, consume within 5-7 days. You can also freeze for up to 2 months.</p>
                 </div>
-                <div class="product-card">
-                    <img src="Shelsky's Best/BigMacherFaded.jpeg" alt="Big Macher Package" class="product-img">
-                    <div class="product-info">
-                        <h3>The Big Macher</h3>
-                        <p class="product-price">$175</p>
-                        <p class="product-desc">The works: smoked fish, bagels, cream cheese, salads, and all the fixings. Feeds 8-10 easily.</p>
-                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
-                    </div>
+                <div class="faq-item">
+                    <h3>What's the difference between Nova and Lox?</h3>
+                    <p>Nova is cold-smoked and has a milder, silkier texture. Traditional lox is salt-cured (not smoked) with a more intense, briny flavor. We offer both!</p>
                 </div>
-                <div class="product-card">
-                    <img src="Shelsky's Best/GrandPlateauSquare.jpeg" alt="Grand Plateau" class="product-img">
-                    <div class="product-info">
-                        <h3>Grand Seafood Plateau</h3>
-                        <p class="product-price">$250</p>
-                        <p class="product-desc">The ultimate spread. Smoked fish, caviar, oysters, and accompaniments for the most special occasions.</p>
-                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
-                    </div>
+                <div class="faq-item">
+                    <h3>How is it shipped?</h3>
+                    <p>Vacuum-sealed and packed with ice packs in insulated containers. Ships overnight to arrive fresh and cold.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What makes Shelsky's fish different?</h3>
+                    <p>Chef Peter Shelsky trained at Eleven Madison Park (3 Michelin stars). We cure our gravlax in-house daily. We source from Acme Smoked Fish—the same supplier used by Russ & Daughters, Barney Greengrass, and Zabar's.</p>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://shelskys.com/product-category/smoked-fish/" class="btn">Shop All Smoked Fish</a>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-content">
+                <span class="guarantee-icon">✓</span>
+                <div class="guarantee-text">
+                    <h3>Not Happy? We'll Make It Right.</h3>
+                    <p>If you're unsatisfied with your order for any reason, contact us at shelskys@shelskys.com. We'll work with you to make it right with a refund or store credit.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -621,7 +773,7 @@
                 <a href="https://shelskys.com/#history">Our Story</a> |
                 <a href="https://shelskys.com/product-category/smoked-fish/">Shop Fish</a>
             </p>
-            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2025 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
+            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2026 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
         </div>
     </footer>
 
