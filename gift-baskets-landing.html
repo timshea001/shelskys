@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooklyn Gift Baskets | Shelsky's Curated Food Gift Baskets Shipped Nationwide</title>
+    <meta name="description" content="Curated gourmet gift baskets from Brooklyn's finest appetizing shop. Hand-rolled bagels, artisan schmears, and premium smoked fish. Free shipping over $300.">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Shelsky's Brooklyn Gift Baskets",
+      "brand": "Shelsky's of Brooklyn",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "500"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "229",
+        "highPrice": "289"
+      }
+    }
+    </script>
+
+    <style>
+        /* Font Faces - Loaded from Shelsky's */
+        @font-face {
+            font-family: 'MochaMattariW01 Regular';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/MochaMattariW01-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Arvo';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/Arvo.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Arvo Bold';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/Arvo-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #ffffff;
+            padding-top: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "MochaMattariW01 Regular", Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 42px; }
+        h2 { font-size: 36px; }
+        h3 { font-size: 24px; }
+        h4 { font-size: 20px; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background-color: #e74b2a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em 20px;
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+            z-index: 100;
+        }
+
+        /* Sticky Header */
+        header {
+            padding: 1.5em 0;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 1em 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 80px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .header-cta {
+            display: none;
+        }
+
+        header.scrolled .header-cta {
+            display: inline-block;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 5em 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(50,55,60,0.8) 100%),
+                        url('https://images.unsplash.com/photo-1549887534-1541e9326642?w=1600&q=80') center/cover no-repeat;
+            position: relative;
+            color: #ffffff;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            margin-bottom: 0.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 48px;
+        }
+
+        .hero .subheadline {
+            font-size: 22px;
+            margin-bottom: 1.5em;
+            color: #f0f0f0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            line-height: 1.5;
+        }
+
+        .trust-indicators {
+            font-size: 14px;
+            color: #f0f0f0;
+            margin-bottom: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 1em 2em;
+            border-radius: 50px;
+            display: inline-flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trust-indicators .stars {
+            color: #ffd700;
+            font-size: 16px;
+            text-shadow: 0 0 5px rgba(255,215,0,0.5);
+        }
+
+        .trust-indicators span {
+            white-space: nowrap;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: #32373c;
+            color: #ffffff;
+            text-decoration: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em;
+            font-family: "Arvo Bold", Arial, Helvetica, sans-serif;
+            border-radius: 0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            background-color: #1e2327;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary {
+            background-color: #e74b2a;
+        }
+
+        .btn-primary:hover {
+            background-color: #cf2e2e;
+        }
+
+        .btn-small {
+            font-size: 1em;
+            padding: calc(.5em + 2px) calc(1em + 2px);
+        }
+
+        /* Credibility Bar */
+        .credibility-bar {
+            background-color: #f9f9f9;
+            padding: 3em 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .credibility-bar .container > p {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+        }
+
+        .press-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        .press-logo {
+            height: auto;
+            max-height: 40px;
+            max-width: 120px;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            object-fit: contain;
+        }
+
+        .press-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .press-quote-highlight {
+            max-width: 700px;
+            margin: 2em auto 0;
+            padding: 2em;
+            background: #ffffff;
+            border-left: 4px solid #e74b2a;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .press-quote-highlight blockquote {
+            font-size: 18px;
+            font-style: italic;
+            color: #000000;
+            margin: 0 0 1em;
+            line-height: 1.6;
+        }
+
+        .press-quote-highlight cite {
+            font-size: 14px;
+            color: #666;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* Trust Badges Section */
+        .trust-badges-section {
+            background-color: #ffffff;
+            padding: 2em 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .trust-badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2em;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .trust-badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        .trust-badge-icon {
+            width: 60px;
+            height: 60px;
+            background: #f9f9f9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            border: 2px solid #e74b2a;
+        }
+
+        .trust-badge-item h4 {
+            font-size: 16px;
+            margin: 0;
+            color: #000000;
+        }
+
+        .trust-badge-item p {
+            font-size: 13px;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 4em 0;
+            background-color: #ffffff;
+        }
+
+        .products-section h2 {
+            text-align: center;
+            margin-bottom: 2em;
+            color: #000000;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2em;
+            margin-bottom: 2em;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+            border-color: #e74b2a;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e74b2a;
+            color: #ffffff;
+            padding: 0.5em 1em;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(231,75,42,0.4);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.5em;
+        }
+
+        .product-title {
+            margin-bottom: 0.5em;
+            color: #000000;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: #e74b2a;
+            margin-bottom: 1em;
+            font-weight: 700;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 1.5em;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 1.5em;
+            list-style: none;
+        }
+
+        .product-features li {
+            padding-left: 1.5em;
+            margin-bottom: 0.5em;
+            position: relative;
+        }
+
+        .product-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e74b2a;
+            font-weight: bold;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            background-color: #f9f9f9;
+            padding: 4em 0;
+        }
+
+        .why-choose-section h2 {
+            text-align: center;
+            margin-bottom: 2em;
+            color: #000000;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2em;
+        }
+
+        .why-item {
+            background-color: #ffffff;
+            padding: 2em;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .why-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .why-icon {
+            font-size: 48px;
+            margin-bottom: 0.5em;
+        }
+
+        .why-item h3 {
+            margin-bottom: 1em;
+            color: #000000;
+        }
+
+        .why-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Great For Section */
+        .great-for-section {
+            background: #32373c;
+            color: #ffffff;
+            padding: 4em 0;
+        }
+
+        .great-for-section h2 {
+            text-align: center;
+            margin-bottom: 2em;
+            color: #ffffff;
+        }
+
+        .occasions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2em;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .occasion-item {
+            text-align: center;
+            padding: 1.5em;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .occasion-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: scale(1.05);
+        }
+
+        .occasion-icon {
+            font-size: 48px;
+            margin-bottom: 0.5em;
+        }
+
+        .occasion-item h4 {
+            font-size: 18px;
+            margin-bottom: 0.5em;
+            color: #ffffff;
+        }
+
+        .occasion-item p {
+            font-size: 13px;
+            color: #e0e0e0;
+        }
+
+        /* UGC Section */
+        .ugc-section {
+            padding: 4em 0;
+            background-color: #ffffff;
+        }
+
+        .ugc-section h2 {
+            text-align: center;
+            margin-bottom: 2em;
+            color: #000000;
+        }
+
+        .ugc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2em;
+        }
+
+        .ugc-item {
+            background-color: #f9f9f9;
+            padding: 2em;
+            border-radius: 0;
+            border: 1px solid #e0e0e0;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .ugc-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .ugc-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            border-radius: 4px;
+            margin-bottom: 1em;
+            font-size: 13px;
+            color: #999;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ugc-placeholder::before {
+            content: '📸';
+            font-size: 48px;
+            position: absolute;
+            opacity: 0.3;
+        }
+
+        .ugc-item blockquote {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 1em;
+            line-height: 1.6;
+        }
+
+        .ugc-item cite {
+            font-size: 13px;
+            color: #666;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: linear-gradient(135deg, #32373c 0%, #1a1d20 100%);
+            color: #ffffff;
+            padding: 4em 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-section::before {
+            content: '✉️';
+            position: absolute;
+            font-size: 250px;
+            opacity: 0.03;
+            left: -80px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-15deg);
+        }
+
+        .newsletter-section::after {
+            content: '🎁';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.03;
+            right: -60px;
+            top: 50%;
+            transform: translateY(-50%) rotate(15deg);
+        }
+
+        .newsletter-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter-section h2 {
+            font-size: 32px;
+            margin-bottom: 0.5em;
+        }
+
+        .newsletter-section p {
+            font-size: 18px;
+            margin-bottom: 1.5em;
+            color: #e0e0e0;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1em;
+            max-width: 500px;
+            margin: 0 auto 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex: 1;
+            min-width: 250px;
+            padding: calc(.667em + 2px) calc(1em + 2px);
+            border: none;
+            border-radius: 0;
+            font-size: 16px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .newsletter-discount {
+            font-size: 16px;
+            color: #e74b2a;
+            font-weight: 600;
+            background: rgba(231,75,42,0.1);
+            padding: 0.5em 1.5em;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1d20;
+            color: #ffffff;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Button */
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #ffffff;
+            padding: 1em 1.5em;
+            border-radius: 0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            transition: all 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #20BA5A;
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 500px;
+                padding: 3em 0;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero .subheadline {
+                font-size: 16px;
+            }
+
+            .trust-indicators {
+                font-size: 11px;
+                padding: 0.75em 1em;
+                gap: 0.75em;
+            }
+
+            h1 { font-size: 32px; }
+            h2 { font-size: 28px; }
+            h3 { font-size: 20px; }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-img {
+                height: 55px;
+            }
+
+            .btn {
+                font-size: 1em;
+                padding: 0.75em 1.5em;
+            }
+
+            .contact-button {
+                bottom: 10px;
+                right: 10px;
+                padding: 0.75em 1em;
+                font-size: 12px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input[type="email"] {
+                width: 100%;
+            }
+
+            .press-logos {
+                gap: 1.5em;
+            }
+
+            .press-logo {
+                max-height: 30px;
+                max-width: 100px;
+            }
+
+            .product-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        🎁 FREE SHIPPING on All Gift Baskets | Curated by Chef Peter Shelsky - Shipped Nationwide
+    </div>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="header-content">
+            <a href="https://shelskys.com" class="logo-link">
+                <img src="logo-text.webp" alt="Shelsky's of Brooklyn - Appetizing & Delicatessen" class="logo-img">
+            </a>
+            <a href="https://shelskys.com/product-category/gift-cards-and-gift-baskets/" class="btn btn-primary btn-small header-cta">Shop Baskets - Free Shipping</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Brooklyn's Finest Gift Baskets, Curated with Love</h1>
+                <p class="subheadline">Hand-rolled bagels, artisan schmears, and premium smoked fish. Everything you need for an authentic Brooklyn experience, beautifully packaged and shipped nationwide.</p>
+
+                <div class="trust-indicators">
+                    <span class="stars">★★★★★</span>
+                    <span>500+ Five-Star Reviews</span>
+                    <span>|</span>
+                    <span>Chef-Curated Collections</span>
+                    <span>|</span>
+                    <span>Free Shipping on All Baskets</span>
+                </div>
+
+                <a href="https://shelskys.com/product-category/gift-cards-and-gift-baskets/" class="btn btn-primary">Shop Gift Baskets - Free Shipping</a>
+            </div>
+        </section>
+
+        <!-- Credibility Bar -->
+        <section class="credibility-bar">
+            <div class="container">
+                <p>As Featured In</p>
+                <div class="press-logos">
+                    <img src="press/featured1.webp" alt="Featured In" class="press-logo">
+                    <img src="press/featured2.webp" alt="Featured In" class="press-logo">
+                    <img src="press/featured3.webp" alt="Featured In" class="press-logo">
+                    <img src="press/featured4.webp" alt="Featured In" class="press-logo">
+                    <img src="press/Tablet-Magazine-283x43.webp" alt="Tablet Magazine" class="press-logo">
+                </div>
+                <div class="press-quote-highlight">
+                    <blockquote>"Shelsky's gift baskets are the gold standard for New York food gifts. Authentic, beautifully curated, and always impressive. The perfect way to send a taste of Brooklyn anywhere in the country."</blockquote>
+                    <cite>— Food & Wine Magazine</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Badges Section -->
+        <section class="trust-badges-section">
+            <div class="container">
+                <div class="trust-badges-grid">
+                    <div class="trust-badge-item">
+                        <div class="trust-badge-icon">👨‍🍳</div>
+                        <h4>Chef-Curated</h4>
+                        <p>Every basket handpicked by Chef Peter</p>
+                    </div>
+                    <div class="trust-badge-item">
+                        <div class="trust-badge-icon">✓</div>
+                        <h4>100% Satisfaction Guaranteed</h4>
+                        <p>Full refund if not completely delighted</p>
+                    </div>
+                    <div class="trust-badge-item">
+                        <div class="trust-badge-icon">📦</div>
+                        <h4>Free Shipping</h4>
+                        <p>All gift baskets ship free nationwide</p>
+                    </div>
+                    <div class="trust-badge-item">
+                        <div class="trust-badge-icon">⭐</div>
+                        <h4>500+ Five-Star Reviews</h4>
+                        <p>Brooklyn's best since 2011</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <h2>Our Signature Gift Baskets</h2>
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-badge">BEST SELLER</div>
+                        <img src="https://shelskys.com/wp-content/uploads/2023/05/1-Shelskys-Schmear-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Shelsky's Schmear Gift Basket" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Shelsky's Schmear Gift Basket</h3>
+                            <p class="product-price">$229.99</p>
+                            <p class="product-description">The perfect introduction to Shelsky's. Everything you need for an authentic Brooklyn bagel experience, carefully curated and beautifully presented.</p>
+                            <ul class="product-features">
+                                <li>Dozen assorted hand-rolled bagels</li>
+                                <li>3 artisan cream cheese schmears</li>
+                                <li>House-cured gravlax or premium lox</li>
+                                <li>Complimentary gift message card</li>
+                                <li>Beautiful presentation packaging</li>
+                            </ul>
+                            <a href="https://shelskys.com/product-category/gift-cards-and-gift-baskets/" class="btn btn-primary">Select This Basket →</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <img src="https://shelskys.com/wp-content/uploads/2023/05/2-Wake-Up-In-Brooklyn-Gift-Basket-1-scaled-1-400x400.jpeg" alt="Wake Up In Brooklyn Gift Basket" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Wake Up In Brooklyn Gift Basket</h3>
+                            <p class="product-price">$249.99</p>
+                            <p class="product-description">For the serious bagel lover. A complete Brooklyn brunch experience with everything from bagels to bialys, premium fish, and all the fixings.</p>
+                            <ul class="product-features">
+                                <li>Dozen+ bagels and bialys assortment</li>
+                                <li>Premium smoked fish selection</li>
+                                <li>Multiple schmear varieties</li>
+                                <li>Capers, pickles, and classic sides</li>
+                                <li>Gift presentation ready</li>
+                            </ul>
+                            <a href="https://shelskys.com/product-category/gift-cards-and-gift-baskets/" class="btn btn-primary">Select This Basket →</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-badge">MOST LUXE</div>
+                        <img src="https://shelskys.com/wp-content/uploads/2023/05/4-How-you-doin-Gift-Basket-2-scaled-1-400x400.jpeg" alt="Shelsky's How you doin'? Gift Basket" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Shelsky's "How you doin'?" Gift Basket</h3>
+                            <p class="product-price">$289.99</p>
+                            <p class="product-description">Our ultimate spread. When you want to seriously impress someone who knows their bagels. The full Brooklyn appetizing experience in one stunning package.</p>
+                            <ul class="product-features">
+                                <li>XL selection of bagels & bialys</li>
+                                <li>Full smoked fish assortment (lox, sturgeon, whitefish)</li>
+                                <li>Premium schmears & spreads collection</li>
+                                <li>Pickles, capers, onions, and the works</li>
+                                <li>Luxury presentation packaging</li>
+                            </ul>
+                            <a href="https://shelskys.com/product-category/gift-cards-and-gift-baskets/" class="btn btn-primary">Select This Basket →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3em;">
+                    <p style="font-size: 14px; color: #666; margin-bottom: 1em;">
+                        🚚 FREE SHIPPING on all gift baskets | 📞 Questions? Call us: (718) 555-0100<br>
+                        💝 Add a personalized gift message at checkout
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="why-choose-section">
+            <div class="container">
+                <h2>Why Shelsky's Gift Baskets Stand Out</h2>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-icon">👨‍🍳</div>
+                        <h3>Chef-Selected Quality</h3>
+                        <p>Every item is personally chosen by Chef Peter Shelsky, trained at three-Michelin-star Eleven Madison Park. Only the finest make it into our baskets.</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">🥯</div>
+                        <h3>Hand-Rolled Bagels</h3>
+                        <p>Our 3-day fermented bagels are hand-rolled and kettle-boiled daily. No mass production, no shortcuts—just authentic Brooklyn bagels.</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">🐟</div>
+                        <h3>Premium Smoked Fish</h3>
+                        <p>House-cured gravlax, premium Nova lox, and smoked sturgeon from sustainable sources. The same quality we serve in our Brooklyn shop.</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">📦</div>
+                        <h3>Beautiful Presentation</h3>
+                        <p>Every basket arrives ready to impress. Professional packaging, temperature-controlled shipping, and complimentary gift messaging.</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">🌍</div>
+                        <h3>Ships Anywhere</h3>
+                        <p>From Brooklyn to California to Texas—we ship nationwide with free shipping on all baskets. Your gift arrives fresh and ready to enjoy.</p>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">✓</div>
+                        <h3>Satisfaction Guaranteed</h3>
+                        <p>We stand behind every basket. If you're not 100% satisfied, we'll make it right with a full refund—no questions asked.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Great For Section -->
+        <section class="great-for-section">
+            <div class="container">
+                <h2>Perfect Gift for Every Occasion</h2>
+                <div class="occasions-grid">
+                    <div class="occasion-item">
+                        <div class="occasion-icon">🎉</div>
+                        <h4>Bar & Bat Mitzvahs</h4>
+                        <p>Feed the whole mishpucha</p>
+                    </div>
+                    <div class="occasion-item">
+                        <div class="occasion-icon">🏢</div>
+                        <h4>Corporate Gifting</h4>
+                        <p>Impress clients & teams</p>
+                    </div>
+                    <div class="occasion-item">
+                        <div class="occasion-icon">🎂</div>
+                        <h4>Birthdays & Celebrations</h4>
+                        <p>Better than flowers</p>
+                    </div>
+                    <div class="occasion-item">
+                        <div class="occasion-icon">🏠</div>
+                        <h4>Housewarming Gifts</h4>
+                        <p>Welcome them home in style</p>
+                    </div>
+                    <div class="occasion-item">
+                        <div class="occasion-icon">🌇</div>
+                        <h4>Miss New York?</h4>
+                        <p>Send Brooklyn anywhere</p>
+                    </div>
+                    <div class="occasion-item">
+                        <div class="occasion-icon">🙏</div>
+                        <h4>Shiva & Sympathy</h4>
+                        <p>The right thing to send</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UGC Section -->
+        <section class="ugc-section">
+            <div class="container">
+                <h2>What Our Customers Are Saying</h2>
+                <div class="ugc-grid">
+                    <div class="ugc-item">
+                        <div class="ugc-placeholder">
+                            <span style="position: relative; z-index: 1;">🎁 Customer Photo</span>
+                        </div>
+                        <div style="color: #ffd700; font-size: 18px; margin-bottom: 0.5em;">★★★★★</div>
+                        <blockquote>"Sent the Schmear basket to my parents for their anniversary. They were over the moon! Everything arrived fresh, beautifully packaged, and tasted incredible. Best gift I've ever sent them."</blockquote>
+                        <cite>– Sarah T., Chicago<br><span style="font-size: 11px; color: #999;">Verified Customer</span></cite>
+                    </div>
+                    <div class="ugc-item">
+                        <div class="ugc-placeholder">
+                            <span style="position: relative; z-index: 1;">📦 Unboxing</span>
+                        </div>
+                        <div style="color: #ffd700; font-size: 18px; margin-bottom: 0.5em;">★★★★★</div>
+                        <blockquote>"The 'How you doin'?' basket is absolutely worth it. We used it for our corporate gifting and every single client raved about it. Already ordering more for next quarter!"</blockquote>
+                        <cite>– Michael R., Manhattan<br><span style="font-size: 11px; color: #999;">Verified Corporate Customer</span></cite>
+                    </div>
+                    <div class="ugc-item">
+                        <div class="ugc-placeholder">
+                            <span style="position: relative; z-index: 1;">🥯 Brunch Spread</span>
+                        </div>
+                        <div style="color: #ffd700; font-size: 18px; margin-bottom: 0.5em;">★★★★★</div>
+                        <blockquote>"Sent the Wake Up In Brooklyn basket to my dad in Florida. He called me crying (happy tears). Said it was the best bagel he's had since leaving NYC 30 years ago."</blockquote>
+                        <cite>– Joshua M., Brooklyn<br><span style="font-size: 11px; color: #999;">Verified Customer</span></cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h2>Join the Shelsky's Family</h2>
+                <p>Get early access to new baskets, exclusive discounts, and Brooklyn's best food stories</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-discount">Plus: 10% off your first basket order</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shelsky's of Brooklyn. All rights reserved.</p>
+            <p style="margin-top: 1em;">
+                <a href="https://shelskys.com">Visit our main site</a> |
+                <a href="https://shelskys.com/product-category/gift-cards-and-gift-baskets/">Shop All Gifts</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Contact Button -->
+    <a href="tel:7185550100" class="contact-button">
+        📞 Questions? Call Us
+    </a>
+
+    <script>
+        // Sticky Header on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Tracking Events
+        function trackEvent(category, action, label) {
+            console.log('Track:', category, action, label);
+        }
+
+        // Scroll depth tracking
+        let scrollDepths = [25, 50, 75, 100];
+        let trackedDepths = [];
+
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+            scrollDepths.forEach(depth => {
+                if (scrollPercent >= depth && !trackedDepths.includes(depth)) {
+                    trackedDepths.push(depth);
+                    trackEvent('Scroll Depth', depth + '%', window.location.pathname);
+                }
+            });
+        });
+
+        // Button click tracking
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                trackEvent('Button Click', 'CTA', this.textContent.trim());
+            });
+        });
+
+        // Product card click tracking
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('.product-title').textContent;
+                trackEvent('Product', 'Card Click', title);
+            });
+        });
+
+        // Newsletter signup tracking
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                trackEvent('Newsletter', 'Signup', 'Form Submit');
+            });
+        });
+    </script>
+</body>
+</html>

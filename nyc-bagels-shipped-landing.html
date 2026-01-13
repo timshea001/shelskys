@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Bagels Shipped Nationwide | Authentic Brooklyn Bagels Delivered Fresh</title>
+    <meta name="description" content="Real New York bagels shipped fresh to your door. Hand-rolled, kettle-boiled, 3-day fermented. Free shipping over $300. The bagels NYers miss most, delivered anywhere.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NYC Bagels Shipped Nationwide | Shelsky's of Brooklyn">
+    <meta property="og:description" content="Real New York bagels shipped fresh. Hand-rolled, kettle-boiled perfection from Brooklyn's finest appetizing shop.">
+    <meta property="og:type" content="product">
+
+    <!-- Schema Markup for Google Ads Quality Score -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "NYC Bagels Shipped Fresh",
+      "brand": {
+        "@type": "Brand",
+        "name": "Shelsky's of Brooklyn"
+      },
+      "description": "Authentic hand-rolled, kettle-boiled New York bagels shipped nationwide",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "500"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "18",
+        "highPrice": "150",
+        "offerCount": "20"
+      }
+    }
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'MochaMattari';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/MochaMattariW01-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Arvo';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/Arvo-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+        }
+
+        h1, h2, h3 {
+            font-family: 'MochaMattari', Georgia, serif;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Promo Banner */
+        .promo-banner {
+            background: #e74b2a;
+            color: #fff;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Minimal Header */
+        header {
+            padding: 20px 0;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { height: 60px; }
+
+        .btn {
+            display: inline-block;
+            background: #e74b2a;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-family: 'Arvo', Georgia, serif;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background: #cf2e2e; }
+        .btn-dark { background: #32373c; }
+        .btn-dark:hover { background: #1e2327; }
+        .btn-small { padding: 10px 20px; font-size: 14px; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('Shelsky\'s Best/IMG_8350.jpeg') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            margin-bottom: 16px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero .tagline {
+            font-size: 20px;
+            margin-bottom: 24px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .trust-row span { display: flex; align-items: center; gap: 6px; }
+        .stars { color: #ffd700; }
+
+        /* Social Proof Bar */
+        .social-proof {
+            background: #f9f9f9;
+            padding: 24px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .proof-item h3 { font-size: 28px; color: #e74b2a; margin-bottom: 4px; }
+        .proof-item p { font-size: 13px; color: #666; }
+
+        /* Press Logos */
+        .press-section {
+            padding: 40px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .press-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .press-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .press-logos img {
+            height: 35px;
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.3s;
+        }
+
+        .press-logos img:hover { filter: none; opacity: 1; }
+
+        /* Value Props */
+        .value-props {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .value-props h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .prop-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+        }
+
+        .prop-icon { font-size: 48px; margin-bottom: 16px; }
+        .prop-card h3 { font-size: 20px; margin-bottom: 12px; }
+        .prop-card p { font-size: 14px; color: #666; line-height: 1.7; }
+
+        /* Product Section */
+        .products {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info { padding: 20px; }
+        .product-info h3 { font-size: 18px; margin-bottom: 8px; }
+        .product-price { color: #e74b2a; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .product-desc { font-size: 14px; color: #666; margin-bottom: 16px; }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: #f9f9f9;
+            padding: 28px;
+            border-left: 4px solid #e74b2a;
+        }
+
+        .testimonial-stars { color: #ffd700; font-size: 18px; margin-bottom: 12px; }
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .testimonial-card cite {
+            font-style: normal;
+            font-size: 13px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 60px 0;
+            background: #32373c;
+            color: #fff;
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .step-num {
+            width: 50px;
+            height: 50px;
+            background: #e74b2a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+
+        .step h4 { font-size: 18px; margin-bottom: 8px; }
+        .step p { font-size: 14px; opacity: 0.85; }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('Shelsky\'s Best/IMG_8352.jpeg') center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .final-cta h2 { font-size: 40px; margin-bottom: 16px; }
+        .final-cta p { font-size: 18px; margin-bottom: 32px; opacity: 0.9; }
+
+        /* Footer */
+        footer {
+            background: #1a1d20;
+            color: #fff;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a { color: #fff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .props-grid, .product-grid, .testimonial-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .proof-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .hero { padding: 60px 20px; min-height: 400px; }
+            .trust-row { flex-direction: column; gap: 12px; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .proof-grid { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; gap: 12px; }
+            .logo { height: 50px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        FREE SHIPPING on orders over $300 | Fresh bagels shipped nationwide
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="https://shelskys.com">
+                    <img src="logo-text.webp" alt="Shelsky's of Brooklyn" class="logo">
+                </a>
+                <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn btn-small">Order Bagels Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Real NYC Bagels, Shipped Fresh to Your Door</h1>
+            <p class="tagline">Hand-rolled, kettle-boiled, 3-day fermented. This is what New Yorkers miss most. Now delivered anywhere in America.</p>
+
+            <div class="trust-row">
+                <span><span class="stars">★★★★★</span> 500+ Reviews</span>
+                <span>Brooklyn's Best Since 2011</span>
+                <span>Ships Overnight</span>
+            </div>
+
+            <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn">Order Fresh Bagels - Free Shipping $300+</a>
+        </div>
+    </section>
+
+    <!-- Social Proof Numbers -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <h3>13+</h3>
+                    <p>Years in Brooklyn</p>
+                </div>
+                <div class="proof-item">
+                    <h3>500+</h3>
+                    <p>5-Star Reviews</p>
+                </div>
+                <div class="proof-item">
+                    <h3>72hr</h3>
+                    <p>Fermentation Time</p>
+                </div>
+                <div class="proof-item">
+                    <h3>50</h3>
+                    <p>States Delivered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Logos -->
+    <section class="press-section">
+        <div class="container">
+            <p class="press-label">As Featured In</p>
+            <div class="press-logos">
+                <img src="press/featured1.webp" alt="New York Times">
+                <img src="press/featured2.webp" alt="Bon Appetit">
+                <img src="press/featured3.webp" alt="Vogue">
+                <img src="press/featured4.webp" alt="Edible Brooklyn">
+                <img src="press/Tablet-Magazine-283x43.webp" alt="Tablet Magazine">
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="value-props">
+        <div class="container">
+            <h2>Why Shelsky's Bagels?</h2>
+            <div class="props-grid">
+                <div class="prop-card">
+                    <div class="prop-icon">⏰</div>
+                    <h3>3-Day Fermentation</h3>
+                    <p>We don't rush it. 72 hours of cold fermentation develops complex flavors that mass-produced bagels can never achieve. You'll taste the difference.</p>
+                </div>
+                <div class="prop-card">
+                    <div class="prop-icon">👐</div>
+                    <h3>Hand-Rolled & Kettle-Boiled</h3>
+                    <p>Every bagel is rolled by hand and boiled before baking. The old-school method creates that perfect crust and dense, chewy interior.</p>
+                </div>
+                <div class="prop-card">
+                    <div class="prop-icon">📦</div>
+                    <h3>Ships Fresh Overnight</h3>
+                    <p>We bake them fresh and ship immediately. Arrives at your door ready to eat or freeze for later. Free shipping on orders over $300.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+        <div class="container">
+            <h2>Build Your Bagel Order</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Shelsky's Best/IMG_8350.jpeg" alt="Assorted Bagels" class="product-img">
+                    <div class="product-info">
+                        <h3>Baker's Dozen (13 Bagels)</h3>
+                        <p class="product-price">From $24</p>
+                        <p class="product-desc">Mix and match any combination. Everything, Plain, Sesame, Pumpernickel, and more.</p>
+                        <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn btn-dark">Select Bagels</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Shelsky's Best/SalmonTrioPlatterSquare.jpeg" alt="Bagels and Lox" class="product-img">
+                    <div class="product-info">
+                        <h3>Bagels & Lox Package</h3>
+                        <p class="product-price">From $89</p>
+                        <p class="product-desc">Complete brunch kit: bagels, house-cured salmon, cream cheese, capers, onions.</p>
+                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Build Package</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Shelsky's Best/BigMacherFaded.jpeg" alt="Gift Package" class="product-img">
+                    <div class="product-info">
+                        <h3>The Big Macher Gift</h3>
+                        <p class="product-price">From $175</p>
+                        <p class="product-desc">The ultimate Brooklyn care package. Feeds 8-10 with bagels, fish, spreads, and sweets.</p>
+                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Send a Gift</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn">Shop All Bagels</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Sent bagels to my parents in Florida. Dad called crying (happy tears). Said it was the best bagel since leaving NYC 30 years ago."</blockquote>
+                    <cite>— Joshua M., Brooklyn</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"These bagels educated my California family on what a real bagel is. The 3-day fermentation makes all the difference. Now they request Shelsky's for every visit!"</blockquote>
+                    <cite>— Rachel K., Los Angeles</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"I order from Shelsky's every month for our office. It's become our most anticipated meeting perk. Nothing else compares."</blockquote>
+                    <cite>— David L., Austin TX</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How Shipping Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h4>Build Your Order</h4>
+                    <p>Mix and match bagels, add spreads, fish, or build a complete package</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h4>We Bake Fresh</h4>
+                    <p>Your bagels are baked the morning of shipment for maximum freshness</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h4>Overnight Shipping</h4>
+                    <p>Packed in insulated containers with ice packs. Arrives fresh.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h4>Enjoy or Freeze</h4>
+                    <p>Eat within 3 days or freeze for up to 3 months. Toast from frozen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready for Real NYC Bagels?</h2>
+            <p>Free shipping on orders over $300. Ships fresh overnight.</p>
+            <a href="https://shelskys.com/product-category/bagels-bialys/" class="btn">Order Now - Ship Anywhere</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shelsky's of Brooklyn | 141 Court St, Brooklyn NY | <a href="tel:7188558817">718.855.8817</a></p>
+            <p style="margin-top: 12px;">
+                <a href="https://shelskys.com">Main Site</a> |
+                <a href="https://shelskys.com/#history">Our Story</a> |
+                <a href="https://shelskys.com/product-category/bagels-bialys/">Shop Bagels</a>
+            </p>
+            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2025 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll tracking for Google Ads conversion optimization
+        let depths = [25, 50, 75, 100];
+        let tracked = [];
+        window.addEventListener('scroll', function() {
+            const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            depths.forEach(d => {
+                if (pct >= d && !tracked.includes(d)) {
+                    tracked.push(d);
+                    if (typeof gtag === 'function') gtag('event', 'scroll_depth', { depth: d });
+                }
+            });
+        });
+
+        // CTA click tracking
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (typeof gtag === 'function') gtag('event', 'cta_click', { label: this.textContent.trim() });
+            });
+        });
+    </script>
+</body>
+</html>

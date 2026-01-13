@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Smoked Fish & Lox | NYC Quality Shipped Nationwide | Shelsky's Brooklyn</title>
+    <meta name="description" content="House-cured lox, gravlax, smoked salmon & sturgeon from Brooklyn's finest appetizing shop. The smoked fish NYC is famous for, shipped fresh to your door.">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Shelsky's Smoked Fish Collection",
+      "brand": {
+        "@type": "Brand",
+        "name": "Shelsky's of Brooklyn"
+      },
+      "description": "House-cured lox, gravlax, and premium smoked fish shipped nationwide",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "500"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "18",
+        "highPrice": "95"
+      }
+    }
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'MochaMattari';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/MochaMattariW01-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Arvo';
+            src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/Arvo-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+        }
+
+        h1, h2, h3 {
+            font-family: 'MochaMattari', Georgia, serif;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Promo Banner */
+        .promo-banner {
+            background: #e74b2a;
+            color: #fff;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { height: 60px; }
+
+        .btn {
+            display: inline-block;
+            background: #e74b2a;
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-family: 'Arvo', Georgia, serif;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background: #cf2e2e; }
+        .btn-dark { background: #32373c; }
+        .btn-dark:hover { background: #1e2327; }
+        .btn-small { padding: 10px 20px; font-size: 14px; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                        url('Shelsky\'s Best/SalmonTrioPlatterSquare.jpeg') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            margin-bottom: 16px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero .tagline {
+            font-size: 20px;
+            margin-bottom: 24px;
+            opacity: 0.95;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .trust-row span { display: flex; align-items: center; gap: 6px; }
+        .stars { color: #ffd700; }
+
+        /* Press Bar */
+        .press-bar {
+            background: #f9f9f9;
+            padding: 28px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .press-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 16px;
+        }
+
+        .press-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .press-logos img {
+            height: 32px;
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .quote-box {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .quote-box blockquote {
+            font-size: 22px;
+            font-style: italic;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .quote-box cite {
+            font-size: 14px;
+            color: #e74b2a;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        /* Fish Types Section */
+        .fish-types {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .fish-types h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .fish-types .intro {
+            text-align: center;
+            font-size: 17px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .fish-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .fish-card {
+            display: flex;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .fish-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .fish-img {
+            width: 200px;
+            min-height: 200px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .fish-info {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fish-info h3 { font-size: 22px; margin-bottom: 8px; }
+        .fish-price { color: #e74b2a; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .fish-desc { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 16px; }
+
+        /* Why Shelsky's */
+        .why-section {
+            padding: 60px 0;
+            background: #32373c;
+            color: #fff;
+        }
+
+        .why-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .why-icon { font-size: 48px; margin-bottom: 16px; }
+        .why-item h3 { font-size: 20px; margin-bottom: 12px; }
+        .why-item p { font-size: 14px; opacity: 0.9; line-height: 1.7; }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 28px;
+            border-left: 4px solid #e74b2a;
+        }
+
+        .testimonial-stars { color: #ffd700; font-size: 18px; margin-bottom: 12px; }
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .testimonial-card cite {
+            font-style: normal;
+            font-size: 13px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* Products Grid */
+        .products {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-info { padding: 20px; }
+        .product-info h3 { font-size: 18px; margin-bottom: 8px; }
+        .product-price { color: #e74b2a; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .product-desc { font-size: 14px; color: #666; margin-bottom: 16px; }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                        url('Shelsky\'s Best/GravlaxSquare.jpeg') center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .final-cta h2 { font-size: 40px; margin-bottom: 16px; }
+        .final-cta p { font-size: 18px; margin-bottom: 32px; opacity: 0.9; }
+
+        /* Footer */
+        footer {
+            background: #1a1d20;
+            color: #fff;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a { color: #fff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .fish-grid { grid-template-columns: 1fr; }
+            .fish-card { flex-direction: column; }
+            .fish-img { width: 100%; height: 200px; }
+            .why-grid, .product-grid, .testimonial-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .hero { padding: 60px 20px; min-height: 400px; }
+            .trust-row { flex-direction: column; gap: 12px; }
+            .header-inner { flex-direction: column; gap: 12px; }
+            .logo { height: 50px; }
+            .quote-box blockquote { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        FREE SHIPPING on orders over $300 | House-cured smoked fish shipped fresh nationwide
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="https://shelskys.com">
+                    <img src="logo-text.webp" alt="Shelsky's of Brooklyn" class="logo">
+                </a>
+                <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-small">Shop Smoked Fish</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>The Best Lox & Smoked Fish, Shipped Fresh</h1>
+            <p class="tagline">House-cured gravlax, wild salmon lox, sturgeon, and whitefish from Brooklyn's premier appetizing shop. The real deal, delivered anywhere.</p>
+
+            <div class="trust-row">
+                <span><span class="stars">★★★★★</span> 500+ Reviews</span>
+                <span>House-Cured Daily</span>
+                <span>Ships Overnight</span>
+            </div>
+
+            <a href="https://shelskys.com/product-category/smoked-fish/" class="btn">Shop Smoked Fish - Free Shipping $300+</a>
+        </div>
+    </section>
+
+    <!-- Press Bar -->
+    <section class="press-bar">
+        <div class="container">
+            <p class="press-label">As Featured In</p>
+            <div class="press-logos">
+                <img src="press/featured1.webp" alt="New York Times">
+                <img src="press/featured2.webp" alt="Bon Appetit">
+                <img src="press/featured3.webp" alt="Vogue">
+                <img src="press/featured4.webp" alt="Edible Brooklyn">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote-section">
+        <div class="quote-box">
+            <blockquote>"Shelsky's brings the classic Jewish appetizing experience to a new generation. Their house-cured gravlax rivals anything on the Lower East Side."</blockquote>
+            <cite>— Bon Appetit Magazine</cite>
+        </div>
+    </section>
+
+    <!-- Fish Types -->
+    <section class="fish-types">
+        <div class="container">
+            <h2>Our Smoked Fish Selection</h2>
+            <p class="intro">Every piece is hand-selected and prepared in-house using traditional techniques. This is what real appetizing tastes like.</p>
+
+            <div class="fish-grid">
+                <div class="fish-card">
+                    <img src="Shelsky's Best/GravlaxSquare.jpeg" alt="Gravlax" class="fish-img">
+                    <div class="fish-info">
+                        <h3>House-Cured Gravlax</h3>
+                        <p class="fish-price">From $24</p>
+                        <p class="fish-desc">Our signature cure. Wild salmon cured in-house with dill, juniper, and a touch of aquavit. Silky texture, subtle sweetness.</p>
+                        <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="Shelsky's Best/IcelandicSalmonSquare.jpeg" alt="Nova Lox" class="fish-img">
+                    <div class="fish-info">
+                        <h3>Nova Scotia Lox</h3>
+                        <p class="fish-price">From $22</p>
+                        <p class="fish-desc">The classic. Cold-smoked Atlantic salmon with that buttery, silky texture you remember from the best delis.</p>
+                        <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="Shelsky's Best/FancyLakeSturgeonSquare.jpeg" alt="Smoked Sturgeon" class="fish-img">
+                    <div class="fish-info">
+                        <h3>Smoked Sturgeon</h3>
+                        <p class="fish-price">From $32</p>
+                        <p class="fish-desc">The king of smoked fish. Rich, buttery, with a clean smoke finish. A true delicacy for the serious fish lover.</p>
+                        <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="fish-card">
+                    <img src="Shelsky's Best/BalikSquare.jpeg" alt="Balik Salmon" class="fish-img">
+                    <div class="fish-info">
+                        <h3>Tsar's Cut Balik Salmon</h3>
+                        <p class="fish-price">From $38</p>
+                        <p class="fish-desc">The belly cut. Supremely fatty, melt-in-your-mouth salmon that was once reserved for Russian royalty.</p>
+                        <a href="https://shelskys.com/product-category/smoked-fish/" class="btn btn-dark btn-small">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Shelsky's -->
+    <section class="why-section">
+        <div class="container">
+            <h2>Why Our Smoked Fish Is Better</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">👨‍🍳</div>
+                    <h3>Fine Dining Pedigree</h3>
+                    <p>Chef Peter Shelsky trained at Eleven Madison Park (3 Michelin stars). He brings the same obsessive attention to curing fish that he did to haute cuisine.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">🏠</div>
+                    <h3>Cured In-House Daily</h3>
+                    <p>We cure and smoke everything in our Brooklyn kitchen. No mass-produced imports. Every piece is made with care, the old-school way.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">📦</div>
+                    <h3>Ships Fresh Overnight</h3>
+                    <p>Vacuum-sealed and packed cold. Arrives at your door as fresh as if you walked into our shop. Free shipping on orders over $300.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"The gravlax is unreal. I've had lox all over NYC and this is hands down the best. Silky, perfectly seasoned, and the freshness when it arrives is incredible."</blockquote>
+                    <cite>— Rebecca T., Manhattan</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"Please do yourself a favor and order the Fancy Pants. It's the most incredible salmon and sturgeon I've ever had, and dare I say the best smoked fish bagel I've ever had."</blockquote>
+                    <cite>— Mary Madison Durst, Google Review</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote>"I moved from Brooklyn to Texas and thought I'd never have real lox again. Shelsky's ships it perfectly. It's like being back home."</blockquote>
+                    <cite>— Daniel K., Austin TX</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready-Made Packages -->
+    <section class="products">
+        <div class="container">
+            <h2>Complete Packages - Everything You Need</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Shelsky's Best/SalmonTrioPlatterSquare.jpeg" alt="Salmon Trio Platter" class="product-img">
+                    <div class="product-info">
+                        <h3>Salmon Trio Platter</h3>
+                        <p class="product-price">$89</p>
+                        <p class="product-desc">Three of our finest: Gravlax, Nova Lox, and Irish Smoked Salmon. Perfect for comparison tasting.</p>
+                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Shelsky's Best/BigMacherFaded.jpeg" alt="Big Macher Package" class="product-img">
+                    <div class="product-info">
+                        <h3>The Big Macher</h3>
+                        <p class="product-price">$175</p>
+                        <p class="product-desc">The works: smoked fish, bagels, cream cheese, salads, and all the fixings. Feeds 8-10 easily.</p>
+                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Shelsky's Best/GrandPlateauSquare.jpeg" alt="Grand Plateau" class="product-img">
+                    <div class="product-info">
+                        <h3>Grand Seafood Plateau</h3>
+                        <p class="product-price">$250</p>
+                        <p class="product-desc">The ultimate spread. Smoked fish, caviar, oysters, and accompaniments for the most special occasions.</p>
+                        <a href="https://shelskys.com/product-category/gift-brunch-packages/" class="btn btn-dark">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://shelskys.com/product-category/smoked-fish/" class="btn">Shop All Smoked Fish</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready for Real NYC Smoked Fish?</h2>
+            <p>House-cured and shipped fresh. Free shipping on orders over $300.</p>
+            <a href="https://shelskys.com/product-category/smoked-fish/" class="btn">Shop Smoked Fish Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shelsky's of Brooklyn | 141 Court St, Brooklyn NY | <a href="tel:7188558817">718.855.8817</a></p>
+            <p style="margin-top: 12px;">
+                <a href="https://shelskys.com">Main Site</a> |
+                <a href="https://shelskys.com/#history">Our Story</a> |
+                <a href="https://shelskys.com/product-category/smoked-fish/">Shop Fish</a>
+            </p>
+            <p style="margin-top: 12px; opacity: 0.7;">&copy; 2025 Shelsky's of Brooklyn. Brooklyn's finest appetizing since 2011.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Conversion tracking
+        let depths = [25, 50, 75, 100];
+        let tracked = [];
+        window.addEventListener('scroll', function() {
+            const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            depths.forEach(d => {
+                if (pct >= d && !tracked.includes(d)) {
+                    tracked.push(d);
+                    if (typeof gtag === 'function') gtag('event', 'scroll_depth', { depth: d });
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (typeof gtag === 'function') gtag('event', 'cta_click', { label: this.textContent.trim() });
+            });
+        });
+    </script>
+</body>
+</html>

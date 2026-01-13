@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelsky's Landing Pages | Internal Review</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e74b2a;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .page-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .page-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .page-header {
+            background: #32373c;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .page-header h2 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .page-header .target {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        .page-body {
+            padding: 20px;
+        }
+
+        .page-body p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .keywords {
+            margin-bottom: 16px;
+        }
+
+        .keywords h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .keyword-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #333;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin: 2px;
+        }
+
+        .page-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            flex: 1;
+            display: inline-block;
+            text-align: center;
+            padding: 12px 16px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background: #e74b2a;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #cf2e2e;
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .existing-pages {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .existing-pages h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .existing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .existing-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .existing-card h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .existing-card a {
+            display: inline-block;
+            color: #e74b2a;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .existing-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #e74b2a;
+        }
+
+        .stat-card .label {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .pages-grid, .existing-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shelsky's Landing Pages</h1>
+            <p class="subtitle">PPC Landing Pages for Internal Review</p>
+            <span class="badge">January 2026</span>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number">4</div>
+                <div class="label">New Landing Pages</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">3</div>
+                <div class="label">Existing Pages</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">$4-10</div>
+                <div class="label">Target CPA Range</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">3.18x</div>
+                <div class="label">Current ROAS</div>
+            </div>
+        </div>
+
+        <h3 style="font-size: 20px; margin-bottom: 20px;">New Landing Pages (Jan 2026)</h3>
+
+        <div class="pages-grid">
+            <!-- NYC Bagels Shipped -->
+            <div class="page-card">
+                <div class="page-header">
+                    <h2>NYC Bagels Shipped</h2>
+                    <p class="target">Target: Shipping-intent keywords</p>
+                </div>
+                <div class="page-body">
+                    <p>Targets highest-converting keyword cluster. Emphasizes 3-day fermentation, nationwide shipping, and out-of-state testimonials.</p>
+                    <div class="keywords">
+                        <h4>Target Keywords</h4>
+                        <span class="keyword-tag">nyc bagels shipped</span>
+                        <span class="keyword-tag">bagels from new york shipped</span>
+                        <span class="keyword-tag">new york bagels delivered</span>
+                        <span class="keyword-tag">ny bagels by mail</span>
+                    </div>
+                    <div class="page-actions">
+                        <a href="nyc-bagels-shipped-landing.html" class="btn btn-primary">Preview Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smoked Fish / Lox -->
+            <div class="page-card">
+                <div class="page-header">
+                    <h2>Smoked Fish & Lox</h2>
+                    <p class="target">Target: Fish-specific keywords</p>
+                </div>
+                <div class="page-body">
+                    <p>Features individual fish products (gravlax, nova, sturgeon). Emphasizes house-cured, fine dining pedigree.</p>
+                    <div class="keywords">
+                        <h4>Target Keywords</h4>
+                        <span class="keyword-tag">best lox</span>
+                        <span class="keyword-tag">smoked fish nyc</span>
+                        <span class="keyword-tag">best smoked salmon nyc</span>
+                        <span class="keyword-tag">lox delivery</span>
+                    </div>
+                    <div class="page-actions">
+                        <a href="smoked-fish-lox-landing.html" class="btn btn-primary">Preview Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jewish Deli Gifts -->
+            <div class="page-card">
+                <div class="page-header">
+                    <h2>Jewish Deli Gift Baskets</h2>
+                    <p class="target">Target: Gift + Jewish deli keywords</p>
+                </div>
+                <div class="page-body">
+                    <p>Activates dormant Gift Baskets ad group. 8 occasion cards, tiered packages, corporate gifting emphasis.</p>
+                    <div class="keywords">
+                        <h4>Target Keywords</h4>
+                        <span class="keyword-tag">jewish deli gift baskets</span>
+                        <span class="keyword-tag">jewish delis that ship</span>
+                        <span class="keyword-tag">jewish food gifts</span>
+                        <span class="keyword-tag">appetizing gifts</span>
+                    </div>
+                    <div class="page-actions">
+                        <a href="jewish-deli-gifts-landing.html" class="btn btn-primary">Preview Page</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brunch Packages -->
+            <div class="page-card">
+                <div class="page-header">
+                    <h2>Brunch Packages</h2>
+                    <p class="target">Target: Occasion-based keywords</p>
+                </div>
+                <div class="page-body">
+                    <p>Occasion-focused landing page. Sunday brunch, office meetings, celebrations. "Effortless hosting" angle.</p>
+                    <div class="keywords">
+                        <h4>Target Keywords</h4>
+                        <span class="keyword-tag">brunch delivery</span>
+                        <span class="keyword-tag">brunch catering</span>
+                        <span class="keyword-tag">bagel brunch package</span>
+                        <span class="keyword-tag">sunday brunch delivered</span>
+                    </div>
+                    <div class="page-actions">
+                        <a href="brunch-package-landing.html" class="btn btn-primary">Preview Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="existing-pages">
+            <h3>Existing Landing Pages</h3>
+            <div class="existing-grid">
+                <div class="existing-card">
+                    <h4>Caviar Landing Page</h4>
+                    <a href="landing-page.html">Preview &rarr;</a>
+                </div>
+                <div class="existing-card">
+                    <h4>Bagels Landing Page</h4>
+                    <a href="bagels-landing.html">Preview &rarr;</a>
+                </div>
+                <div class="existing-card">
+                    <h4>Gift Baskets Landing</h4>
+                    <a href="gift-baskets-landing.html">Preview &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Shelsky's of Brooklyn | Landing Pages Index | Last Updated: January 2026</p>
+            <p style="margin-top: 8px;">All pages optimized for Google Ads Quality Score and conversion rate.</p>
+        </footer>
+    </div>
+</body>
+</html>
