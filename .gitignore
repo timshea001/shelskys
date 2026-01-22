@@ -1,2 +1,29 @@
+# OS files
 .DS_Store
 .claude/
+
+# Notes and documentation (keep local only)
+*.md
+*.json
+status.md
+*-brief.json
+*-qa-review.md
+
+# Screenshots and working files
+*.png
+*.zip
+
+# Development tools (not for production)
+lp-system/
+components/
+css/
+layouts/
+
+# Email resources (separate from landing pages)
+email_resources/
+email_resources.zip
+
+# Temporary files
+*.tmp
+*.bak
+*~
