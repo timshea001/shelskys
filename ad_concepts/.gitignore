@@ -1,0 +1,3 @@
+# Only track compressed web videos, thumbs, and static images
+*.mp4
+!*_web.mp4

@@ -20,8 +20,8 @@
 
     body {
       font-family: 'Nunito', sans-serif;
-      background: #1a1512;
-      color: #fff;
+      background: #fdfbf7;
+      color: #463935;
       line-height: 1.6;
     }
 
@@ -30,10 +30,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(70, 57, 53, 0.1);
       position: sticky;
       top: 0;
-      background: rgba(26, 21, 18, 0.95);
+      background: rgba(253, 251, 247, 0.95);
       backdrop-filter: blur(12px);
       z-index: 100;
     }
@@ -54,10 +54,10 @@
       font-size: clamp(36px, 5vw, 56px);
       font-weight: 700;
       line-height: 1.05;
-      margin-bottom: 12px;
+      color: #463935; margin-bottom: 12px;
     }
     .hero h1 span { color: #e74b2a; }
-    .hero p { font-size: 18px; color: rgba(255,255,255,0.45); max-width: 600px; margin: 0 auto; }
+    .hero p { font-size: 18px; color: rgba(70, 57, 53, 0.55); max-width: 600px; margin: 0 auto; }
 
     .platform-toggle {
       display: flex;
@@ -67,7 +67,7 @@
       position: sticky;
       top: 65px;
       z-index: 99;
-      background: rgba(26, 21, 18, 0.95);
+      background: rgba(253, 251, 247, 0.95);
       backdrop-filter: blur(12px);
     }
     .platform-toggle button {
@@ -75,9 +75,9 @@
       font-size: 14px;
       font-weight: 600;
       padding: 10px 24px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-      color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(70, 57, 53, 0.15);
+      background: rgba(70, 57, 53, 0.03);
+      color: rgba(70, 57, 53, 0.5);
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -85,7 +85,7 @@
     .platform-toggle button:last-child { border-radius: 0 6px 6px 0; }
     .platform-toggle button.active {
       background: #e74b2a;
-      color: #fff;
+      color: #463935;
       border-color: #e74b2a;
     }
 
@@ -102,8 +102,8 @@
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
-      color: rgba(255,255,255,0.5);
-      background: rgba(255,255,255,0.04);
+      color: rgba(70, 57, 53, 0.5);
+      background: rgba(70, 57, 53, 0.03);
       border: 1px solid rgba(255,255,255,0.08);
       transition: all 0.2s;
     }
@@ -127,7 +127,7 @@
       font-weight: 700;
       color: #e74b2a;
     }
-    .lp-subtitle { font-size: 15px; color: rgba(255,255,255,0.35); margin-bottom: 32px; }
+    .lp-subtitle { font-size: 15px; color: rgba(70, 57, 53, 0.4); margin-bottom: 32px; }
 
     .ad-grid {
       display: grid;
@@ -237,11 +237,11 @@
     .ig-caption .ig-more { color: #a8a8a8; }
 
     .ad-description { margin-top: 16px; text-align: center; max-width: 320px; }
-    .ad-description h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-    .ad-description p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+    .ad-description h3 { font-size: 16px; font-weight: 700; color: #463935; margin-bottom: 4px; }
+    .ad-description p { font-size: 13px; color: rgba(70, 57, 53, 0.45); line-height: 1.5; }
 
     .divider { max-width: 1400px; margin: 0 auto 80px; padding: 0 40px; }
-    .divider div { height: 1px; background: rgba(255,255,255,0.06); }
+    .divider div { height: 1px; background: rgba(70, 57, 53, 0.06); }
 
     .fb-post { display: block; }
     .ig-post { display: none; }
@@ -301,7 +301,7 @@
                 <div class="fb-dots">...</div>
               </div>
               <div class="fb-text">Bon Appetit said this bagel got them through marathon training. We just call it Tuesday.<br><br>Hand-rolled. Kettle-boiled. Shipped fresh from Brooklyn to all 50 states. <span class="see-more">...more</span></div>
-              <div class="fb-media"><video src="../ad_concepts/bon_appetit_bagels.mp4" muted loop playsinline poster="../ad_concepts/bon_appetit_bagels_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="fb-media"><video src="../ad_concepts/bon_appetit_bagels_web.mp4" muted loop playsinline poster="../ad_concepts/bon_appetit_bagels_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
               <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F; 247</span><span class="fb-counts">38 comments</span></div>
               <div class="fb-bottom">
                 <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Brooklyn Bagels. Shipped Fresh Nationwide.</div></div>
@@ -316,7 +316,7 @@
                 <button class="ig-follow">Follow</button>
                 <span class="ig-dots">...</span>
               </div>
-              <div class="ig-media"><video src="../ad_concepts/bon_appetit_bagels.mp4" muted loop playsinline poster="../ad_concepts/bon_appetit_bagels_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="ig-media"><video src="../ad_concepts/bon_appetit_bagels_web.mp4" muted loop playsinline poster="../ad_concepts/bon_appetit_bagels_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
               <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
               <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
               <div class="ig-likes">247 likes</div>
@@ -342,7 +342,7 @@
                 <div class="fb-dots">...</div>
               </div>
               <div class="fb-text">Cracked pepper. Pretzel salt. We call it a bagel au poivre because we can.<br><br>12 varieties. Hand-rolled in Brooklyn. Shipped nationwide. <span class="see-more">...more</span></div>
-              <div class="fb-media"><video src="../ad_concepts/cracked pepper_1.mp4" muted loop playsinline></video></div>
+              <div class="fb-media"><video src="../ad_concepts/cracked pepper_1_web.mp4" muted loop playsinline></video></div>
               <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F; 182</span><span class="fb-counts">24 comments</span></div>
               <div class="fb-bottom">
                 <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Cracked Pepper & Salt Bagel. Brooklyn Made.</div></div>
@@ -357,7 +357,7 @@
                 <button class="ig-follow">Follow</button>
                 <span class="ig-dots">...</span>
               </div>
-              <div class="ig-media"><video src="../ad_concepts/cracked pepper_1.mp4" muted loop playsinline></video></div>
+              <div class="ig-media"><video src="../ad_concepts/cracked pepper_1_web.mp4" muted loop playsinline></video></div>
               <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
               <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
               <div class="ig-likes">182 likes</div>
@@ -438,7 +438,7 @@
                 <div class="fb-dots">...</div>
               </div>
               <div class="fb-text">The pastrami salmon is so good The Infatuation wanted to make curtains out of it.<br><br>House-cured in Brooklyn. 9 varieties of smoked salmon. Ships nationwide. <span class="see-more">...more</span></div>
-              <div class="fb-media"><video src="../ad_concepts/Pastrami Salmon.mp4" muted loop playsinline poster="../ad_concepts/Pastrami Salmon_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="fb-media"><video src="../ad_concepts/Pastrami Salmon_web.mp4" muted loop playsinline poster="../ad_concepts/Pastrami Salmon_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
               <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F; 156</span><span class="fb-counts">29 comments</span></div>
               <div class="fb-bottom">
                 <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">House-Cured. Hand-Sliced. Shipped Fresh.</div></div>
@@ -453,7 +453,7 @@
                 <button class="ig-follow">Follow</button>
                 <span class="ig-dots">...</span>
               </div>
-              <div class="ig-media"><video src="../ad_concepts/Pastrami Salmon.mp4" muted loop playsinline poster="../ad_concepts/Pastrami Salmon_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="ig-media"><video src="../ad_concepts/Pastrami Salmon_web.mp4" muted loop playsinline poster="../ad_concepts/Pastrami Salmon_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
               <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
               <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
               <div class="ig-likes">156 likes</div>
@@ -493,7 +493,7 @@
                 <div class="fb-dots">...</div>
               </div>
               <div class="fb-text">These won the NYC Latke Festival. You can order them from your couch.<br><br>Crispy outside. Soft inside. Shipped fresh from Brooklyn. <span class="see-more">...more</span></div>
-              <div class="fb-media"><video src="../ad_concepts/Latkes (1).mp4" muted loop playsinline poster="../ad_concepts/Latkes (1)_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="fb-media"><video src="../ad_concepts/Latkes (1)_web.mp4" muted loop playsinline poster="../ad_concepts/Latkes (1)_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
               <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F; 198</span><span class="fb-counts">42 comments</span></div>
               <div class="fb-bottom">
                 <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Award-Winning Latkes. Shipped to Your Door.</div></div>
@@ -508,7 +508,7 @@
                 <button class="ig-follow">Follow</button>
                 <span class="ig-dots">...</span>
               </div>
-              <div class="ig-media"><video src="../ad_concepts/Latkes (1).mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="ig-media"><video src="../ad_concepts/Latkes (1)_web.mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
               <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
               <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
               <div class="ig-likes">198 likes</div>
@@ -534,7 +534,7 @@
                 <div class="fb-dots">...</div>
               </div>
               <div class="fb-text">Your grandmother's latkes but better. Sorry.<br><br>Traditional potato latkes, made in Brooklyn, shipped to all 50 states. <span class="see-more">...more</span></div>
-              <div class="fb-media"><video src="../ad_concepts/latkes_2.mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="fb-media"><video src="../ad_concepts/latkes_2_web.mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
               <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F;&#x1F602; 324</span><span class="fb-counts">89 comments</span></div>
               <div class="fb-bottom">
                 <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Award-Winning Latkes. Ships Nationwide.</div></div>
@@ -549,7 +549,7 @@
                 <button class="ig-follow">Follow</button>
                 <span class="ig-dots">...</span>
               </div>
-              <div class="ig-media"><video src="../ad_concepts/latkes_2.mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="ig-media"><video src="../ad_concepts/latkes_2_web.mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
               <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
               <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
               <div class="ig-likes">324 likes</div>
