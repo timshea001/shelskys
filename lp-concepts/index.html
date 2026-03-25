@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelsky's Landing Page Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'MochaMattari';
+      src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/MochaMattariW01-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #fdfbf7;
+      color: #463935;
+      min-height: 100vh;
+    }
+
+    .header {
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(70, 57, 53, 0.1);
+    }
+
+    .header-logo {
+      height: 48px;
+    }
+
+    .header-meta {
+      font-size: 13px;
+      color: rgba(70, 57, 53, 0.4);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 40px 20px;
+    }
+
+    .hero h1 {
+      font-family: 'MochaMattari', Georgia, serif;
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: normal;
+      line-height: 1.05;
+      color: #463935;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span { color: #e74b2a; }
+
+    .hero p {
+      font-size: 18px;
+      color: rgba(70, 57, 53, 0.55);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .concepts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      padding: 60px 40px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border: 2px solid rgba(70, 57, 53, 0.08);
+      border-radius: 16px;
+      padding: 40px 32px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .card:hover {
+      border-color: #e74b2a;
+      background: #fff;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+
+    .card-number {
+      font-size: 14px;
+      font-weight: 700;
+      color: #bba06f;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      font-family: 'MochaMattari', Georgia, serif;
+      font-size: 28px;
+      font-weight: normal;
+      color: #e74b2a;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .card-headline {
+      font-size: 17px;
+      font-weight: 600;
+      color: #463935;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: rgba(70, 57, 53, 0.55);
+      line-height: 1.6;
+    }
+
+    .card-arrow {
+      position: absolute;
+      top: 40px;
+      right: 32px;
+      font-size: 24px;
+      color: rgba(70, 57, 53, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover .card-arrow {
+      color: #e74b2a;
+      transform: translateX(4px);
+    }
+
+    .card-tag {
+      display: inline-block;
+      background: rgba(70, 57, 53, 0.06);
+      color: rgba(70, 57, 53, 0.55);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .ad-link {
+      text-align: center;
+      padding: 0 40px 100px;
+    }
+
+    .ad-link a {
+      color: #e74b2a;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      border: 2px solid #e74b2a;
+      padding: 12px 28px;
+      border-radius: 6px;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .ad-link a:hover {
+      background: rgba(231, 75, 42, 0.06);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .concepts { grid-template-columns: 1fr; padding: 40px 20px 40px; }
+      .header { padding: 24px 20px; }
+      .hero { padding: 60px 20px 20px; }
+      .card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <img src="https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/images/logo.png" alt="Shelsky's" class="header-logo">
+    <span class="header-meta">LP Concepts &middot; March 2026</span>
+  </header>
+
+  <section class="hero">
+    <h1>3 Products.<br><span>3 Landing Pages.</span></h1>
+    <p>Each page targets a specific product category from Meta ad traffic. Package-first strategy with free shipping upfront. Click any card to preview.</p>
+  </section>
+
+  <section class="concepts">
+
+    <a href="lp-bagels.html" class="card">
+      <span class="card-arrow">&rarr;</span>
+      <div class="card-number">Page 01</div>
+      <h2>Brooklyn Bagels</h2>
+      <div class="card-headline">"Brooklyn Bagels. Shipped Fresh to Your Door."</div>
+      <p>The hero product. Hand-rolled, kettle-boiled, 12 varieties including the infamous Pepper & Salt "Bagel Au Poivre." Routes cold traffic to brunch packages with free shipping baked in.</p>
+      <span class="card-tag">Bagels &middot; Packages &middot; Cold Traffic</span>
+    </a>
+
+    <a href="lp-smoked-fish.html" class="card">
+      <span class="card-arrow">&rarr;</span>
+      <div class="card-number">Page 02</div>
+      <h2>Smoked Fish</h2>
+      <div class="card-headline">"House-Cured. Hand-Sliced. Shipped Fresh."</div>
+      <p>Nine varieties of smoked salmon from classic Nova to the legendary pastrami salmon. Individual products plus package cross-sell. The Infatuation 8.3 credibility play.</p>
+      <span class="card-tag">Smoked Fish &middot; Individual + Packages &middot; Authority</span>
+    </a>
+
+    <a href="lp-latkes.html" class="card">
+      <span class="card-arrow">&rarr;</span>
+      <div class="card-number">Page 03</div>
+      <h2>Award-Winning Latkes</h2>
+      <div class="card-headline">"The Latke Shouldn't Need an Explanation."</div>
+      <p>NYC Latke Festival People's Choice Winner. Two varieties plus cross-sell to toppings (pastrami salmon, cream cheese, creme fraiche). The boldest copy of the three.</p>
+      <span class="card-tag">Latkes &middot; Award &middot; Cross-sell</span>
+    </a>
+
+  </section>
+
+  <div class="ad-link">
+    <a href="ad-concepts.html">View Ad Concepts + Phone Mockups &rarr;</a>
+  </div>
+
+</body>
+</html>

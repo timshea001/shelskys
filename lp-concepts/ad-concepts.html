@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelsky's Ad Concepts — Phone Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'MochaMattari';
+      src: url('https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/fonts/MochaMattariW01-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #1a1512;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .header {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      background: rgba(26, 21, 18, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+    .header-logo {
+      font-family: 'MochaMattari', Georgia, serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: #e74b2a;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+    .header a.back { color: #e74b2a; font-size: 14px; font-weight: 600; text-decoration: none; }
+    .header a.back:hover { text-decoration: underline; }
+
+    .hero { text-align: center; padding: 80px 40px 20px; }
+    .hero h1 {
+      font-family: 'MochaMattari', Georgia, serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: #e74b2a; }
+    .hero p { font-size: 18px; color: rgba(255,255,255,0.45); max-width: 600px; margin: 0 auto; }
+
+    .platform-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      padding: 24px 20px 16px;
+      position: sticky;
+      top: 65px;
+      z-index: 99;
+      background: rgba(26, 21, 18, 0.95);
+      backdrop-filter: blur(12px);
+    }
+    .platform-toggle button {
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 24px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .platform-toggle button:first-child { border-radius: 6px 0 0 6px; }
+    .platform-toggle button:last-child { border-radius: 0 6px 6px 0; }
+    .platform-toggle button.active {
+      background: #e74b2a;
+      color: #fff;
+      border-color: #e74b2a;
+    }
+
+    .section-nav {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      padding: 12px 20px 48px;
+      flex-wrap: wrap;
+    }
+    .section-nav a {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.2s;
+    }
+    .section-nav a:hover { color: #e74b2a; border-color: #e74b2a; background: rgba(231,75,42,0.08); }
+
+    .lp-section {
+      max-width: 1400px;
+      margin: 0 auto 80px;
+      padding: 0 40px;
+    }
+    .lp-section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .lp-section-header h2 {
+      font-family: 'MochaMattari', Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #e74b2a;
+    }
+    .lp-subtitle { font-size: 15px; color: rgba(255,255,255,0.35); margin-bottom: 32px; }
+
+    .ad-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 32px;
+    }
+
+    /* Phone Mockup */
+    .phone-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone {
+      width: 320px;
+      background: #fff;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 0 3px #333, 0 0 0 6px #1a1a1a;
+      position: relative;
+    }
+
+    .phone-notch {
+      width: 120px;
+      height: 28px;
+      background: #1a1a1a;
+      border-radius: 0 0 16px 16px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone-screen {
+      background: #fff;
+      margin-top: -4px;
+    }
+
+    /* FB Feed */
+    .fb-post { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: #fff; }
+    .fb-header { display: flex; align-items: center; gap: 10px; padding: 12px 14px 8px; }
+    .fb-avatar {
+      width: 40px; height: 40px; border-radius: 50%; background: #e74b2a;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      overflow: hidden;
+    }
+    .fb-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .fb-name { font-size: 14px; font-weight: 700; color: #050505; line-height: 1.2; }
+    .fb-sponsored { font-size: 12px; color: #65676B; }
+    .fb-dots { margin-left: auto; color: #050505; font-size: 20px; }
+
+    .fb-text { padding: 0 14px 10px; font-size: 14.5px; color: #050505; line-height: 1.35; }
+    .fb-text .see-more { color: #65676B; cursor: pointer; font-weight: 500; }
+
+    .fb-media { width: 100%; display: block; }
+    .fb-media video { width: 100%; display: block; }
+    .fb-media img { width: 100%; display: block; }
+
+    .fb-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 14px; background: #F0F2F5; gap: 12px;
+    }
+    .fb-bottom-left { flex: 1; min-width: 0; }
+    .fb-desc { font-size: 12px; color: #65676B; text-transform: uppercase; letter-spacing: 0.3px; }
+    .fb-headline { font-size: 14px; font-weight: 700; color: #050505; line-height: 1.25; }
+    .fb-cta {
+      flex-shrink: 0; background: #E4E6EB; color: #050505;
+      font-size: 14px; font-weight: 700; padding: 8px 16px; border-radius: 6px; white-space: nowrap;
+    }
+
+    .fb-engagement { display: flex; align-items: center; justify-content: space-between; padding: 8px 14px 4px; }
+    .fb-reactions { font-size: 13px; color: #65676B; }
+    .fb-counts { font-size: 13px; color: #65676B; }
+    .fb-actions { display: flex; justify-content: space-around; padding: 4px 14px 10px; border-top: 1px solid #CED0D4; margin-top: 4px; }
+    .fb-action { font-size: 13px; color: #65676B; font-weight: 600; padding: 6px 0; }
+
+    /* IG Feed */
+    .ig-post { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: #000; color: #fff; }
+    .ig-header { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+    .ig-avatar {
+      width: 32px; height: 32px; border-radius: 50%; background: #e74b2a;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      overflow: hidden;
+    }
+    .ig-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .ig-header-info { flex: 1; }
+    .ig-name { font-size: 13px; font-weight: 600; color: #fff; }
+    .ig-sponsored { font-size: 11px; color: #a8a8a8; }
+    .ig-follow { font-size: 13px; font-weight: 600; color: #0095F6; padding: 6px 16px; border: 1px solid #363636; border-radius: 8px; background: transparent; }
+    .ig-dots { color: #fff; font-size: 16px; margin-left: 12px; letter-spacing: 2px; }
+
+    .ig-media { width: 100%; display: block; }
+    .ig-media video { width: 100%; display: block; }
+    .ig-media img { width: 100%; display: block; }
+
+    .ig-cta-bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: #1a1a1a; border-bottom: 1px solid #262626; }
+    .ig-cta-text { font-size: 14px; font-weight: 600; color: #fff; }
+    .ig-cta-chevron { font-size: 18px; color: #fff; }
+
+    .ig-actions-bar { display: flex; align-items: center; padding: 10px 14px 4px; gap: 16px; }
+    .ig-icon { font-size: 24px; color: #fff; line-height: 1; }
+    .ig-icon-right { margin-left: auto; }
+
+    .ig-likes { padding: 0 14px 4px; font-size: 13px; font-weight: 600; color: #fff; }
+    .ig-caption { padding: 0 14px 12px; font-size: 13px; color: #fff; line-height: 1.4; }
+    .ig-caption strong { font-weight: 700; }
+    .ig-caption .ig-more { color: #a8a8a8; }
+
+    .ad-description { margin-top: 16px; text-align: center; max-width: 320px; }
+    .ad-description h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .ad-description p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+
+    .divider { max-width: 1400px; margin: 0 auto 80px; padding: 0 40px; }
+    .divider div { height: 1px; background: rgba(255,255,255,0.06); }
+
+    .fb-post { display: block; }
+    .ig-post { display: none; }
+    body.ig-mode .fb-post { display: none; }
+    body.ig-mode .ig-post { display: block; }
+
+    @media (max-width: 768px) {
+      .lp-section { padding: 0 16px; }
+      .hero { padding: 60px 20px 20px; }
+      .ad-grid { grid-template-columns: 1fr; justify-items: center; }
+      .header { padding: 16px 20px; }
+      .phone { width: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="header-logo"><img src="https://shelskys.com/wp-content/themes/fws-shelskys/src/assets/images/logo.png" alt="Shelsky's" style="height: 36px;"></a>
+    <a href="index.html" class="back">&larr; Back to Concepts</a>
+  </header>
+
+  <section class="hero">
+    <h1>Ad Concepts <span>by Product</span></h1>
+    <p>Video and static ads across 3 product categories. Toggle between Facebook and Instagram preview. Each ad drives to its dedicated landing page.</p>
+  </section>
+
+  <div class="platform-toggle">
+    <button class="active" onclick="setMode('fb')">Facebook Feed</button>
+    <button onclick="setMode('ig')">Instagram Feed</button>
+  </div>
+
+  <nav class="section-nav">
+    <a href="#bagels">Bagels</a>
+    <a href="#smoked-fish">Smoked Fish</a>
+    <a href="#latkes">Latkes</a>
+  </nav>
+
+  <!-- ══════════════════════ BAGELS ══════════════════════ -->
+  <section class="lp-section" id="bagels">
+    <div class="lp-section-header">
+      <h2>Bagels</h2>
+    </div>
+    <p class="lp-subtitle">Video hooks + static ads driving to the bagels landing page</p>
+
+    <div class="ad-grid">
+
+      <!-- Ad 1: Bon Appetit Bagels (video) -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="fb-post">
+              <div class="fb-header">
+                <div class="fb-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div><div class="fb-name">Shelsky's of Brooklyn</div><div class="fb-sponsored">Sponsored</div></div>
+                <div class="fb-dots">...</div>
+              </div>
+              <div class="fb-text">Bon Appetit said this bagel got them through marathon training. We just call it Tuesday.<br><br>Hand-rolled. Kettle-boiled. Shipped fresh from Brooklyn to all 50 states. <span class="see-more">...more</span></div>
+              <div class="fb-media"><video src="../ad_concepts/bon_appetit_bagels.mp4" muted loop playsinline poster="../ad_concepts/bon_appetit_bagels_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F; 247</span><span class="fb-counts">38 comments</span></div>
+              <div class="fb-bottom">
+                <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Brooklyn Bagels. Shipped Fresh Nationwide.</div></div>
+                <div class="fb-cta">Shop Now</div>
+              </div>
+              <div class="fb-actions"><span class="fb-action">Like</span><span class="fb-action">Comment</span><span class="fb-action">Share</span></div>
+            </div>
+            <div class="ig-post">
+              <div class="ig-header">
+                <div class="ig-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div class="ig-header-info"><div class="ig-name">shelsky_s</div><div class="ig-sponsored">Sponsored</div></div>
+                <button class="ig-follow">Follow</button>
+                <span class="ig-dots">...</span>
+              </div>
+              <div class="ig-media"><video src="../ad_concepts/bon_appetit_bagels.mp4" muted loop playsinline poster="../ad_concepts/bon_appetit_bagels_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
+              <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
+              <div class="ig-likes">247 likes</div>
+              <div class="ig-caption"><strong>shelsky_s</strong> Bon Appetit said this bagel got them through marathon training. We just call it Tuesday. <span class="ig-more">...more</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-description">
+          <h3>Bon Appetit Hook</h3>
+          <p>Press credibility + video process footage. Drives to bagels LP.</p>
+        </div>
+      </div>
+
+      <!-- Ad 2: Cracked Pepper (video) -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="fb-post">
+              <div class="fb-header">
+                <div class="fb-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div><div class="fb-name">Shelsky's of Brooklyn</div><div class="fb-sponsored">Sponsored</div></div>
+                <div class="fb-dots">...</div>
+              </div>
+              <div class="fb-text">Cracked pepper. Pretzel salt. We call it a bagel au poivre because we can.<br><br>12 varieties. Hand-rolled in Brooklyn. Shipped nationwide. <span class="see-more">...more</span></div>
+              <div class="fb-media"><video src="../ad_concepts/cracked pepper_1.mp4" muted loop playsinline></video></div>
+              <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F; 182</span><span class="fb-counts">24 comments</span></div>
+              <div class="fb-bottom">
+                <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Cracked Pepper & Salt Bagel. Brooklyn Made.</div></div>
+                <div class="fb-cta">Shop Now</div>
+              </div>
+              <div class="fb-actions"><span class="fb-action">Like</span><span class="fb-action">Comment</span><span class="fb-action">Share</span></div>
+            </div>
+            <div class="ig-post">
+              <div class="ig-header">
+                <div class="ig-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div class="ig-header-info"><div class="ig-name">shelsky_s</div><div class="ig-sponsored">Sponsored</div></div>
+                <button class="ig-follow">Follow</button>
+                <span class="ig-dots">...</span>
+              </div>
+              <div class="ig-media"><video src="../ad_concepts/cracked pepper_1.mp4" muted loop playsinline></video></div>
+              <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
+              <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
+              <div class="ig-likes">182 likes</div>
+              <div class="ig-caption"><strong>shelsky_s</strong> Cracked pepper. Pretzel salt. We call it a bagel au poivre because we can. <span class="ig-more">...more</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-description">
+          <h3>Bagel Au Poivre</h3>
+          <p>Product-specific hook. Unique variety = curiosity driver.</p>
+        </div>
+      </div>
+
+      <!-- Ad 3: Coolest Bagel (static) -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="fb-post">
+              <div class="fb-header">
+                <div class="fb-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div><div class="fb-name">Shelsky's of Brooklyn</div><div class="fb-sponsored">Sponsored</div></div>
+                <div class="fb-dots">...</div>
+              </div>
+              <div class="fb-text">12 varieties. Hand-rolled at 4am. Shipped fresh from Brooklyn to your door in 2 days. <span class="see-more">...more</span></div>
+              <div class="fb-media"><img src="../ad_concepts/coolest_bagel.png" alt="Cracked Pepper Bagel"></div>
+              <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F;&#x1F60D; 412</span><span class="fb-counts">67 comments</span></div>
+              <div class="fb-bottom">
+                <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Baked in Brooklyn. Ships Nationwide.</div></div>
+                <div class="fb-cta">Shop Now</div>
+              </div>
+              <div class="fb-actions"><span class="fb-action">Like</span><span class="fb-action">Comment</span><span class="fb-action">Share</span></div>
+            </div>
+            <div class="ig-post">
+              <div class="ig-header">
+                <div class="ig-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div class="ig-header-info"><div class="ig-name">shelsky_s</div><div class="ig-sponsored">Sponsored</div></div>
+                <button class="ig-follow">Follow</button>
+                <span class="ig-dots">...</span>
+              </div>
+              <div class="ig-media"><img src="../ad_concepts/coolest_bagel.png" alt="Cracked Pepper Bagel"></div>
+              <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
+              <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
+              <div class="ig-likes">412 likes</div>
+              <div class="ig-caption"><strong>shelsky_s</strong> "This is the coolest f-ing bagel I've ever had." — A happy customer. <span class="ig-more">...more</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-description">
+          <h3>Coolest Bagel (Static)</h3>
+          <p>Customer quote UGC-style static. Close-up macro photography.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"><div></div></div>
+
+  <!-- ══════════════════════ SMOKED FISH ══════════════════════ -->
+  <section class="lp-section" id="smoked-fish">
+    <div class="lp-section-header">
+      <h2>Smoked Fish</h2>
+    </div>
+    <p class="lp-subtitle">Pastrami salmon hero ad driving to smoked fish LP</p>
+
+    <div class="ad-grid">
+
+      <!-- Ad: Pastrami Salmon (video) -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="fb-post">
+              <div class="fb-header">
+                <div class="fb-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div><div class="fb-name">Shelsky's of Brooklyn</div><div class="fb-sponsored">Sponsored</div></div>
+                <div class="fb-dots">...</div>
+              </div>
+              <div class="fb-text">The pastrami salmon is so good The Infatuation wanted to make curtains out of it.<br><br>House-cured in Brooklyn. 9 varieties of smoked salmon. Ships nationwide. <span class="see-more">...more</span></div>
+              <div class="fb-media"><video src="../ad_concepts/Pastrami Salmon.mp4" muted loop playsinline poster="../ad_concepts/Pastrami Salmon_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F; 156</span><span class="fb-counts">29 comments</span></div>
+              <div class="fb-bottom">
+                <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">House-Cured. Hand-Sliced. Shipped Fresh.</div></div>
+                <div class="fb-cta">Shop Now</div>
+              </div>
+              <div class="fb-actions"><span class="fb-action">Like</span><span class="fb-action">Comment</span><span class="fb-action">Share</span></div>
+            </div>
+            <div class="ig-post">
+              <div class="ig-header">
+                <div class="ig-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div class="ig-header-info"><div class="ig-name">shelsky_s</div><div class="ig-sponsored">Sponsored</div></div>
+                <button class="ig-follow">Follow</button>
+                <span class="ig-dots">...</span>
+              </div>
+              <div class="ig-media"><video src="../ad_concepts/Pastrami Salmon.mp4" muted loop playsinline poster="../ad_concepts/Pastrami Salmon_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
+              <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
+              <div class="ig-likes">156 likes</div>
+              <div class="ig-caption"><strong>shelsky_s</strong> The pastrami salmon is so good The Infatuation wanted to make curtains out of it. <span class="ig-more">...more</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-description">
+          <h3>Pastrami Salmon</h3>
+          <p>Infatuation quote hook + slicing footage. Drives to smoked fish LP.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"><div></div></div>
+
+  <!-- ══════════════════════ LATKES ══════════════════════ -->
+  <section class="lp-section" id="latkes">
+    <div class="lp-section-header">
+      <h2>Latkes</h2>
+    </div>
+    <p class="lp-subtitle">Award-winning latkes — NYC Latke Festival People's Choice Winner</p>
+
+    <div class="ad-grid">
+
+      <!-- Ad: Latkes 1 (video) -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="fb-post">
+              <div class="fb-header">
+                <div class="fb-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div><div class="fb-name">Shelsky's of Brooklyn</div><div class="fb-sponsored">Sponsored</div></div>
+                <div class="fb-dots">...</div>
+              </div>
+              <div class="fb-text">These won the NYC Latke Festival. You can order them from your couch.<br><br>Crispy outside. Soft inside. Shipped fresh from Brooklyn. <span class="see-more">...more</span></div>
+              <div class="fb-media"><video src="../ad_concepts/Latkes (1).mp4" muted loop playsinline poster="../ad_concepts/Latkes (1)_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F; 198</span><span class="fb-counts">42 comments</span></div>
+              <div class="fb-bottom">
+                <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Award-Winning Latkes. Shipped to Your Door.</div></div>
+                <div class="fb-cta">Shop Now</div>
+              </div>
+              <div class="fb-actions"><span class="fb-action">Like</span><span class="fb-action">Comment</span><span class="fb-action">Share</span></div>
+            </div>
+            <div class="ig-post">
+              <div class="ig-header">
+                <div class="ig-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div class="ig-header-info"><div class="ig-name">shelsky_s</div><div class="ig-sponsored">Sponsored</div></div>
+                <button class="ig-follow">Follow</button>
+                <span class="ig-dots">...</span>
+              </div>
+              <div class="ig-media"><video src="../ad_concepts/Latkes (1).mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
+              <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
+              <div class="ig-likes">198 likes</div>
+              <div class="ig-caption"><strong>shelsky_s</strong> These won the NYC Latke Festival. You can order them from your couch. <span class="ig-more">...more</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-description">
+          <h3>Latke Festival Winner</h3>
+          <p>Award hook + frying footage. Drives to latkes LP.</p>
+        </div>
+      </div>
+
+      <!-- Ad: Latkes 2 (video) -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="fb-post">
+              <div class="fb-header">
+                <div class="fb-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div><div class="fb-name">Shelsky's of Brooklyn</div><div class="fb-sponsored">Sponsored</div></div>
+                <div class="fb-dots">...</div>
+              </div>
+              <div class="fb-text">Your grandmother's latkes but better. Sorry.<br><br>Traditional potato latkes, made in Brooklyn, shipped to all 50 states. <span class="see-more">...more</span></div>
+              <div class="fb-media"><video src="../ad_concepts/latkes_2.mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="fb-engagement"><span class="fb-reactions">&#x1F44D;&#x2764;&#xFE0F;&#x1F602; 324</span><span class="fb-counts">89 comments</span></div>
+              <div class="fb-bottom">
+                <div class="fb-bottom-left"><div class="fb-desc">shelskys.com</div><div class="fb-headline">Award-Winning Latkes. Ships Nationwide.</div></div>
+                <div class="fb-cta">Shop Now</div>
+              </div>
+              <div class="fb-actions"><span class="fb-action">Like</span><span class="fb-action">Comment</span><span class="fb-action">Share</span></div>
+            </div>
+            <div class="ig-post">
+              <div class="ig-header">
+                <div class="ig-avatar"><img src="https://shelskys.com/wp-content/uploads/2023/05/EverythingBagelPerfect-400x400.jpeg" alt=""></div>
+                <div class="ig-header-info"><div class="ig-name">shelsky_s</div><div class="ig-sponsored">Sponsored</div></div>
+                <button class="ig-follow">Follow</button>
+                <span class="ig-dots">...</span>
+              </div>
+              <div class="ig-media"><video src="../ad_concepts/latkes_2.mp4" muted loop playsinline poster="../ad_concepts/latkes_2_thumb.jpg" onclick="this.paused?this.play():this.pause()"></video></div>
+              <div class="ig-cta-bar"><span class="ig-cta-text">Shop Now</span><span class="ig-cta-chevron">&rsaquo;</span></div>
+              <div class="ig-actions-bar"><span class="ig-icon">&#x2661;</span><span class="ig-icon">&#x1F4AC;</span><span class="ig-icon">&#x2933;</span><span class="ig-icon ig-icon-right">&#x1F516;</span></div>
+              <div class="ig-likes">324 likes</div>
+              <div class="ig-caption"><strong>shelsky_s</strong> Your grandmother's latkes but better. Sorry. <span class="ig-more">...more</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ad-description">
+          <h3>Grandma's Latkes</h3>
+          <p>Bold/funny hook. High comment bait potential.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function setMode(mode) {
+      document.body.classList.toggle('ig-mode', mode === 'ig');
+      document.querySelectorAll('.platform-toggle button').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(mode === 'ig' ? 'instagram' : 'facebook'));
+      });
+    }
+
+    // Auto-play videos on hover
+    document.querySelectorAll('.phone video').forEach(v => {
+      const wrap = v.closest('.phone');
+      wrap.addEventListener('mouseenter', () => v.play());
+      wrap.addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
+    });
+  </script>
+
+</body>
+</html>
