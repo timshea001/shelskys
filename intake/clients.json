@@ -1,0 +1,8 @@
+{
+  "shelskys": {
+    "client_name": "Shelsky's of Brooklyn",
+    "production_reality_bans_prefill": ["hand-rolled", "kettle-boiled", "boiled"],
+    "storefront_term_options": ["141 Court", "the shop", "the deli", "our place"],
+    "customer_term_options": ["you", "folks", "neighbors", "members", "guests"]
+  }
+}

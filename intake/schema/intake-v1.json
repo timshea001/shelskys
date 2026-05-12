@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Client Voice & Brand Intake",
+  "type": "object",
+  "required": ["client_slug", "client_name", "filled_by", "filled_at", "schema_version", "voice", "language", "products", "stories", "program"],
+  "properties": {
+    "client_slug": { "type": "string" },
+    "client_name": { "type": "string" },
+    "filled_by": {
+      "type": "object",
+      "required": ["name", "role", "email"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "role": { "type": "string", "minLength": 1 },
+        "email": { "type": "string", "format": "email" }
+      }
+    },
+    "filled_at": { "type": "string", "format": "date-time" },
+    "schema_version": { "type": "string", "const": "1.0" },
+    "voice": {
+      "type": "object",
+      "properties": {
+        "one_sentence_brand": { "type": "string" },
+        "voice_words": { "type": "array", "items": { "type": "string" } },
+        "anti_voice_words": { "type": "array", "items": { "type": "string" } },
+        "formal_familiar": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "warm_direct": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "restrained_playful": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "subject_lines_loved": { "type": "array", "items": { "type": "string" } },
+        "subject_lines_vetoed": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "language": {
+      "type": "object",
+      "properties": {
+        "phrases_loved": { "type": "array", "items": { "type": "string" } },
+        "phrases_vetoed": { "type": "array", "items": { "type": "string" } },
+        "production_reality_bans": { "type": "array", "items": { "type": "string" } },
+        "storefront_term": { "type": "string" },
+        "customer_term": { "type": "string" }
+      }
+    },
+    "products": {
+      "type": "object",
+      "properties": {
+        "priority": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "underweight": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": { "type": "string" },
+              "note": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "seasonal_notes": { "type": "string" }
+      }
+    },
+    "stories": {
+      "type": "object",
+      "properties": {
+        "brand_origin": { "type": "string" },
+        "favorite_menu_item": { "type": "string" },
+        "regular_customer_story": { "type": "string" },
+        "press_moment": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string" },
+            "url": { "type": ["string", "null"] }
+          }
+        },
+        "neighborhood_anchor": { "type": "string" }
+      }
+    },
+    "program": {
+      "type": "object",
+      "properties": {
+        "goals": { "type": "array", "items": { "type": "string" } },
+        "cadence_pref": { "type": "string" },
+        "discount_stance": { "type": "string" },
+        "off_limits": { "type": "string" }
+      }
+    }
+  }
+}

@@ -27,3 +27,9 @@ email_resources.zip
 *.tmp
 *.bak
 *~
+
+# Intake form — needs JSON config + schema + README in repo
+!intake/clients.json
+!intake/schema/*.json
+!intake/README.md
+!peter-intake-quiz-spec.md
