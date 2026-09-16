@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Brooklyn Brunch Box — Shelsky's of Brooklyn</title>
+<meta name="description" content="A dozen Brooklyn bagels, four schmears, and smoked whitefish salad. Feeds 6–8. Shipped cold and free from our Cobble Hill kitchen. The whole brunch, in one box.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdfbf7;
+    --paper:#ffffff;
+    --red:#e74b2a;
+    --red-dk:#cf3d1f;
+    --ink:#463935;
+    --gold:#bba06f;
+    --hair:rgba(70,57,53,0.12);
+    --muted:rgba(70,57,53,0.62);
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:'Nunito',Arial,Helvetica,sans-serif;
+    --shadow:0 12px 40px rgba(70,57,53,0.10);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;border:0;}
+  a{color:var(--red);}
+  h1,h2,h3{font-family:var(--serif);font-weight:normal;color:var(--ink);margin:0;line-height:1.1;}
+  h1{font-size:clamp(40px,6vw,68px);}
+  h2{font-size:clamp(30px,4vw,46px);line-height:1.12;}
+  h3{font-size:22px;}
+  p{margin:0 0 18px;}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  .eyebrow{font-family:var(--sans);font-size:12px;color:var(--red);text-transform:uppercase;letter-spacing:3.5px;font-weight:800;margin:0 0 16px;}
+  .btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;padding:20px 44px;border-radius:3px;transition:background .15s,transform .15s;box-shadow:var(--shadow);}
+  .btn:hover{background:var(--red-dk);transform:translateY(-1px);}
+  .btn.lg{font-size:16px;padding:22px 52px;}
+  section{padding:84px 0;}
+  .center{text-align:center;}
+  .lede{font-size:21px;line-height:1.65;color:var(--ink);}
+  .rule{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 0 28px;}
+  .rule .line{height:1px;width:64px;background:var(--red);}
+  .rule .dot{color:var(--red);font-size:15px;line-height:0;}
+
+  /* sticky header */
+  .nav{position:sticky;top:0;z-index:40;background:rgba(253,251,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair);}
+  .nav .container{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;}
+  .nav .brand{display:flex;align-items:center;gap:10px;}
+  .nav .brand img{height:34px;width:auto;}
+  .nav .brand .wm{font-family:var(--serif);font-size:18px;color:var(--ink);}
+  .nav .navcta{background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:12px 22px;border-radius:3px;}
+  .nav .navcta:hover{background:var(--red-dk);}
+
+  /* hero */
+  .hero{background:var(--cream);padding:0;}
+  .hero .grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;max-width:1320px;margin:0 auto;}
+  .hero .copy{padding:84px 64px 84px 6vw;display:flex;flex-direction:column;justify-content:center;}
+  .hero .ship{font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:18px;}
+  .hero h1{margin:0 0 22px;}
+  .hero .sub{font-size:21px;line-height:1.55;color:var(--ink);margin:0 0 30px;max-width:30em;}
+  .hero .pricerow{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;}
+  .hero .price{font-family:var(--serif);font-size:40px;color:var(--ink);}
+  .hero .shipfree{font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+  .hero .bonus{display:inline-block;background:#fff;border:1px dashed var(--red);color:var(--red);font-size:13px;font-weight:800;letter-spacing:.5px;padding:9px 16px;border-radius:3px;margin:14px 0 26px;width:fit-content;}
+  .hero .btnrow{display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+  .hero .micro{font-size:14px;color:var(--muted);margin:22px 0 0;}
+  .hero .photo{background:url('https://shelskys.com/wp-content/uploads/2023/05/1-Shelskys-Schmear-Gift-Basket-1-scaled-1.jpeg') center/cover no-repeat;min-height:620px;}
+
+  /* trust strip */
+  .trust{background:var(--ink);color:#f3ece6;}
+  .trust .container{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 56px;padding-top:26px;padding-bottom:26px;text-align:center;}
+  .trust span{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;opacity:.92;}
+  .trust b{color:#fff;}
+
+  /* generic two-col */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .split.alt{direction:rtl;}
+  .split.alt > *{direction:ltr;}
+  .split img{border-radius:6px;box-shadow:var(--shadow);width:100%;height:auto;object-fit:cover;}
+
+  /* whats inside card */
+  .insidewrap{background:var(--paper);}
+  .insidecard{max-width:760px;margin:36px auto 0;background:var(--cream);border:1px solid var(--hair);border-radius:8px;padding:14px 36px;box-shadow:var(--shadow);}
+  .inside{list-style:none;margin:0;padding:0;}
+  .inside li{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair);align-items:baseline;}
+  .inside li:last-child{border-bottom:0;}
+  .inside .qty{font-family:var(--serif);font-size:21px;color:var(--red);min-width:88px;}
+  .inside .item{font-size:17px;line-height:1.5;}
+  .inside .item b{font-weight:800;}
+  .inside .free{background:rgba(231,75,42,.06);margin:0 -36px;padding-left:36px;padding-right:36px;}
+  .feeds{display:flex;align-items:center;justify-content:center;gap:18px;margin:40px auto 0;text-align:center;}
+  .feeds .big{font-family:var(--serif);font-size:64px;color:var(--red);line-height:1;}
+  .feeds .lbl{text-align:left;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;color:var(--muted);line-height:1.3;}
+
+  /* reviews */
+  .reviews{background:var(--cream);}
+  .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px;}
+  .qcard{background:var(--paper);border:1px solid var(--hair);border-radius:8px;padding:30px;box-shadow:var(--shadow);}
+  .qcard .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:12px;}
+  .qcard p{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink);margin:0 0 16px;}
+  .qcard .who{font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:0;}
+
+  /* offer band */
+  .offer{background:var(--red);color:#fff;text-align:center;}
+  .offer h2{color:#fff;}
+  .offer .price{font-family:var(--serif);font-size:34px;margin:16px 0 4px;}
+  .offer .sub{opacity:.92;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;margin:0 0 28px;}
+  .offer .btn{background:#fff;color:var(--red);}
+  .offer .btn:hover{background:#f7efe9;}
+
+  /* map */
+  .map img{border-radius:6px;box-shadow:var(--shadow);margin:0 auto;max-width:760px;width:100%;}
+  .map-cap{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--muted);text-align:center;margin:18px auto 0;max-width:34em;}
+
+  /* faq */
+  .faq{max-width:780px;margin:0 auto;}
+  .faq .q{border-top:1px solid var(--hair);padding:26px 0;}
+  .faq .q:last-child{border-bottom:1px solid var(--hair);}
+  .faq h3{margin:0 0 8px;}
+  .faq p{margin:0;font-size:17px;}
+
+  /* final */
+  .final{background:var(--paper);text-align:center;}
+  .gold-tick{width:46px;height:0;border-top:2px solid var(--gold);margin:0 auto 30px;}
+  .final .closer{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--muted);margin:16px 0 30px;}
+
+  footer{background:var(--ink);color:#cdbfb6;text-align:center;padding:44px 32px;font-size:14px;}
+  footer a{color:#f3ece6;text-decoration:none;}
+  footer .links{margin:0 0 12px;}
+
+  /* sticky mobile buy */
+  .stickybuy{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--red);display:none;box-shadow:0 -2px 16px rgba(0,0,0,.18);}
+  .stickybuy a{display:flex;justify-content:space-between;align-items:center;color:#fff;text-decoration:none;padding:15px 22px;font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:14px;}
+  .stickybuy .sp{font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:18px;}
+
+  @media (max-width:900px){
+    .hero .grid{grid-template-columns:1fr;}
+    .hero .copy{padding:56px 32px;order:2;}
+    .hero .photo{order:1;min-height:340px;}
+    .split,.split.alt{grid-template-columns:1fr;gap:32px;direction:ltr;}
+    .split.alt .imgcol{order:-1;}
+    .qgrid{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+  }
+  @media (max-width:600px){
+    body{font-size:17px;}
+    .container{padding:0 22px;}
+    .nav .brand .wm{display:none;}
+    .stickybuy{display:block;}
+    .footspace{height:66px;}
+    .hero .price{font-size:34px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== STICKY NAV ===== -->
+<nav class="nav">
+  <div class="container">
+    <span class="brand">
+      <img src="https://shelskys.com/wp-content/uploads/2022/12/logo-fish.png" alt="Shelsky's">
+      <span class="wm">Shelsky's of Brooklyn</span>
+    </span>
+    <a class="navcta" href="#order">Order · $209.99</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="grid">
+    <div class="copy">
+      <div class="ship">Free shipping · Brooklyn to your door in 1–2 days</div>
+      <h1>The Brooklyn<br>Brunch Box</h1>
+      <p class="sub">The whole spread, in one box. A dozen of our bagels, four schmears, and smoked whitefish salad — enough to feed the whole table without anyone hunting for the cream cheese.</p>
+      <div class="pricerow"><span class="price">$209.99</span><span class="shipfree">Ships free</span></div>
+      <div class="bonus">+ A free Shelsky's babka in every box</div>
+      <div class="btnrow">
+        <a class="btn lg" href="https://shelskys.com/product/a-brooklyn-schmear-package/?attribute_pa_format=brunch_package&utm_source=meta&utm_medium=paid&utm_campaign=brooklyn_brunch_box_lp">Send the Brunch Box</a>
+      </div>
+      <p class="micro">Packed cold the morning it ships · Pick your delivery date at checkout</p>
+    </div>
+    <div class="photo" role="img" aria-label="The Brooklyn Brunch Box — a dozen bagels, four schmears, and smoked whitefish salad"></div>
+  </div>
+</header>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust">
+  <div class="container">
+    <span>As seen in <b>The New York Times</b></span>
+    <span>From our <b>Cobble Hill</b> kitchen</span>
+    <span>Shipped <b>cold &amp; fresh</b> nationwide</span>
+  </div>
+</div>
+
+<!-- ===== THE PITCH ===== -->
+<section class="center">
+  <div class="container">
+    <div class="rule"><span class="line"></span><span class="dot">&bull;</span><span class="line"></span></div>
+    <p class="eyebrow">One box. The whole brunch.</p>
+    <h2>Stop building a brunch order<br>one bagel at a time.</h2>
+    <p class="lede" style="max-width:36em;margin:24px auto 0;">You could click through the whole menu — guess at how many bagels, second-guess the schmears, forget the fish. Or you could send the box we'd build for our own family on a Sunday. We did the deciding. You just pick the day it shows up.</p>
+  </div>
+</section>
+
+<!-- ===== WHAT'S INSIDE ===== -->
+<section class="insidewrap">
+  <div class="container center">
+    <p class="eyebrow">What's in the box</p>
+    <h2>The spread, built for you.</h2>
+    <div class="insidecard">
+      <ul class="inside">
+        <li><span class="qty">1 dozen</span><span class="item"><b>Brooklyn bagels</b>, assorted — baked the night before we ship them</span></li>
+        <li><span class="qty">½ lb</span><span class="item"><b>Plain</b> cream cheese</span></li>
+        <li><span class="qty">½ lb</span><span class="item"><b>Scallion</b> cream cheese</span></li>
+        <li><span class="qty">½ lb</span><span class="item"><b>Lox</b> cream cheese</span></li>
+        <li><span class="qty">½ lb</span><span class="item"><b>Vegetable</b> cream cheese</span></li>
+        <li><span class="qty">½ lb</span><span class="item"><b>Smoked whitefish salad</b> — for good measure</span></li>
+        <li class="free"><span class="qty">Free</span><span class="item">A <b>Shelsky's babka</b>, tucked in for dessert</span></li>
+      </ul>
+    </div>
+    <div class="feeds">
+      <span class="big">6–8</span>
+      <span class="lbl">people,<br>comfortably fed</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FRESHNESS (split) ===== -->
+<section>
+  <div class="container">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Why it tastes like Brooklyn</p>
+        <h2>Made the morning it ships.</h2>
+        <p class="lede" style="margin-top:22px;">Everything comes out of our Cobble Hill kitchen at 141 Court Street — the same counter Brooklyn's been lining up at. The bagels are baked through the night, the fish is sliced to order, and it all goes into cold packaging built to hold temperature from our door to yours.</p>
+      </div>
+      <div class="imgcol">
+        <img src="https://shelskys.com/wp-content/uploads/2023/05/2-Wake-Up-In-Brooklyn-Gift-Basket-1-scaled-1.jpeg" alt="A Shelsky's brunch spread — bagels, smoked fish, and schmears" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<!-- NOTE: Neil quote + NYT are verified. Swap in 2 more real customer reviews from Google/Yelp before launch. -->
+<section class="reviews center">
+  <div class="container">
+    <p class="eyebrow">What people say</p>
+    <h2>Brooklyn agrees.</h2>
+    <div class="qgrid">
+      <div class="qcard">
+        <div class="stars">★★★★★</div>
+        <p>"Best bagels for miles around."</p>
+        <p class="who">— Neil, customer</p>
+      </div>
+      <div class="qcard">
+        <div class="stars">★★★★★</div>
+        <p>"A taste of home for anyone who left New York and still dreams about the appetizing counter."</p>
+        <p class="who">— Brooklyn regular</p>
+      </div>
+      <div class="qcard">
+        <div class="stars">★★★★★</div>
+        <p>"Showed up cold, fresh, and looking like it came straight off Court Street."</p>
+        <p class="who">— Shipped order</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHIPPING / MAP ===== -->
+<section class="map center insidewrap">
+  <div class="container">
+    <p class="eyebrow">Brooklyn → your door</p>
+    <h2>Closer than you thought.</h2>
+    <p class="lede" style="max-width:34em;margin:22px auto 36px;">We cracked the shipping problem. If you live in the yellow, the box is <b>one day away</b> by ground. In the brown, <b>two</b>. Cold, fresh, and a whole lot cheaper than it used to be.</p>
+    <img src="https://d3k81ch9hvuctc.cloudfront.net/company/R9PxLn/images/978678dd-4b43-4e85-a5fa-a3ff20f38ff2.png" alt="UPS ground transit map from Brooklyn — yellow one day, brown two days, green three days" loading="lazy">
+    <p class="map-cap">UPS ground transit, outbound from our Brooklyn kitchen.<br>Yellow = one day. Brown = two. Green = three.</p>
+  </div>
+</section>
+
+<!-- ===== GIFT / OCCASION (split alt) ===== -->
+<section>
+  <div class="container">
+    <div class="split alt">
+      <div>
+        <p class="eyebrow">For the table or the doorstep</p>
+        <h2>A brunch, or a gift<br>that actually gets eaten.</h2>
+        <p class="lede" style="margin-top:22px;">Hosting a crowd? It's the whole spread in one box. Sending it to someone who left New York and misses it? Add the reusable wooden gift crate at checkout and we'll make it a present. Either way, it shows up looking like Brooklyn.</p>
+      </div>
+      <div class="imgcol">
+        <img src="https://shelskys.com/wp-content/uploads/2023/05/6-look-like-a-real-macher-big-shot-1-scaled-1.jpeg" alt="A Shelsky's gift crate packed with bagels, smoked fish, and sweets" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFFER BAND ===== -->
+<section class="offer" id="order">
+  <div class="container">
+    <p class="eyebrow" style="color:#fff;opacity:.9;">The Brooklyn Brunch Box</p>
+    <h2>The whole brunch. One box.</h2>
+    <div class="price">$209.99</div>
+    <p class="sub">Free shipping · Free babka in every box · Feeds 6–8</p>
+    <a class="btn lg" href="https://shelskys.com/product/a-brooklyn-schmear-package/?attribute_pa_format=brunch_package&utm_source=meta&utm_medium=paid&utm_campaign=brooklyn_brunch_box_lp">Send the Brunch Box</a>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section>
+  <div class="container">
+    <p class="eyebrow center">Good to know</p>
+    <h2 class="center" style="margin-bottom:14px;">Questions, answered.</h2>
+    <div class="faq">
+      <div class="q"><h3>Will it show up fresh?</h3><p>Yes. Everything is packed cold the morning it ships, in insulated packaging built to hold temperature. Most of the country is one to two days from our kitchen by ground — pick your delivery date at checkout so it lands when you want it.</p></div>
+      <div class="q"><h3>How many people does it feed?</h3><p>Six to eight comfortably. A dozen bagels, four schmears, and a half-pound of whitefish salad is plenty for a brunch table or a houseful of weekend guests.</p></div>
+      <div class="q"><h3>Can I send it as a gift?</h3><p>Absolutely. Add the reusable wooden gift crate at checkout and ship it straight to them — it's the brunch a transplanted New Yorker actually wants.</p></div>
+      <div class="q"><h3>What's the free babka?</h3><p>A little something sweet from our bakery, tucked into every box ordered from this page. Because brunch shouldn't end without dessert.</p></div>
+      <div class="q"><h3>What if I'm local?</h3><p>Lucky you. <a href="https://www.getsauce.com/order/shelskys-of-brooklyn-court-st/menu/">Order for local delivery or in-store pickup at 141 Court Street.</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final">
+  <div class="container">
+    <div class="gold-tick"></div>
+    <h2>The whole brunch.<br>One box. Shipped free.</h2>
+    <p class="closer">A taste of Brooklyn, without the schlep.</p>
+    <a class="btn lg" href="https://shelskys.com/product/a-brooklyn-schmear-package/?attribute_pa_format=brunch_package&utm_source=meta&utm_medium=paid&utm_campaign=brooklyn_brunch_box_lp">Send the Brunch Box — $209.99</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p class="links">
+    <a href="https://instagram.com/shelsky_s">Instagram</a> &nbsp;·&nbsp;
+    <a href="https://www.facebook.com/ShelskysSmokedFish">Facebook</a> &nbsp;·&nbsp;
+    <a href="https://shelskys.com">shelskys.com</a>
+  </p>
+  <p style="margin:0;">Shelsky's of Brooklyn · 141 Court St, Brooklyn NY 11201<br>(718) 855-8817 · shelskys@shelskys.com</p>
+</footer>
+
+<div class="footspace"></div>
+
+<!-- ===== STICKY MOBILE BUY ===== -->
+<div class="stickybuy">
+  <a href="https://shelskys.com/product/a-brooklyn-schmear-package/?attribute_pa_format=brunch_package&utm_source=meta&utm_medium=paid&utm_campaign=brooklyn_brunch_box_lp">
+    <span class="sp">The Brunch Box · $209.99</span>
+    <span>Send it →</span>
+  </a>
+</div>
+
+</body>
+</html>

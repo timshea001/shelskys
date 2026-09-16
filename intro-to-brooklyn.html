@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intro to Brooklyn: Shelsky's Best Sellers, One Box | Shelsky's of Brooklyn</title>
+<meta name="description" content="Six Brooklyn bagels, a quarter pound of Eastern Gaspe Nova smoked salmon, plain and scallion cream cheese, and smoked whitefish salad. Our best sellers in one box, shipped cold and free from Court Street.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<!--
+  CONFIG (Tim / Jay): the Intro to Brooklyn kit does not exist as a Woo SKU yet.
+  Price and CTA URL below are PLACEHOLDERS. Change them here once and every
+  price + button on the page updates.
+-->
+<script>
+  window.LP = {
+    price: "$89",
+    ctaUrl: "https://shelskys.com/product-category/gift-and-brunch-packages-free-shipping/?utm_source=meta&utm_medium=paid&utm_campaign=intro_to_brooklyn_lp"
+  };
+</script>
+<style>
+  :root{
+    --cream:#fdfbf7;
+    --paper:#ffffff;
+    --red:#e74b2a;
+    --red-dk:#cf3d1f;
+    --ink:#463935;
+    --gold:#bba06f;
+    --hair:rgba(70,57,53,0.12);
+    --muted:rgba(70,57,53,0.62);
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:'Nunito',Arial,Helvetica,sans-serif;
+    --shadow:0 12px 40px rgba(70,57,53,0.10);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;border:0;}
+  a{color:var(--red);}
+  h1,h2,h3{font-family:var(--serif);font-weight:normal;color:var(--ink);margin:0;line-height:1.1;}
+  h1{font-size:clamp(40px,6vw,68px);}
+  h2{font-size:clamp(30px,4vw,46px);line-height:1.12;}
+  h3{font-size:22px;}
+  p{margin:0 0 18px;}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  .eyebrow{font-family:var(--sans);font-size:12px;color:var(--red);text-transform:uppercase;letter-spacing:3.5px;font-weight:800;margin:0 0 16px;}
+  .btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;padding:20px 44px;border-radius:3px;transition:background .15s,transform .15s;box-shadow:var(--shadow);}
+  .btn:hover{background:var(--red-dk);transform:translateY(-1px);}
+  .btn.lg{font-size:16px;padding:22px 52px;}
+  section{padding:84px 0;}
+  .center{text-align:center;}
+  .lede{font-size:21px;line-height:1.65;color:var(--ink);}
+  .rule{display:flex;align-items:center;justify-content:center;gap:9px;margin:0 0 28px;}
+  .rule .line{height:1px;width:64px;background:var(--red);}
+  .rule .dot{color:var(--red);font-size:15px;line-height:0;}
+
+  /* sticky header */
+  .nav{position:sticky;top:0;z-index:40;background:rgba(253,251,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair);}
+  .nav .container{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;}
+  .nav .brand{display:flex;align-items:center;gap:10px;}
+  .nav .brand img{height:34px;width:auto;}
+  .nav .brand .wm{font-family:var(--serif);font-size:18px;color:var(--ink);}
+  .nav .navcta{background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:12px 22px;border-radius:3px;}
+  .nav .navcta:hover{background:var(--red-dk);}
+
+  /* hero */
+  .hero{background:var(--cream);padding:0;}
+  .hero .grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;max-width:1320px;margin:0 auto;}
+  .hero .copy{padding:84px 64px 84px 6vw;display:flex;flex-direction:column;justify-content:center;}
+  .hero .ship{font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:18px;}
+  .hero h1{margin:0 0 22px;}
+  .hero .sub{font-size:21px;line-height:1.55;color:var(--ink);margin:0 0 30px;max-width:30em;}
+  .hero .pricerow{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;flex-wrap:wrap;}
+  .hero .price{font-family:var(--serif);font-size:40px;color:var(--ink);}
+  .hero .was{font-family:var(--serif);font-size:20px;color:var(--muted);}
+  .hero .shipfree{font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+  .hero .bonus{display:inline-block;background:#fff;border:1px dashed var(--red);color:var(--red);font-size:13px;font-weight:800;letter-spacing:.5px;padding:9px 16px;border-radius:3px;margin:14px 0 26px;width:fit-content;}
+  .hero .btnrow{display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+  .hero .micro{font-size:14px;color:var(--muted);margin:22px 0 0;}
+  .hero .photo{background:url('https://d3k81ch9hvuctc.cloudfront.net/company/R9PxLn/images/9382b4fd-8755-4f51-a7e1-6e1dae20f62d.jpeg') center/cover no-repeat;min-height:620px;}
+
+  /* trust strip */
+  .trust{background:var(--ink);color:#f3ece6;}
+  .trust .container{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 56px;padding-top:26px;padding-bottom:26px;text-align:center;}
+  .trust span{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;opacity:.92;}
+  .trust b{color:#fff;}
+
+  /* generic two-col */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .split.alt{direction:rtl;}
+  .split.alt > *{direction:ltr;}
+  .split img{border-radius:6px;box-shadow:var(--shadow);width:100%;height:auto;object-fit:cover;}
+
+  /* whats inside card */
+  .insidewrap{background:var(--paper);}
+  .insidecard{max-width:760px;margin:36px auto 0;background:var(--cream);border:1px solid var(--hair);border-radius:8px;padding:14px 36px;box-shadow:var(--shadow);}
+  .inside{list-style:none;margin:0;padding:0;}
+  .inside li{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--hair);align-items:baseline;}
+  .inside li:last-child{border-bottom:0;}
+  .inside .qty{font-family:var(--serif);font-size:21px;color:var(--red);min-width:88px;}
+  .inside .item{font-size:17px;line-height:1.5;}
+  .inside .item b{font-weight:800;}
+  .inside .free{background:rgba(231,75,42,.06);margin:0 -36px;padding-left:36px;padding-right:36px;}
+  .feeds{display:flex;align-items:center;justify-content:center;gap:18px;margin:40px auto 0;text-align:center;}
+  .feeds .big{font-family:var(--serif);font-size:64px;color:var(--red);line-height:1;}
+  .feeds .lbl{text-align:left;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;font-size:13px;color:var(--muted);line-height:1.3;}
+
+  /* anchor pricing */
+  .anchor{background:var(--cream);}
+  .anchorgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:860px;margin:40px auto 0;}
+  .acard{background:var(--paper);border:1px solid var(--hair);border-radius:8px;padding:34px 30px;text-align:center;box-shadow:var(--shadow);}
+  .acard.hot{border:2px solid var(--red);}
+  .acard .k{font-weight:800;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin:0 0 10px;}
+  .acard.hot .k{color:var(--red);}
+  .acard .n{font-family:var(--serif);font-size:44px;line-height:1;margin:0 0 8px;}
+  .acard .n small{font-size:18px;color:var(--muted);}
+  .acard p.d{font-size:15px;color:var(--muted);margin:0;}
+
+  /* product grid (the counter) */
+  .counter{background:var(--paper);}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px;}
+  .pcard{background:var(--cream);border:1px solid var(--hair);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);text-align:left;}
+  .pcard img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+  .pcard .pb{padding:20px 22px 24px;}
+  .pcard .tag{font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin:0 0 6px;}
+  .pcard h3{font-size:21px;margin:0 0 8px;}
+  .pcard p{font-size:15px;line-height:1.55;color:var(--ink);margin:0 0 10px;}
+  .pcard .pr{font-weight:800;font-size:13px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin:0;}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px;}
+  .step{background:var(--paper);border:1px solid var(--hair);border-radius:8px;padding:30px 28px;box-shadow:var(--shadow);}
+  .step .num{font-family:var(--serif);font-size:44px;color:var(--red);line-height:1;margin:0 0 12px;}
+  .step h3{margin:0 0 8px;}
+  .step p{font-size:16px;margin:0;color:var(--ink);}
+
+  /* reviews */
+  .reviews{background:var(--cream);}
+  .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px;}
+  .qcard{background:var(--paper);border:1px solid var(--hair);border-radius:8px;padding:30px;box-shadow:var(--shadow);}
+  .qcard .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:12px;}
+  .qcard p{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink);margin:0 0 16px;}
+  .qcard .who{font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:0;}
+
+  /* offer band */
+  .offer{background:var(--red);color:#fff;text-align:center;}
+  .offer h2{color:#fff;}
+  .offer .price{font-family:var(--serif);font-size:34px;margin:16px 0 4px;}
+  .offer .sub{opacity:.92;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;margin:0 0 28px;}
+  .offer .btn{background:#fff;color:var(--red);}
+  .offer .btn:hover{background:#f7efe9;}
+
+  /* map */
+  .map img{border-radius:6px;box-shadow:var(--shadow);margin:0 auto;max-width:760px;width:100%;}
+  .map-cap{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--muted);text-align:center;margin:18px auto 0;max-width:34em;}
+
+  /* faq */
+  .faq{max-width:780px;margin:0 auto;}
+  .faq .q{border-top:1px solid var(--hair);padding:26px 0;}
+  .faq .q:last-child{border-bottom:1px solid var(--hair);}
+  .faq h3{margin:0 0 8px;}
+  .faq p{margin:0;font-size:17px;}
+
+  /* final */
+  .final{background:var(--paper);text-align:center;}
+  .gold-tick{width:46px;height:0;border-top:2px solid var(--gold);margin:0 auto 30px;}
+  .final .closer{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--muted);margin:16px 0 30px;}
+
+  footer{background:var(--ink);color:#cdbfb6;text-align:center;padding:44px 32px;font-size:14px;}
+  footer a{color:#f3ece6;text-decoration:none;}
+  footer .links{margin:0 0 12px;}
+
+  /* sticky mobile buy */
+  .stickybuy{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--red);display:none;box-shadow:0 -2px 16px rgba(0,0,0,.18);}
+  .stickybuy a{display:flex;justify-content:space-between;align-items:center;color:#fff;text-decoration:none;padding:15px 22px;font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:14px;}
+  .stickybuy .sp{font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:18px;}
+
+  @media (max-width:900px){
+    .hero .grid{grid-template-columns:1fr;}
+    .hero .copy{padding:56px 32px;order:2;}
+    .hero .photo{order:1;min-height:340px;}
+    .split,.split.alt{grid-template-columns:1fr;gap:32px;direction:ltr;}
+    .split.alt .imgcol{order:-1;}
+    .qgrid,.pgrid,.steps{grid-template-columns:1fr;}
+    .pgrid{grid-template-columns:1fr 1fr;}
+    .anchorgrid{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+  }
+  @media (max-width:600px){
+    body{font-size:17px;}
+    .container{padding:0 22px;}
+    .nav .brand .wm{display:none;}
+    .stickybuy{display:block;}
+    .footspace{height:66px;}
+    .hero .price{font-size:34px;}
+    .pgrid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== STICKY NAV ===== -->
+<nav class="nav">
+  <div class="container">
+    <span class="brand">
+      <img src="https://shelskys.com/wp-content/uploads/2022/12/logo-fish.png" alt="Shelsky's">
+      <span class="wm">Shelsky's of Brooklyn</span>
+    </span>
+    <a class="navcta" href="#order">Order the Intro &middot; <span class="js-price">$89</span></a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="grid">
+    <div class="copy">
+      <div class="ship">Ships free &middot; Order by 4pm and it ships the next day</div>
+      <h1>Intro to Brooklyn.</h1>
+      <p class="sub">Six of our bagels, a quarter pound of the smoked salmon this shop is known for, two schmears, and our whitefish salad. Everything a New Yorker puts on a bagel, in one box, for one price.</p>
+      <div class="pricerow"><span class="price js-price">$89</span><span class="shipfree">Ships free</span></div>
+      <div class="bonus">Our best sellers. Below our platter price. Built to be your first order.</div>
+      <div class="btnrow">
+        <a class="btn lg js-cta" href="#order">Send Me the Intro</a>
+      </div>
+      <p class="micro">Packed cold the morning it ships &middot; Pick your delivery date at checkout</p>
+    </div>
+    <div class="photo" role="img" aria-label="Shelsky's bagels, smoked salmon, cream cheese and rugelach laid out on a wood counter"></div>
+  </div>
+</header>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust">
+  <div class="container">
+    <span>As seen in <b>The New York Times</b></span>
+    <span>From our <b>Court Street</b> counter</span>
+    <span>Shipped <b>cold &amp; fresh</b> nationwide</span>
+  </div>
+</div>
+
+<!-- ===== THE PITCH ===== -->
+<section class="center">
+  <div class="container">
+    <div class="rule"><span class="line"></span><span class="dot">&bull;</span><span class="line"></span></div>
+    <p class="eyebrow">Beyond the bagel</p>
+    <h2>You came for the bagels.<br>Stay for the counter.</h2>
+    <p class="lede" style="max-width:36em;margin:24px auto 0;">Most first orders are a bag of bagels. Fine. But in Brooklyn a bagel is a delivery system. It exists to carry smoked salmon, a real schmear, and a scoop of whitefish salad. The Intro puts the whole sandwich in the box, so your first order tastes like the counter at 141 Court Street and not the bread aisle.</p>
+  </div>
+</section>
+
+<!-- ===== WHAT'S INSIDE ===== -->
+<section class="insidewrap">
+  <div class="container center">
+    <p class="eyebrow">What's in the box</p>
+    <h2>Our best sellers. Nothing else.</h2>
+    <div class="insidecard">
+      <ul class="inside">
+        <li><span class="qty">6</span><span class="item"><b>Brooklyn bagels</b>, assorted. Dense and chewy, baked the night before we ship them</span></li>
+        <li><span class="qty">&frac14; lb</span><span class="item"><b>Eastern Gasp&eacute; Nova smoked salmon</b>, sliced to order. The standard-bearer. The fish that belongs on the bagel</span></li>
+        <li><span class="qty">&frac14; lb</span><span class="item"><b>Plain</b> cream cheese, whipped</span></li>
+        <li><span class="qty">&frac14; lb</span><span class="item"><b>Scallion</b> cream cheese, for the people who mean it</span></li>
+        <li><span class="qty">&frac14; lb</span><span class="item"><b>Smoked whitefish salad</b>, Lake Michigan whitefish, hand-picked off the bone</span></li>
+        <li class="free"><span class="qty">Free</span><span class="item">The <b>"Eat your bagel like a New Yorker"</b> card. Which order, which side, how thick. Settled</span></li>
+      </ul>
+    </div>
+    <div class="feeds">
+      <span class="big">3&ndash;4</span>
+      <span class="lbl">people,<br>one very good morning</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ANCHOR PRICING ===== -->
+<section class="anchor center">
+  <div class="container">
+    <p class="eyebrow">Same counter, smaller box</p>
+    <h2>Our platters start at $209.99.<br>This one is <span class="js-price">$89</span>.</h2>
+    <p class="lede" style="max-width:34em;margin:22px auto 0;">The brunch packages feed a table of eight and ship in a wooden crate. The Intro feeds you, and whoever you like enough to share with. Same fish, same schmear, same bagels. Shipping is in the price.</p>
+    <div class="anchorgrid">
+      <div class="acard">
+        <p class="k">The brunch platters</p>
+        <p class="n">$209.99 <small>and up</small></p>
+        <p class="d">Feeds 6 to 8. A dozen bagels, four schmears, a pound of fish. For the whole table.</p>
+      </div>
+      <div class="acard hot">
+        <p class="k">Intro to Brooklyn</p>
+        <p class="n"><span class="js-price">$89</span> <small>shipped</small></p>
+        <p class="d">Feeds 3 to 4. Six bagels, the salmon, two schmears, whitefish salad. For finding out.<br><br>Bought separately: $96.66 plus $14 to $19 shipping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE COUNTER (educate) ===== -->
+<section class="counter center">
+  <div class="container">
+    <p class="eyebrow">What we're actually shipping</p>
+    <h2>Bagels are the door. This is the shop.</h2>
+    <p class="lede" style="max-width:36em;margin:22px auto 0;">Shelsky's is an appetizing shop. That is the old New York word for the counter where the smoked fish lives. The Intro gives you the Nova. Here is what you graduate to.</p>
+    <div class="pgrid">
+      <div class="pcard">
+        <img src="https://shelskys.com/wp-content/uploads/2023/01/Smoked-Irish-Salmon_3-0221_SQ-600x600.jpg" alt="Eastern Gaspe Nova smoked salmon, sliced" loading="lazy">
+        <div class="pb">
+          <p class="tag">In the box</p>
+          <h3>Eastern Gasp&eacute; Nova</h3>
+          <p>Rich, even smoke, not too salty. When somebody orders a bagel with lox and cream cheese, this is the salmon they mean.</p>
+          <p class="pr">$35.99 / half pound</p>
+        </div>
+      </div>
+      <div class="pcard">
+        <img src="https://shelskys.com/wp-content/uploads/2023/01/Sable_3-0235_SQ-600x600.jpg" alt="Wild Alaskan sable, smoked black cod" loading="lazy">
+        <div class="pb">
+          <p class="tag">Next order</p>
+          <h3>Wild Alaskan Sable</h3>
+          <p>Smoked black cod, buttery, brined with garlic and paprika. The delicacy of the appetizing table long before it got trendy.</p>
+          <p class="pr">$53.99 / half pound</p>
+        </div>
+      </div>
+      <div class="pcard">
+        <img src="https://shelskys.com/wp-content/uploads/2023/01/Pastrami-Smoked-Salmon_3-0228_SQ-600x600.jpg" alt="Pastrami smoked salmon" loading="lazy">
+        <div class="pb">
+          <p class="tag">Next order</p>
+          <h3>Pastrami Smoked Salmon</h3>
+          <p>Pure smoked salmon up front, then the pastrami spice, then a peppery finish that keeps going. A cult item here.</p>
+          <p class="pr">$38.49 / half pound</p>
+        </div>
+      </div>
+      <div class="pcard">
+        <img src="https://shelskys.com/wp-content/uploads/2023/01/Gravlax_3-0230_SQ-600x600.jpg" alt="House-cured gravlax with dill" loading="lazy">
+        <div class="pb">
+          <p class="tag">Next order</p>
+          <h3>House-Cured Gravlax</h3>
+          <p>Scottish salmon, a bath in lemon juice and aquavit, then salt, sugar, pepper and dill for a few days. Cured here, by us.</p>
+          <p class="pr">$36.99 / half pound</p>
+        </div>
+      </div>
+      <div class="pcard">
+        <img src="https://shelskys.com/wp-content/uploads/2023/01/Belly-Lox_3-0207_SQ-600x600.jpg" alt="Salty belly lox" loading="lazy">
+        <div class="pb">
+          <p class="tag">For the hard core</p>
+          <h3>Salty Belly Lox</h3>
+          <p>The only true lox. Salt-cured, never smoked, cut from the belly. Assertively salty. Old-school New York, no apologies.</p>
+          <p class="pr">$35.99 / half pound</p>
+        </div>
+      </div>
+      <div class="pcard">
+        <img src="https://shelskys.com/wp-content/uploads/2023/01/Whitefish-Salad_4-0085-1_SQ-600x600.jpg" alt="Smoked whitefish salad" loading="lazy">
+        <div class="pb">
+          <p class="tag">In the box</p>
+          <h3>Smoked Whitefish Salad</h3>
+          <p>Lake Michigan whitefish, smoked in old smokers for that woodsy flavor, hand-picked so it stays flaky. Our quiet best seller.</p>
+          <p class="pr">$23.99 / half pound</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FRESHNESS (split) ===== -->
+<section>
+  <div class="container">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Why it tastes like Brooklyn</p>
+        <h2>Sliced the morning it ships.</h2>
+        <p class="lede" style="margin-top:22px;">Everything comes out of our kitchen at 141 Court Street, the same counter Brooklyn has been lining up at for years. The bagels are baked through the night, the salmon is sliced to order, and it all goes into cold packaging built to hold temperature from our door to yours. Order by 4pm and it ships the next day.</p>
+      </div>
+      <div class="imgcol">
+        <img src="https://d3k81ch9hvuctc.cloudfront.net/company/R9PxLn/images/c5fb3412-f3e7-4708-85ed-25658764b41a.jpeg" alt="A rack of Shelsky's everything and sesame bagels, fresh from the oven" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="insidewrap center">
+  <div class="container">
+    <p class="eyebrow">How it works</p>
+    <h2>Three steps. None of them hard.</h2>
+    <div class="steps">
+      <div class="step">
+        <p class="num">1</p>
+        <h3>Pick your delivery date</h3>
+        <p>Choose the day you want it at checkout. Order by 4pm and it ships the next day.</p>
+      </div>
+      <div class="step">
+        <p class="num">2</p>
+        <h3>We slice, pack, and ship</h3>
+        <p>Bagels out of the oven, salmon off the slicer, everything into an insulated box with ice packs. UPS from Brooklyn.</p>
+      </div>
+      <div class="step">
+        <p class="num">3</p>
+        <h3>Open. Schmear. Argue.</h3>
+        <p>Plain or scallion. Salmon on the bottom or on top. Whitefish salad on its own bagel. The card settles it, mostly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<!-- NOTE: Neil quote, NYT, and the Tablet line are verified. Third card is a press quote, not a customer review. -->
+<section class="reviews center">
+  <div class="container">
+    <p class="eyebrow">What people say</p>
+    <h2>Brooklyn agrees.</h2>
+    <div class="qgrid">
+      <div class="qcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Best bagels for miles around."</p>
+        <p class="who">Neil, customer</p>
+      </div>
+      <div class="qcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Shelsky's has sort of become our synagogue."</p>
+        <p class="who">Tablet Magazine, "The Bagel Store Is My Synagogue"</p>
+      </div>
+      <div class="qcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>As seen in The New York Times. A real Brooklyn appetizing shop, not a warehouse.</p>
+        <p class="who">141 Court Street, Brooklyn</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHIPPING / MAP ===== -->
+<section class="map center insidewrap">
+  <div class="container">
+    <p class="eyebrow">Brooklyn to your door</p>
+    <h2>Closer than you thought.</h2>
+    <p class="lede" style="max-width:34em;margin:22px auto 36px;">If you live in the yellow, the box is <b>one day away</b> by ground. In the brown, <b>two</b>. Cold the whole way, and the shipping is already in the price.</p>
+    <img src="https://d3k81ch9hvuctc.cloudfront.net/company/R9PxLn/images/978678dd-4b43-4e85-a5fa-a3ff20f38ff2.png" alt="UPS ground transit map from Brooklyn: yellow one day, brown two days, green three days" loading="lazy">
+    <p class="map-cap">UPS ground transit, outbound from our Brooklyn kitchen.<br>Yellow = one day. Brown = two. Green = three.</p>
+  </div>
+</section>
+
+<!-- ===== OFFER BAND ===== -->
+<section class="offer" id="order">
+  <div class="container">
+    <p class="eyebrow" style="color:#fff;opacity:.9;">Intro to Brooklyn</p>
+    <h2>Our best sellers. One box. Shipped free.</h2>
+    <div class="price js-price">$89</div>
+    <p class="sub">Six bagels &middot; Gasp&eacute; Nova &middot; Two schmears &middot; Whitefish salad &middot; Feeds 3 to 4</p>
+    <a class="btn lg js-cta" href="#order">Send Me the Intro</a>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section>
+  <div class="container">
+    <p class="eyebrow center">Good to know</p>
+    <h2 class="center" style="margin-bottom:14px;">Questions, answered.</h2>
+    <div class="faq">
+      <div class="q"><h3>Will it show up fresh?</h3><p>Yes. Everything is packed cold the morning it ships, in insulated packaging built to hold temperature. Most of the country is one to two days from our kitchen by ground. Pick your delivery date at checkout so it lands when you want it.</p></div>
+      <div class="q"><h3>Why not just order bagels?</h3><p>You can. But a bagel with nothing on it is breakfast. A bagel with Gasp&eacute; Nova, scallion cream cheese, and whitefish salad on the side is the reason people line up on Court Street. The Intro is the whole sandwich, shipped free, for less than the bagels and fish would cost you separately once shipping is added.</p></div>
+      <div class="q"><h3>Can I swap the salmon or the schmears?</h3><p>The Intro is fixed so we can pack it fast and ship it free. It is the salmon and the schmears we would pick for you anyway. Everything else on the counter, the sable, the pastrami salmon, the gravlax, is one click away for your next order.</p></div>
+      <div class="q"><h3>How many people does it feed?</h3><p>Three to four for a proper brunch, or two people across two mornings. Six bagels, a quarter pound of salmon, two quarter-pound schmears, and a quarter pound of whitefish salad.</p></div>
+      <div class="q"><h3>Can I send it as a gift?</h3><p>Yes. Ship it straight to them and add a gift message at checkout. It is the box a transplanted New Yorker actually wants.</p></div>
+      <div class="q"><h3>What if I'm local?</h3><p>Lucky you. <a href="https://www.getsauce.com/order/shelskys-of-brooklyn-court-st/menu/">Order for local delivery or pickup at 141 Court Street.</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final">
+  <div class="container">
+    <div class="gold-tick"></div>
+    <h2>Your first order from Brooklyn.<br>Make it the right one.</h2>
+    <p class="closer">The bagels, the fish, the schmear. Shipped free.</p>
+    <a class="btn lg js-cta" href="#order">Send Me the Intro &middot; <span class="js-price">$89</span></a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p class="links">
+    <a href="https://instagram.com/shelsky_s">Instagram</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.facebook.com/ShelskysSmokedFish">Facebook</a> &nbsp;&middot;&nbsp;
+    <a href="https://shelskys.com">shelskys.com</a>
+  </p>
+  <p style="margin:0;">Shelsky's of Brooklyn &middot; 141 Court St, Brooklyn NY 11201<br>(718) 855-8817 &middot; shelskys@shelskys.com</p>
+</footer>
+
+<div class="footspace"></div>
+
+<!-- ===== STICKY MOBILE BUY ===== -->
+<div class="stickybuy">
+  <a class="js-cta" href="#order">
+    <span class="sp">Intro to Brooklyn &middot; <span class="js-price">$89</span></span>
+    <span>Send it</span>
+  </a>
+</div>
+
+<script>
+  (function(){
+    var c = window.LP || {};
+    document.querySelectorAll('.js-price').forEach(function(el){ el.textContent = c.price; });
+    document.querySelectorAll('a.js-cta').forEach(function(a){ if(c.ctaUrl){ a.setAttribute('href', c.ctaUrl); } });
+  })();
+</script>
+
+</body>
+</html>
