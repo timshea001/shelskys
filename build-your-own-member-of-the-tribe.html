@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Build Your Own Member of the Tribe | Shelsky's of Brooklyn</title>
+<meta name="description" content="Everything to make two Member of the Tribe sandwiches at home: Eastern Gaspe Nova, cream cheese, bagels. Built exactly how we make it on Court Street.">
+<link rel="stylesheet" href="lp-assets/sandwich-kits/kit.css">
+
+<!-- ======================================================================
+  KIT CONFIG. This object is the whole page. To spin up another sandwich:
+  copy this file, rename it, and swap this object. Shared bits live in
+  lp-assets/sandwich-kits/ (kit.css, kit.js, kits-registry.js, reviews.js).
+  [[double brackets]] = placeholder, renders as a yellow "needs Peter" chip.
+  Build is from the live Court St menu: "The classic - Eastern Gaspe Nova, and your choice of scallion or plain cream cheese. Served on your choice of bagel or bialy." Counter price $18.99 each.
+======================================================================= -->
+<script>
+window.KIT = {
+  slug: "member-of-the-tribe",
+  name: "Member of the Tribe",
+  shortName: "Member of the Tribe",
+  showPlaceholderLegend: true,
+  ctaUrl: "#order", /* [[Woo product URL + UTMs once the SKU exists]] */
+  photo: "lp-assets/sandwich-kits/member-of-the-tribe.jpg",
+  photoAlt: "Member of the Tribe: Eastern Gaspe Nova smoked salmon and cream cheese on a bagel",
+  badge: "The classic",
+  kicker: "From the Court Street counter to your kitchen",
+  heroSub: "Eastern Gasp\u00e9 Nova, sliced to order, and a real schmear on a Brooklyn bagel. The sandwich everyone means when they say lox and cream cheese. Everything to build two, and the card that shows you how.",
+  sizes: [
+    { label: "Makes 2", desc: "Lunch for two. Or you, twice.", price: "[[$XX]]" },
+    { label: "Makes 4", desc: "A week of lunches. [[Size TBD]]", price: "[[$XX]]" }
+  ],
+  anchorLine: "Two at our counter run $37.98. [[Kit price and shipping in price TBD]]",
+  ratingLine: "[[4.X stars]] &middot; 1,000+ Google reviews across our two Brooklyn shops",
+  contents: [
+    { qty: "[[1/4 lb]]", name: "Eastern Gasp\u00e9 Nova smoked salmon", note: "Hand-sliced. Rich, even smoke, not too salty.", img: "lp-assets/sandwich-kits/thumbs/nova.jpg" },
+    { qty: "[[1/4 lb]]", name: "Scallion or plain cream cheese", note: "[[Customer picks at checkout, or scallion only?]]", img: "lp-assets/sandwich-kits/thumbs/scallion-cc.jpg" },
+    { qty: "[[2]]", name: "Brooklyn bagels or bialys", note: "[[Which bagel? Menu says your choice]]", img: "lp-assets/sandwich-kits/thumbs/sesame-bagel.jpg" },
+    { qty: "Free", name: "The Member of the Tribe card", note: "A photo of the sandwich and the build, step by step.", free: true }
+  ],
+  boxHeadline: "The classic. Done right, at home.",
+  boxCopy: "The grocery store version is thin fish on a soft bagel. This is the Nova we slice to order behind the counter, the schmear we whip in house, and a bagel with a real crust. Portioned for two, packed cold, shipped from Brooklyn.",
+  math: [
+    ["Two at our Court St counter", "$37.98"],
+    ["Shipping", "[[Built into the price?]]"],
+    ["Build Your Own Member of the Tribe kit", "[[$XX]]"]
+  ],
+  recipeMeta: "Makes 2 &middot; 3 minutes &middot; [[Draft build, Peter to confirm exact shop steps]]",
+  steps: [
+    "Slice the bagels. [[Toasted or not? Peter's rule here]]",
+    "Schmear both halves. More than you think.",
+    "Lay on the Nova in loose folds, half the pack per sandwich.",
+    "Close it, press it, cut it in half."
+  ],
+  recipeSig: "That's it. That's the classic.",
+  video: {
+    headline: "Watch Peter build the classic. Then build yours.",
+    copy: "Filmed behind the counter at 141 Court Street. One sandwich, built the way we build it every day. Watch it once and the card makes sense.",
+    src: "lp-assets/sandwich-kits/standin-peter-slicing.mp4",
+    poster: "lp-assets/sandwich-kits/standin-peter-slicing-poster.jpg",
+    standIn: "Stand-in clip: Peter slicing salmon. Member of the Tribe build shoots in November."
+  },
+  reviews: {
+    strip: ["christopher-h", "john-c", "renee-l"],
+    wall: ["lana-s", "perry-k", "k-h", "daniel-c", "k-g", "amy-k", "sharon-c", "john-d", "nick-s"],
+    ship: "a-m"
+  },
+  wallHeadline: "Brooklyn has opinions. These are theirs.",
+  shipCopy: "Sliced to order, packed cold in an insulated box with ice packs, and sent UPS from our Brooklyn kitchen. [[Shipping built into the kit price: Peter pricing against the most expensive zip.]]",
+  crossSell: ["great-gatsby", "tribute", "clementine"],
+  faq: [
+    ["What is actually in the box?", "Everything to make two Member of the Tribe sandwiches: Eastern Gasp\u00e9 Nova, cream cheese, and the bagels. Plus the card with the photo and the build."],
+    ["Is this lox?", "Technically it is Nova: cold-smoked, mild, silky. True lox is salt-cured belly, and we sell that too. When people say lox and cream cheese, this is the one they mean."],
+    ["How long will it keep?", "Refrigerate everything when it arrives. [[Peter: best-by window for the kit]]"],
+    ["Can I send it as a gift?", "Yes. Ship it straight to them and add a gift message at checkout."],
+    ["Is shipping included?", "[[Peter deciding: shipping built into the price vs. added at checkout.]]"],
+    ["I'm in Brooklyn. Can I just come in?", "Please do. Member of the Tribe is on the menu at 141 Court Street. <a href=\"https://www.getsauce.com/order/shelskys-of-brooklyn-court-st/menu/\">Order for pickup or local delivery.</a>"]
+  ],
+  finalHeadline: "The classic, built at home.",
+  finalCloser: "Two sandwiches. One box. The card that shows you how."
+};
+</script>
+<script src="lp-assets/sandwich-kits/kits-registry.js"></script>
+<script src="lp-assets/sandwich-kits/reviews.js"></script>
+</head>
+<body>
+
+<div class="phbar" id="phbar" style="display:none"></div>
+
+<nav class="nav">
+  <div class="container">
+    <a class="brand" href="https://shelskys.com"><img src="lp-assets/sandwich-kits/logo-fish.png" alt="Shelsky's"><span class="wm">Shelsky's of Brooklyn</span></a>
+    <a class="navcta" id="nav-cta" href="#order">Get the kit</a>
+  </div>
+</nav>
+
+<header class="hero" id="hero"></header>
+<div class="strip" id="strip"></div>
+<div class="press" id="press"></div>
+<section class="inbox" id="inbox"></section>
+<section class="recipe" id="recipe"></section>
+<section class="video" id="video"></section>
+<section class="wall" id="wall"></section>
+<div class="ship" id="ship"></div>
+<section class="more" id="more"></section>
+<section class="faqwrap" id="faq"></section>
+<section class="final" id="order"></section>
+
+<footer>
+  <p class="links">
+    <a href="https://instagram.com/shelsky_s">Instagram</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.facebook.com/ShelskysSmokedFish">Facebook</a> &nbsp;&middot;&nbsp;
+    <a href="https://shelskys.com">shelskys.com</a>
+  </p>
+  <p style="margin:0;">Shelsky's of Brooklyn &middot; 141 Court St, Brooklyn NY 11201<br>(718) 855-8817 &middot; shelskys@shelskys.com</p>
+</footer>
+<div class="footspace"></div>
+<div class="stickybuy" id="sticky"></div>
+
+<script src="lp-assets/sandwich-kits/kit.js"></script>
+</body>
+</html>

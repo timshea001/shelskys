@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Build Your Own Clementine | Shelsky's of Brooklyn</title>
+<meta name="description" content="Everything to make two of The Clementine at home: house-cured gravlax, butter, red onion, tomato, capers, lemon, bialys. Built exactly how we make it on Court Street.">
+<link rel="stylesheet" href="lp-assets/sandwich-kits/kit.css">
+
+<!-- ======================================================================
+  KIT CONFIG. This object is the whole page. To spin up another sandwich:
+  copy this file, rename it, and swap this object. Shared bits live in
+  lp-assets/sandwich-kits/ (kit.css, kit.js, kits-registry.js, reviews.js).
+  [[double brackets]] = placeholder, renders as a yellow "needs Peter" chip.
+  Build is from the live Court St menu: "House-cured gravlax, butter, thinly-sliced red onion, tomatoes, capers, and lemon juice. We suggest this sandwich on a toasted bialy." Counter price $20.49 each.
+======================================================================= -->
+<script>
+window.KIT = {
+  slug: "clementine",
+  name: "The Clementine",
+  shortName: "Clementine",
+  showPlaceholderLegend: true,
+  ctaUrl: "#order", /* [[Woo product URL + UTMs once the SKU exists]] */
+  photo: "lp-assets/sandwich-kits/the-clementine.jpg",
+  photoAlt: "The Clementine: house-cured gravlax, tomato and red onion on a toasted bialy",
+  badge: "Gravlax we cure ourselves",
+  kicker: "From the Court Street counter to your kitchen",
+  heroSub: "House-cured gravlax, good butter, tomato, thin red onion, capers and a squeeze of lemon on a toasted bialy. Bright, clean, a little Scandinavian, very Brooklyn. Everything to build two, and the card that shows you how.",
+  sizes: [
+    { label: "Makes 2", desc: "Lunch for two. Or you, twice.", price: "[[$XX]]" },
+    { label: "Makes 4", desc: "A week of lunches. [[Size TBD]]", price: "[[$XX]]" }
+  ],
+  anchorLine: "Two Clementines at our counter run $40.98. [[Kit price and shipping in price TBD]]",
+  ratingLine: "[[4.X stars]] &middot; 1,000+ Google reviews across our two Brooklyn shops",
+  contents: [
+    { qty: "[[1/4 lb]]", name: "House-cured gravlax", note: "Scottish salmon cured here with salt, sugar, pepper and dill.", img: "lp-assets/sandwich-kits/thumbs/gravlax.jpg" },
+    { qty: "[[2]]", name: "Bialys", note: "The bread we suggest. Toast it.", img: "lp-assets/sandwich-kits/thumbs/bialy.jpg" },
+    { qty: "[[2 oz]]", name: "Butter", note: "[[Brand TBD]]" },
+    { qty: "[[1 oz]]", name: "Capers", note: "[[Jar or portion cup?]]" },
+    { qty: "[[1 each]]", name: "Tomato, red onion, lemon", note: "[[Ship fresh produce, or card tells them to grab it?]]" },
+    { qty: "Free", name: "The Clementine card", note: "A photo of the sandwich and the build, step by step.", free: true }
+  ],
+  boxHeadline: "The whole sandwich. Nothing to shop for.",
+  boxCopy: "Nobody sells our gravlax but us. We cure it in house, slice it to order, and pack it with everything else the sandwich needs, portioned for two.",
+  math: [
+    ["Two Clementines at our Court St counter", "$40.98"],
+    ["Shipping", "[[Built into the price?]]"],
+    ["Build Your Own Clementine kit", "[[$XX]]"]
+  ],
+  recipeMeta: "Makes 2 &middot; 5 minutes &middot; [[Draft build, Peter to confirm exact shop steps]]",
+  steps: [
+    "Split and toast the bialys.",
+    "Butter both halves while they are hot.",
+    "Lay on the gravlax, half the pack per sandwich.",
+    "Tomato, then red onion sliced thin, then a scatter of capers.",
+    "Squeeze lemon over the top. Close it, cut it, eat it."
+  ],
+  recipeSig: "Butter, not cream cheese. Trust us.",
+  video: {
+    headline: "Watch Peter build the Clementine. Then build yours.",
+    copy: "Filmed behind the counter at 141 Court Street. One sandwich, built the way we build it every day. Watch it once and the card makes sense.",
+    src: "lp-assets/sandwich-kits/standin-peter-slicing.mp4",
+    poster: "lp-assets/sandwich-kits/standin-peter-slicing-poster.jpg",
+    standIn: "Stand-in clip: Peter slicing salmon. Clementine build shoots in November."
+  },
+  reviews: {
+    strip: ["lana-s", "lisa-k", "john-d"],
+    wall: ["daniel-p", "eric-c", "marina-v", "k-g", "amy-k", "nick-s", "sharon-c", "jonathan-l", "christopher-h"],
+    ship: "a-m"
+  },
+  wallHeadline: "Brooklyn has opinions. These are theirs.",
+  shipCopy: "Sliced to order, packed cold in an insulated box with ice packs, and sent UPS from our Brooklyn kitchen. [[Shipping built into the kit price: Peter pricing against the most expensive zip.]]",
+  crossSell: ["great-gatsby", "tribute", "member-of-the-tribe"],
+  faq: [
+    ["What is actually in the box?", "Everything to make two Clementines: house-cured gravlax, bialys, butter, capers, and the rest of the build. Plus the card with the photo and the steps."],
+    ["What is gravlax?", "Salmon cured, not smoked. We cure Scottish salmon in house with salt, sugar, pepper and dill for a few days. Silky, clean, bright."],
+    ["How long will it keep?", "Refrigerate everything when it arrives. [[Peter: best-by window for the kit]]"],
+    ["Can I send it as a gift?", "Yes. Ship it straight to them and add a gift message at checkout."],
+    ["Is shipping included?", "[[Peter deciding: shipping built into the price vs. added at checkout.]]"],
+    ["I'm in Brooklyn. Can I just come in?", "Please do. The Clementine is on the menu at 141 Court Street. <a href=\"https://www.getsauce.com/order/shelskys-of-brooklyn-court-st/menu/\">Order for pickup or local delivery.</a>"]
+  ],
+  finalHeadline: "Build the Clementine at home.",
+  finalCloser: "Two sandwiches. One box. The card that shows you how."
+};
+</script>
+<script src="lp-assets/sandwich-kits/kits-registry.js"></script>
+<script src="lp-assets/sandwich-kits/reviews.js"></script>
+</head>
+<body>
+
+<div class="phbar" id="phbar" style="display:none"></div>
+
+<nav class="nav">
+  <div class="container">
+    <a class="brand" href="https://shelskys.com"><img src="lp-assets/sandwich-kits/logo-fish.png" alt="Shelsky's"><span class="wm">Shelsky's of Brooklyn</span></a>
+    <a class="navcta" id="nav-cta" href="#order">Get the kit</a>
+  </div>
+</nav>
+
+<header class="hero" id="hero"></header>
+<div class="strip" id="strip"></div>
+<div class="press" id="press"></div>
+<section class="inbox" id="inbox"></section>
+<section class="recipe" id="recipe"></section>
+<section class="video" id="video"></section>
+<section class="wall" id="wall"></section>
+<div class="ship" id="ship"></div>
+<section class="more" id="more"></section>
+<section class="faqwrap" id="faq"></section>
+<section class="final" id="order"></section>
+
+<footer>
+  <p class="links">
+    <a href="https://instagram.com/shelsky_s">Instagram</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.facebook.com/ShelskysSmokedFish">Facebook</a> &nbsp;&middot;&nbsp;
+    <a href="https://shelskys.com">shelskys.com</a>
+  </p>
+  <p style="margin:0;">Shelsky's of Brooklyn &middot; 141 Court St, Brooklyn NY 11201<br>(718) 855-8817 &middot; shelskys@shelskys.com</p>
+</footer>
+<div class="footspace"></div>
+<div class="stickybuy" id="sticky"></div>
+
+<script src="lp-assets/sandwich-kits/kit.js"></script>
+</body>
+</html>
