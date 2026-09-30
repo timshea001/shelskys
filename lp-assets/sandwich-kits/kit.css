@@ -194,7 +194,8 @@ footer .links{margin:0 0 12px;}
 
 .stickybuy{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--red);display:none;box-shadow:0 -2px 16px rgba(0,0,0,.18);}
 .stickybuy a{display:flex;justify-content:space-between;align-items:center;color:#fff;text-decoration:none;padding:15px 22px;font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:14px;gap:12px;}
-.stickybuy .sp{font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:17px;}
+.stickybuy .sp{font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:16px;min-width:0;}
+.stickybuy a>:last-child{white-space:nowrap;flex-shrink:0;}
 .footspace{height:0;}
 
 @media (max-width:980px){
